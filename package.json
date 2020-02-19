@@ -9,6 +9,7 @@
   "author": "Lior Kummer",
   "license": "GPL-3.0",
   "devDependencies": {
+    "copy-webpack-plugin": "^5.1.1",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   }
