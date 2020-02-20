@@ -1,5 +1,6 @@
 const CopyPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -25,6 +26,9 @@ module.exports = {
         ]),
         new MiniCssExtractPlugin({
             filename: "theme/static/[name].css"
+        }),
+        new StylelintPlugin({
+            syntax: 'scss'
         })
     ]
 }
