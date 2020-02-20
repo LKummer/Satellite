@@ -1,7 +1,8 @@
 {
     "extends": "stylelint-config-standard",
     "plugins": [
-        "stylelint-scss"
+        "stylelint-scss",
+        "stylelint-order"
     ],
     "rules": {
         "at-rule-no-unknown": null,
@@ -33,6 +34,14 @@
         "scss/operator-no-unspaced": true,
         "scss/selector-no-redundant-nesting-selector": true,
         "scss/no-duplicate-dollar-variables": true,
-        "scss/no-duplicate-mixins": true
+        "scss/no-duplicate-mixins": true,
+        "order/order": [
+            "custom-properties",
+            "dollar-variables",
+            "declarations",
+            "rules",
+            "at-rules"
+        ],
+        "order/properties-alphabetical-order": true
     }
 }
