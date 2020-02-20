@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:hugo": "hugo -s demo -d ../dist/demo --themesDir ../dist",
-    "build:webpack": "webpack"
+    "build:webpack": "webpack",
+    "dev:hugo": "hugo -s demo -d ../dist/demo --themesDir ../dist -vw",
+    "dev:webpack": "webpack-dev-server"
   },
   "author": "Lior Kummer",
   "license": "GPL-3.0",
@@ -14,6 +16,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "hugo-bin": "^0.52.2",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

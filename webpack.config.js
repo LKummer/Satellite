@@ -11,5 +11,10 @@ module.exports = {
             { from: 'layouts', to: 'theme/layouts' },
             { from: 'public', to: 'theme' }
         ])
-    ]
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, 'dist/demo'),
+        watchContentBase: true,
+        writeToDisk: true
+    }
 }
