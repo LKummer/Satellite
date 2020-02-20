@@ -8,6 +8,8 @@ DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
+theme = "theme"
+
 [menu]
 
   [[menu.main]]

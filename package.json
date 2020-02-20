@@ -4,12 +4,15 @@
   "description": "This repository contains project setup boilerplate for a Webpack based project\r that builds a Hugo theme.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:hugo": "hugo -s demo -d ../dist/demo --themesDir ../dist",
+    "build:webpack": "webpack"
   },
   "author": "Lior Kummer",
   "license": "GPL-3.0",
   "devDependencies": {
     "copy-webpack-plugin": "^5.1.1",
+    "hugo-bin": "^0.52.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   }
