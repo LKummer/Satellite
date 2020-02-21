@@ -1,10 +1,9 @@
 {
   "name": "hugo-theme-boilerplate",
   "version": "0.1.0",
-  "description": "This repository contains project setup boilerplate for a Webpack based project\r that builds a Hugo theme.",
-  "main": "index.js",
+  "description": "",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "run-s build:webpack build:hugo",
     "build:hugo": "hugo -s demo -d ../dist/demo --themesDir ../dist",
     "build:webpack": "webpack",
