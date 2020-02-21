@@ -1,4 +1,3 @@
-const WebpackRTLPlugin = require('webpack-rtl-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
@@ -16,7 +15,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new WebpackRTLPlugin(),
         new OptimizeCssAssetsPlugin()
     ]
 }
