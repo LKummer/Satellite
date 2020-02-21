@@ -1,39 +1,27 @@
 const CopyPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const StylelintPlugin = require('stylelint-webpack-plugin')
+const merge = require('webpack-merge')
 
-module.exports = {
-    mode: 'development',
+// Common Webpack configuration.
+const common = require('./webpack.common')
+
+// Configuration for building a Hugo theme in dist/theme.
+const build = {
     output: {
         filename: 'theme/static/[name].js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader'
-                ]
-            },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'eslint-loader'
-            }
-        ]
     },
     plugins: [
         new CopyPlugin([
             { from: 'layouts', to: 'theme/layouts' },
             { from: 'public', to: 'theme' }
-        ]),
-        new MiniCssExtractPlugin({
-            filename: "theme/static/[name].css"
-        }),
-        new StylelintPlugin({
-            syntax: 'scss'
-        })
+        ])
     ]
+}
+
+module.exports = env => {
+    // Short circuit check `env` to avoid errors.
+    if (env && env.prod) {
+        return merge(common, build, { mode: 'production' })
+    } else {
+        return merge(common, build, { mode: 'development' })
+    }
 }

@@ -8,6 +8,7 @@
     "build": "run-s build:webpack build:hugo",
     "build:hugo": "hugo -s demo -d ../dist/demo --themesDir ../dist",
     "build:webpack": "webpack",
+    "build:webpack:prod": "webpack --env.prod",
     "dev": "run-s build:webpack dev:start",
     "dev:start": "run-p dev:webpack dev:hugo",
     "dev:hugo": "hugo serve -s demo -d ../dist/demo --themesDir ../dist -vw",
@@ -31,6 +32,7 @@
     "stylelint-scss": "^3.14.2",
     "stylelint-webpack-plugin": "^1.2.3",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
   }
 }
