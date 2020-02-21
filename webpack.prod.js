@@ -1,6 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
+// Minification for JS and CSS files.
 module.exports = {
     mode: 'production',
     optimization: {
