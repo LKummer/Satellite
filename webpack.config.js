@@ -20,7 +20,8 @@ const build = {
 module.exports = env => {
     // Short circuit check `env` to avoid errors.
     if (env && env.prod) {
-        return merge(common, build, { mode: 'production' })
+        const prod = require('./webpack.prod')
+        return merge(common, build, prod)
     } else {
         return merge(common, build, { mode: 'development' })
     }
