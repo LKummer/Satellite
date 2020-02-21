@@ -9,14 +9,19 @@
     "build:hugo": "hugo -s demo -d ../dist/demo --themesDir ../dist",
     "build:webpack": "webpack",
     "build:webpack:prod": "webpack --env.prod",
+    "build:storybook": "build-storybook",
     "dev": "run-s build:webpack dev:start",
     "dev:start": "run-p dev:webpack dev:hugo",
     "dev:hugo": "hugo serve -s demo -d ../dist/demo --themesDir ../dist -vw",
-    "dev:webpack": "webpack -w"
+    "dev:webpack": "webpack -w",
+    "storybook": "start-storybook -p 6006"
   },
   "author": "Lior Kummer",
   "license": "GPL-3.0",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@storybook/html": "^5.3.13",
+    "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
