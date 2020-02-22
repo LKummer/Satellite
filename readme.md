@@ -29,13 +29,19 @@ $ npm run storybook
 To build in development mode:
 
 ```
-$ npm run build:webpack
+$ npm run build:theme
 ```
 
 To build in production mode:
 
 ```
-$ npm run build:webpack:prod
+$ npm run build:theme:prod
 ```
 
-After building the the theme folder can be found in the `dist` folder.
+To build the theme and the demo blog:
+
+```
+$ npm run build
+```
+
+Built files can be found in the `dist` folder.
