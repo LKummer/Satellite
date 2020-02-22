@@ -4,7 +4,7 @@
 
 After cloning the project, install the required dependencies:
 
-```
+```shell
 $ npm ci
 ```
 
@@ -12,7 +12,7 @@ $ npm ci
 
 To launch a hot reload dev server with a demo Hugo blog:
 
-```
+```shell
 $ npm run dev
 ```
 
@@ -20,7 +20,7 @@ $ npm run dev
 
 To launch a hot reload Storybook instance:
 
-```
+```shell
 $ npm run storybook
 ```
 
@@ -28,19 +28,19 @@ $ npm run storybook
 
 To build in development mode:
 
-```
+```shell
 $ npm run build:theme
 ```
 
 To build in production mode:
 
-```
+```shell
 $ npm run build:theme:prod
 ```
 
 To build the theme and the demo blog:
 
-```
+```shell
 $ npm run build
 ```
 
