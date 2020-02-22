@@ -25,6 +25,7 @@ const build = {
         // Used to copy files into the dist/theme folder.
         new CopyPlugin([
             { from: 'layouts', to: 'theme/layouts' },
+            { from: 'i18n', to: 'theme/i18n' },
             { from: 'public', to: 'theme' }
         ]),
         // Used to extract a CSS file.
