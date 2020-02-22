@@ -45,3 +45,20 @@ $ npm run build
 ```
 
 Built files can be found in the `dist` folder.
+
+## Translation Guide
+
+The translation files are in the `i18n` folder. Translation files should be
+named in the form `<language subtag>.toml`, for example: `fr.toml`.
+
+A translation definition takes the following form:
+
+```toml
+[definition]
+    form = "template string"
+```
+
+Where `definition` is the key of the definition, `form` is the
+[Go Plural Form](https://godoc.org/golang.org/x/text/feature/plural#Form)
+of the argument passed to the `template string` and `template string` is the
+translated string.
