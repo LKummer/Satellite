@@ -62,3 +62,16 @@ Where `definition` is the key of the definition, `form` is the
 [Go Plural Form](https://godoc.org/golang.org/x/text/feature/plural#Form)
 of the argument passed to the `template string` and `template string` is the
 translated string.
+
+The `direction` definition is a special definition used to configure whether
+the language requires left-to-right or right-to-left styling by being set to
+`ltr` or `rtl` respectively.
+
+```toml
+# Example direction definition:
+[direction]
+    other: "ltr"
+```
+
+If the `direction` definition is not set to either `ltr` or `rtl`, Hugo will
+emit an error and refuse to build. 
