@@ -10,7 +10,7 @@
     "build:theme:prod": "webpack --env.prod",
     "build:storybook": "build-storybook",
     "dev": "run-s build:theme dev:start",
-    "dev:start": "run-p dev:webpack dev:demo",
+    "dev:start": "run-p dev:theme dev:demo",
     "dev:demo": "hugo serve -s demo -d ../dist/demo --themesDir ../dist -vw",
     "dev:theme": "webpack -w",
     "storybook": "start-storybook -p 6006"
