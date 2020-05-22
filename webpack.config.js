@@ -16,8 +16,17 @@ const build = {
       {
         // When merged first, this loader should be the last one used
         // To process Sass files.
-        test: /\.s[ac]ss$/iu,
+        test: /\.(?:css|scss|sass)$/iu,
         use: [MiniCssExtractPlugin.loader]
+      },
+      {
+        test: /\.woff2?$/u,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'theme/static/fonts',
+          publicPath: './fonts/'
+        }
       }
     ]
   },
@@ -42,8 +51,8 @@ module.exports = env => {
   // Short circuit check `env` to avoid errors.
   if (env && env.prod) {
     const prod = require('./webpack.prod')
-    return merge(build, common, prod)
+    return merge.smart(build, common, prod)
   } else {
-    return merge(build, common, { mode: 'development' })
+    return merge.smart(build, common, { mode: 'development' })
   }
 }
