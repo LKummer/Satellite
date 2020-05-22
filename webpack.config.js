@@ -18,8 +18,7 @@ const build = {
         loader: 'eslint-loader'
       },
       {
-        // When merged first, this loader should be the last one used
-        // To process Sass files.
+        // Process SCSS and extract a CSS file.
         test: /\.(?:css|scss|sass)$/iu,
         use: [
           MiniCssExtractPlugin.loader,
@@ -28,6 +27,7 @@ const build = {
         ]
       },
       {
+        // Load fonts.
         test: /\.woff2?$/u,
         loader: 'file-loader',
         options: {
@@ -39,26 +39,26 @@ const build = {
     ]
   },
   plugins: [
-    // Used to copy files into the dist/theme folder.
+    // Copies files to the dist/theme folder.
     new CopyPlugin([
       { from: 'layouts', to: 'theme/layouts' },
       { from: 'i18n', to: 'theme/i18n' },
       { from: 'public', to: 'theme' }
     ]),
-    // Used to extract a CSS file.
+    // Extracts a CSS file.
     new MiniCssExtractPlugin({
       filename: 'theme/static/[name].css'
     }),
-    // Used to process an rtl CSS file.
+    // Extracts an RTL processed CSS file.
     new WebpackRTLPlugin(),
-    // Used for linting SCSS.
+    // Lints stylesheets.
     new StylelintPlugin({
       syntax: 'scss'
     })
   ]
 }
 
-// Merge the required configurations.
+// Merge the configurations.
 module.exports = env => {
   // Short circuit check `env` to avoid errors.
   if (env && env.prod) {
