@@ -1,10 +1,8 @@
 const CopyPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackRTLPlugin = require('webpack-rtl-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin')
 const merge = require('webpack-merge')
-
-// Common Webpack configuration.
-const common = require('./webpack.common')
 
 // Configuration for building a Hugo theme in dist/theme.
 const build = {
@@ -14,10 +12,20 @@ const build = {
   module: {
     rules: [
       {
+        // Pass JS files through ESLint.
+        test: /\.js$/iu,
+        exclude: /node_modules/u,
+        loader: 'eslint-loader'
+      },
+      {
         // When merged first, this loader should be the last one used
         // To process Sass files.
         test: /\.(?:css|scss|sass)$/iu,
-        use: [MiniCssExtractPlugin.loader]
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.woff2?$/u,
@@ -42,7 +50,11 @@ const build = {
       filename: 'theme/static/[name].css'
     }),
     // Used to process an rtl CSS file.
-    new WebpackRTLPlugin()
+    new WebpackRTLPlugin(),
+    // Used for linting SCSS.
+    new StylelintPlugin({
+      syntax: 'scss'
+    })
   ]
 }
 
@@ -51,8 +63,8 @@ module.exports = env => {
   // Short circuit check `env` to avoid errors.
   if (env && env.prod) {
     const prod = require('./webpack.prod')
-    return merge.smart(build, common, prod)
+    return merge.smart(build, prod)
   } else {
-    return merge.smart(build, common, { mode: 'development' })
+    return merge.smart(build, { mode: 'development' })
   }
 }
