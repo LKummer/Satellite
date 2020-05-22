@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    {{/* Stylesheet direction logic.
-       * Load either an LTR or an RTL stylesheet or error on invalid value. */}}
-    {{ $direction := T "direction" }}
-    {{ if eq $direction "ltr" }}
-    <link rel="stylesheet" href="{{ absURL "/main.css" }}">
-    {{ else if eq $direction "rtl" }}
-    <link rel="stylesheet" href="{{ absURL "/main.rtl.css" }}">
-    {{ else }}
-    {{ errorf "Direction translation definition is not 'ltr' or 'rtl' (%s). Using ltr stylesheet." $direction }}
-    {{ end }}
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    {{/* Stylesheet direction logic. * Load either an LTR or an RTL stylesheet
+    or error on invalid value. */}} {{ $direction := T "direction" }} {{ if eq
+    $direction "ltr" }} <link rel="stylesheet" href="{{ absURL "/main.css" }}">
+    {{ else if eq $direction "rtl" }} <link rel="stylesheet" href="{{ absURL
+    "/main.rtl.css" }}"> {{ else }} {{ errorf "Direction translation definition
+    is not 'ltr' or 'rtl' (%s). Using ltr stylesheet." $direction }} {{ end }}
     <title>{{ .Title }}</title>
-</head>
-<body>
+  </head>
+  <body>
     {{- block "main" . }}{{- end }}
-    <script src="{{ absURL "/main.js" }}"></script>
-</body>
+    <script src='{{ absURL "/main.js" }}'></script>
+  </body>
 </html>

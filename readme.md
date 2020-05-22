@@ -74,4 +74,4 @@ the language requires left-to-right or right-to-left styling by being set to
 ```
 
 If the `direction` definition is not set to either `ltr` or `rtl`, Hugo will
-emit an error and refuse to build. 
+emit an error and refuse to build.
