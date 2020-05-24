@@ -1,7 +1,8 @@
 module.exports = {
-  extends: 'stylelint-config-standard',
+  extends: ['stylelint-config-standard', 'prettier'],
   plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
+    'block-closing-brace-newline-after': null,
     'at-rule-no-unknown': null,
     'at-rule-empty-line-before': null,
     'media-query-list-comma-newline-after': null,
@@ -10,11 +11,10 @@ module.exports = {
     'scss/at-else-empty-line-before': 'never',
     'scss/at-else-if-parentheses-space-before': 'always',
     'scss/at-extend-no-missing-placeholder': true,
-    'scss/at-function-parentheses-space-before': 'always',
     'scss/at-if-no-null': true,
     'scss/at-import-partial-extension': 'never',
     'scss/at-mixin-argumentless-call-parentheses': 'never',
-    'scss/at-mixin-parentheses-space-before': 'always',
+    'scss/at-mixin-parentheses-space-before': 'never',
     'scss/dollar-variable-colon-space-after': 'always-single-line',
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-no-missing-interpolation': true,
