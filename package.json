@@ -13,7 +13,8 @@
     "dev:start": "run-p dev:theme dev:demo",
     "dev:demo": "hugo serve -s demo -d ../dist/demo --themesDir ../dist -vw",
     "dev:theme": "webpack -w",
-    "dev:doc": "hugo serve -s doc -vw"
+    "dev:doc": "hugo serve -s doc -vw",
+    "format": "prettier --write ."
   },
   "author": "Lior Kummer",
   "license": "GPL-3.0",
