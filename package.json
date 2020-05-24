@@ -8,11 +8,12 @@
     "build:demo": "hugo -s demo -d ../dist/demo --themesDir ../dist",
     "build:theme": "webpack",
     "build:theme:prod": "webpack --env.prod",
-    "build:storybook": "build-storybook",
+    "build:doc": "hugo -s doc -d ../dist/doc",
     "dev": "run-s build:theme dev:start",
     "dev:start": "run-p dev:theme dev:demo",
     "dev:demo": "hugo serve -s demo -d ../dist/demo --themesDir ../dist -vw",
-    "dev:theme": "webpack -w"
+    "dev:theme": "webpack -w",
+    "dev:doc": "hugo serve -s doc -vw"
   },
   "author": "Lior Kummer",
   "license": "GPL-3.0",
