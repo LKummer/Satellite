@@ -1,0 +1,69 @@
+{{ define "main" }}
+<main>
+{{ partial "sections/dense-masthead" .Params.masthead }}
+<section class="cardsview">
+    <div class="cardsview-container">
+        <ul class="l-offset l-offset-dense-end">
+            {{ $site := .Site }}
+            {{ range $key, $pages := .Site.Taxonomies.categories }}
+            {{/* Find the page for the category to get it's title and content. */}}
+            {{ $category := $site.GetPage (printf "categories/%s" $key) }}
+            <h1
+                class="cardsview-offset-title l-offset-item-start"
+                id="{{ urlize $category.Title }}" >
+                {{ $category.Title }}
+            </h1>
+            {{ range $pages }}
+            <li class="l-offset-item-end l-offset-item-end-dense">
+                <a href="{{ absLangURL .Permalink }}" class="card">
+                    <h1 class="card-title">
+                        {{ .Title }}
+                    </h1>
+                    <p class="card-text">
+                        {{ with .Params.description }}
+                        {{ . | htmlUnescape | plainify }}
+                        {{ else }}
+                        {{ .Summary | htmlUnescape | plainify }}
+                        {{ end }}
+                    </p>
+                </a>
+            </li>
+            {{ end }}
+            {{ end }}
+
+            {{/* List all uncategorized guides. */}}
+            {{ $.Scratch.Add "uncategorized" slice }}
+            {{ range .Pages }}
+                {{/* Add pages without categories to the scratch. */}}
+                {{ if not .Params.categories }}
+                    {{ $.Scratch.Add "uncategorized" . }}
+                {{ end }}
+            {{ end }}
+            {{ $uncategorized := $.Scratch.Get "uncategorized" }}
+            {{ if gt (len $uncategorized) 0 }}
+            <h1 class="cardsview-offset-title l-offset-item-start">
+                {{ T "list-uncategorized" $uncategorized }}
+            </h1>
+            {{ range $uncategorized }}
+            <li class="l-offset-item-end l-offset-item-end-dense">
+                <a href="{{ absLangURL .Permalink }}" class="card">
+                    <h1 class="card-title">
+                        {{ .Title }}
+                    </h1>
+                    <p class="card-text">
+                        {{ with .Params.description }}
+                        {{ . | htmlUnescape | plainify }}
+                        {{ else }}
+                        {{ .Summary | htmlUnescape | plainify }}
+                        {{ end }}
+                    </p>
+                </a>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</section>
+{{ partial "sections/bottom" .Params.bottom }}
+</main>
+{{ end }}

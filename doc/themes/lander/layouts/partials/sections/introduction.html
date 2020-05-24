@@ -1,0 +1,40 @@
+{{ if . }}
+<section class="cardsview">
+    <div class="cardsview-container">
+        {{ if (or .title .text) }}
+        <section class="l-offset l-offset-end cardsview-top">
+            {{ with .title }}
+            <section class="content content-dark l-offset-item-start">
+                <h1 class="content-title">
+                    {{ . }}
+                </h1>
+            </section>
+            {{ end }}
+            {{ with .text }}
+            <section class="content content-dark l-offset-item-end">
+                <p class="content-text">
+                    {{ . }}
+                </p>
+            </section>
+            {{ end }}
+        </section>
+        {{ end }}
+        {{ with .cards }}
+        <ul class="l-grid">
+            {{ range . }}
+            <li>
+                <section class="card card-centered">
+                    <h1 class="card-title">
+                        {{ .title }}
+                    </h1>
+                    <p class="card-text">
+                        {{ .text }}
+                    </p>
+                </section>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

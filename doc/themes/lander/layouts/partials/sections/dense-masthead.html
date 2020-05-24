@@ -1,0 +1,15 @@
+{{ if . }}
+<section class="masthead masthead-dense">
+    {{ with .title }}
+    <h1 class="masthead-title">
+        {{ . }}
+    </h1>
+    {{ end }}
+    {{ with .subtitle }}
+    <h2 class="masthead-subtitle">
+        {{ . }}
+    </h2>
+    {{ end }}
+    {{ partial "components/buttons" .buttons }}
+</section>
+{{ end }}

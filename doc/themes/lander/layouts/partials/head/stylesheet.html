@@ -1,0 +1,10 @@
+{{/* Stylesheet direction logic.
+   * Load either an LTR or an RTL stylesheet or error on invalid value. */}}
+{{ $direction := T "direction" }}
+{{ if eq $direction "ltr" }}
+<link rel="stylesheet" href="{{ relURL "/main.css" }}">
+{{ else if eq $direction "rtl" }}
+<link rel="stylesheet" href="{{ relURL "/main.rtl.css" }}">
+{{ else }}
+{{ errorf "Direction translation definition is not 'ltr' or 'rtl' (%s). Using ltr stylesheet." $direction }}
+{{ end }}

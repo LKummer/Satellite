@@ -1,0 +1,69 @@
+{{ with .Description }}
+<meta name="description" content="{{ . }}">
+{{ else }}
+<meta name="description" content="{{ .Site.Params.seo.description }}">
+{{ end }}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+
+    {{- /* If the page is not a content page, add schema for a software
+        * appliation */ -}}
+    {{ if .IsNode }}
+    "@type": "SoftwareApplication",
+    "name": "{{ .Site.Title }}",
+    {{ with .Site.Params.seo.category -}}
+    "applicationCategory": "{{ . }}",
+    {{ end -}}
+    {{ with .Site.Params.seo.operatingSystem -}}
+    "operatingSystem": "{{ . }}",
+    {{ end -}}
+    {{ with .Site.Params.seo.downloadURL -}}
+    "downloadUrl": "{{ . }}",
+    {{ end -}}
+    {{/* Try to use the versionEnv config option to get the version from the
+       * environment. */ -}}
+    {{ with getenv .Site.Params.seo.versionEnv -}}
+    "softwareVersion": "{{ . }}",
+    {{ else -}}
+    {{ with .Site.Params.seo.version -}}
+    "softwareVersion": "{{ . }}",
+    {{ end -}}
+    {{ end -}}
+    "url": "{{ absLangURL "/" }}",
+
+    {{- /* If the page is a content page, add schema for an article. */ -}}
+    {{ else }}
+    "@type": "Article",
+    "headline": "{{ .Title }}",
+    "author": {
+        "@type": "Person",
+        "name": "
+    {{- with .Params.author -}}
+        {{- . -}}
+    {{- else -}}
+        {{- .Site.Params.seo.defaultAuthor -}}
+    {{- end }}"
+    },
+    {{ with .Content -}}
+    "wordCount": {{ countwords . }},
+    {{- end }}
+
+    {{- /*  */ -}}
+    {{- end }}
+    {{ with .Site.Params.seo.isFree -}}
+    "isAccessibleForFree": "{{ . }}",
+    {{ end -}}
+    {{ with .Site.Params.seo.license -}}
+    "license": "{{ . }}"
+    {{- end -}}
+    {{ if or .Site.Params.footer.text .Params.description -}}
+    ,
+    "description": "{{ with .Params.description -}}
+                        {{- . -}}
+                    {{- else -}}
+                        {{- .Site.Params.footer.text -}}
+                    {{- end -}}"
+    {{- end }}
+}
+</script>

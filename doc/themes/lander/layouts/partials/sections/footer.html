@@ -1,0 +1,29 @@
+<footer class="footer">
+    <div class="footer-container l-offset l-offset-start">
+        <section class="content content-dark">
+            {{ with .Site.Params.footer.title }}
+            <h1 class="content-title">
+                {{ . }}
+            </h1>
+            {{ end }}
+            {{ with .Site.Params.footer.text }}
+            <p class="content-text">
+                {{ . }}
+            </p>
+            {{ end }}
+        </section>
+        {{ with .Site.Menus.main }}
+        <nav>
+            <ul class="lowernav">
+                {{ range . }}
+                <li>
+                    <a href="{{ absLangURL .URL }}" class="lowernav-item">
+                        {{ .Name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        {{ end }}
+    </div>
+</footer>

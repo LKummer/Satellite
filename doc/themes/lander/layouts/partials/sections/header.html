@@ -1,0 +1,26 @@
+{{/* Wrap in a div to set to full width inside a flexbox layout. */}}
+<div>
+    <header class="navbar">
+        <h1 class="navbar-logo">
+            {{ .Site.Title }}
+        </h1>
+        {{ $current := . }}
+        {{ with .Site.Menus.main }}
+        <span class="navbar-spacer"></span>
+        <nav>
+            <ul class="navbar-navigation">
+                {{ range . }}
+                <li>
+                <a href="{{ absLangURL .URL }}" class="navbar-navigation-item
+                {{- if or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+                navbar-navigation-item-active
+                {{- end -}}">
+                    {{ .Name }}
+                </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        {{ end }}
+    </header>
+</div>

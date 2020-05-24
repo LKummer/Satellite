@@ -1,0 +1,19 @@
+{{ if . }}
+<nav>
+    <ul class="buttons">
+        {{ range . }}
+        {{ if (or .to .href) }}
+        <li>
+            <a
+                href="{{ with .to }}{{ absLangURL . }}{{ else }}{{ .href }}{{ end }}"
+                class="button button-{{ with .color }}{{ . }}{{ else }}primary{{ end }} buttons-button">
+                {{ .label }}
+            </a>
+        </li>
+        {{ else }}
+        {{ warnf "Button `%s` was not rendered because it did not have a `to` or `url` option." .}}
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}

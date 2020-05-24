@@ -1,0 +1,41 @@
+{{ define "main" }}
+<main class="l-single">
+    {{- /* Check if the TOC actually contains anything before rendering it. */ -}}
+    {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
+    <aside class="toc l-single-toc">
+        {{ .TableOfContents }}
+    </aside>
+    {{ end }}
+    <article class="article l-single-article">
+        <nav>
+            <ul class="article-breadcrumbs">
+                <li class="article-breadcrumbs-item">
+                    {{- $section := .Type }}
+                    {{ with .GetPage $section -}}
+                    <a href="{{ absLangURL $section }}">
+                        {{ .Title }}
+                    </a>
+                    {{- end }}
+                </li>
+                {{ with (index (.GetTerms "categories") 0) -}}
+                <li class="article-breadcrumbs-item">
+                    {{ $category := printf "%s#%s" (absLangURL $section) (urlize .Title) -}}
+                    <a href="{{ $category }}">
+                        {{ .Title }}
+                    </a>
+                </li>
+                {{- end }}
+            </ul>
+        </nav>
+        <h1 class="article-title">
+            {{ .Title }}
+        </h1>
+        <section class="article-content">
+            {{ .Content }}
+        </section>
+    </article>
+{{- if lt 1 (len (.GetTerms "categories")) -}}
+    {{- warnf "Content page '%s' belongs to more than one category. Use a single category per page." .File -}}
+{{- end -}}
+</main>
+{{- end -}}

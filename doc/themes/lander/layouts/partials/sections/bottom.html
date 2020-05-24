@@ -1,0 +1,17 @@
+{{ if . }}
+<section class="lowercontent">
+    <section class="content content-light content-centered">
+        {{ with .title }}
+        <h1 class="content-title">
+            {{ . }}
+        </h1>
+        {{ end }}
+        {{ with .text }}
+        <p class="content-text">
+            {{ . }}
+        </p>
+        {{ end }}
+        {{ partial "components/buttons" .buttons }}
+    </section>
+</section>
+{{ end }}
