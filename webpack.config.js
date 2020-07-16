@@ -1,6 +1,7 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackRTLPlugin = require('webpack-rtl-plugin');
+const RTLPlugin = require('webpack-rtl-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = (env) => {
@@ -13,12 +14,6 @@ module.exports = (env) => {
     },
     module: {
       rules: [
-        {
-          // Pass JS files through ESLint.
-          test: /\.js$/iu,
-          exclude: /node_modules/u,
-          loader: 'eslint-loader'
-        },
         {
           // Process SCSS and extract a CSS file.
           test: /\.(?:css|scss|sass)$/iu,
@@ -50,8 +45,9 @@ module.exports = (env) => {
         filename: 'theme/static/[name].css'
       }),
       // Extracts an RTL processed CSS file.
-      new WebpackRTLPlugin(),
-      // Lints stylesheets.
+      new RTLPlugin(),
+      // Lint during build.
+      new ESLintPlugin(),
       new StylelintPlugin({
         syntax: 'scss'
       })
