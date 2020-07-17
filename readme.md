@@ -1,50 +1,36 @@
-# Webpack Based Hugo Theme
+# Hugo Theme
+
+> Webpack boilerplate for Hugo theme development
 
 ## Development Guide
 
 After cloning the project, install the required dependencies:
 
-```shell
-$ npm ci
+```s
+$ yarn install
 ```
 
-### Development Server
+Quick summary of all the development scripts:
 
-To launch a hot reload dev server with a demo Hugo blog:
+* `build` - Build the Hugo theme, demo and documentation sites for production.
+  Linting the sources in the process. Built artifacts are placed in the `dist`
+  folder.
+* `build:theme:debug` - Build the Hugo theme unminified with source maps.
+* `dev` - Run the demo site development server.
+* `dev:doc` - Run the documentation site development server.
+* `format` - Format the sources with Prettier.
 
-```shell
-$ npm run dev
+The scripts can be invoked using `yarn run`:
+
+```s
+$ yarn run <script>
 ```
 
-### Storybook
+For example, if we want to build the theme we can use the `build` script:
 
-To launch a hot reload Storybook instance:
-
-```shell
-$ npm run storybook
+```s
+$ yarn run build
 ```
-
-### Build
-
-To build in development mode:
-
-```shell
-$ npm run build:theme
-```
-
-To build in production mode:
-
-```shell
-$ npm run build:theme:prod
-```
-
-To build the theme and the demo blog:
-
-```shell
-$ npm run build
-```
-
-Built files can be found in the `dist` folder.
 
 ## Translation Guide
 
