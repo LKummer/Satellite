@@ -4,10 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "run-s build:theme build:demo",
+    "build": "run-s build:theme build:demo build:doc",
     "build:demo": "hugo -s demo -d ../dist/demo --themesDir ../dist",
-    "build:theme": "webpack",
-    "build:theme:prod": "webpack --env.prod",
+    "build:theme": "webpack --env.prod",
+    "build:theme:debug": "webpack",
     "build:doc": "hugo -s doc -d ../dist/doc",
     "dev": "run-s build:theme dev:start",
     "dev:start": "run-p dev:theme dev:demo",
