@@ -14,7 +14,10 @@
     "dev:demo": "hugo serve -s demo -d ../dist/demo --themesDir ../dist --layoutDir ../layouts -vw",
     "dev:theme": "webpack -w --env.hot",
     "dev:doc": "hugo serve -s doc -vw",
-    "format": "prettier --write ."
+    "format": "run-s format:prettier format:eslint format:stylelint",
+    "format:eslint": "eslint --fix **/*.js",
+    "format:prettier": "prettier --write **/*.scss **/*.js **/*.json **/*.md",
+    "format:stylelint": "stylelint --fix **/*.scss"
   },
   "author": "Lior Kummer",
   "license": "GPL-3.0",

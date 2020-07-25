@@ -18,7 +18,7 @@ Quick summary of all the development scripts:
 * `build:theme:debug` - Build the Hugo theme unminified with source maps.
 * `dev` - Run the demo site development server.
 * `dev:doc` - Run the documentation site development server.
-* `format` - Format the sources with Prettier.
+* `format` - Format all files with ESLint, Stylelint and Prettier.
 
 The scripts can be invoked using `yarn run`:
 
