@@ -10,16 +10,16 @@ After cloning the project, install the required dependencies:
 $ yarn install
 ```
 
-Quick summary of all the development scripts:
+Quick summary of the development scripts:
 
-* `build` - Build the Hugo theme, demo and documentation sites for production.
+- `build` - Build the Hugo theme, demo and documentation sites for production.
   Linting the sources in the process. Built artifacts are placed in the `dist`
   folder.
-* `build:theme:debug` - Build the Hugo theme unminified with source maps.
-* `dev` - Run the demo site development server.
-* `dev:doc` - Run the documentation site development server.
-* `lint` - Lint all files with ESLint, Stylelint and Prettier.
-* `format` - Format all files with ESLint, Stylelint and Prettier.
+- `build:theme:debug` - Build the Hugo theme unminified with source maps.
+- `dev` - Run the demo site development server.
+- `dev:doc` - Run the documentation site development server.
+- `lint` - Lint all files with ESLint, Stylelint and Prettier.
+- `format` - Format all files with ESLint, Stylelint and Prettier.
 
 The scripts can be invoked using `yarn run`:
 
