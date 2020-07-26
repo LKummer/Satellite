@@ -1,9 +1,14 @@
 {{/* Wrap in a div to set to full width inside a flexbox layout. */}}
 <div>
     <header class="navbar">
-        <h1 class="navbar-logo">
-            {{ .Site.Title }}
-        </h1>
+        <a class="navbar-logo-link" href="{{ absLangURL "" }}">
+            {{ with .Site.Params.graphics.logo }}
+            {{ htmlUnescape . | safeHTML }}
+            {{ end }}
+            <h1 class="navbar-logo-title">
+                {{ .Site.Title }}
+            </h1>
+        </a>
         {{ $current := . }}
         {{ with .Site.Menus.main }}
         <span class="navbar-spacer"></span>

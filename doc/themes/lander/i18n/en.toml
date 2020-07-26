@@ -3,3 +3,9 @@
 
 [list-uncategorized]
     other = "Uncategorized"
+
+[404-title]
+    other = "Could not find this one"
+
+[404-subtitle]
+    other = "Go back and try another page"

@@ -5,4 +5,7 @@
     {{ partial "head/stylesheet" . }}
     {{ partial "head/seo" . }}
     {{ partial "head/colors" . }}
+    {{ with .Site.Params.graphics.favicon }}
+    <link rel="icon" href="{{ relURL . }}">
+    {{ end }}
 </head>

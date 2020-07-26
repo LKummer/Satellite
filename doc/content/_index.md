@@ -1,11 +1,11 @@
 ---
 title: 'Home'
 menu:
-  main:
+  footer:
     weight: 10
 # Section Configuration:
 masthead:
-  title: 'Build Hugo themes with Webpack'
+  title: 'Build Hugo Themes with Webpack'
   subtitle: 'Integrate Hugo and the JS ecosystem'
   buttons:
     - label: 'Getting Started Guide'
