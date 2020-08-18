@@ -57,7 +57,7 @@ the language requires left-to-right or right-to-left styling by being set to
 ```toml
 # Example direction definition:
 [direction]
-    other: "ltr"
+    other = "ltr"
 ```
 
 If the `direction` definition is not set to either `ltr` or `rtl`, Hugo will
