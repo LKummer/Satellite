@@ -15,11 +15,11 @@
     "dev:theme": "webpack -w --env.hot",
     "dev:doc": "hugo serve --source doc",
     "lint": "run-s lint:eslint lint:stylelint lint:prettier",
-    "lint:eslint": "eslint **/*.js",
+    "lint:eslint": "eslint src/*.js *.js",
     "lint:stylelint": "stylelint **/*.scss",
     "lint:prettier": "prettier --check **/*.scss **/*.js **/*.json **/*.md",
     "format": "run-s format:prettier format:eslint format:stylelint",
-    "format:eslint": "eslint --fix **/*.js",
+    "format:eslint": "eslint --fix src/*.js *.js",
     "format:prettier": "prettier --write **/*.scss **/*.js **/*.json **/*.md",
     "format:stylelint": "stylelint --fix **/*.scss"
   },
