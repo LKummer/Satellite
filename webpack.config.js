@@ -33,13 +33,13 @@ module.exports = (env) => {
     },
     plugins: [
       // Copies files to the dist/theme folder.
-      new CopyPlugin(
-        [
+      new CopyPlugin({
+        patterns: [
           !isHotReload && { from: 'layouts', to: 'theme/layouts' },
           { from: 'i18n', to: 'theme/i18n' },
           { from: 'public', to: 'theme' }
         ].filter(Boolean)
-      ),
+      }),
       // Extracts a CSS file.
       new MiniCssExtractPlugin({
         filename: 'theme/static/[name].css'
