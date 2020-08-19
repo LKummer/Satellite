@@ -8,7 +8,7 @@ DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
-theme = "theme"
+theme = "hugo-theme-boilerplate"
 
 [menu]
 
