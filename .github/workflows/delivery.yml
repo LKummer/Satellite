@@ -35,19 +35,16 @@ jobs:
         run: |
           yarn run build:theme
           mv dist/theme dist/${theme_name}
-      - name: Archive the Theme
-        run: |
-          cd dist
-          tar --create --gzip --file ${theme_name}.tar.gz ${theme_name}
-          zip --recurse-paths ${theme_name}.zip ${theme_name}
-      - name: Archive Demo Site
+      - name: Archive Release Artifacts
         run: |
           cp --recursive demo dist/site
           mkdir dist/site/themes
           cp --recursive dist/${theme_name} dist/site/themes
           cd dist
-          tar --create --gzip --file quickstart-site.tar.gz site
+          zip --recurse-paths ${theme_name}.zip ${theme_name}
+          tar --create --gzip --file ${theme_name}.tar.gz ${theme_name}
           zip --recurse-paths quickstart-site.zip site
+          tar --create --gzip --file quickstart-site.tar.gz site
       - name: Create Release
         id: release
         uses: actions/create-release@v1
@@ -56,15 +53,6 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-      - name: Upload Tar Theme Archive
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: dist/${{ env.theme_name }}.tar.gz
-          asset_name: ${{ env.theme_name }}.tar.gz
-          asset_content_type: application/gzip
       - name: Upload Zip Theme Archive
         uses: actions/upload-release-asset@v1
         env:
@@ -74,14 +62,14 @@ jobs:
           asset_path: dist/${{ env.theme_name }}.zip
           asset_name: ${{ env.theme_name }}.zip
           asset_content_type: application/zip
-      - name: Upload Tar Site Archive
+      - name: Upload Tar Theme Archive
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: dist/quickstart-site.tar.gz
-          asset_name: quickstart-site.tar.gz
+          asset_path: dist/${{ env.theme_name }}.tar.gz
+          asset_name: ${{ env.theme_name }}.tar.gz
           asset_content_type: application/gzip
       - name: Upload Zip Site Archive
         uses: actions/upload-release-asset@v1
@@ -92,3 +80,12 @@ jobs:
           asset_path: dist/quickstart-site.zip
           asset_name: quickstart-site.zip
           asset_content_type: application/zip
+      - name: Upload Tar Site Archive
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: dist/quickstart-site.tar.gz
+          asset_name: quickstart-site.tar.gz
+          asset_content_type: application/gzip
