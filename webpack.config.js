@@ -47,7 +47,9 @@ module.exports = (env) => {
       // Extracts an RTL processed CSS file.
       new RTLPlugin(),
       // Lint during build.
-      new ESLintPlugin(),
+      new ESLintPlugin({
+        files: ['src/*.js', '*.js']
+      }),
       new StylelintPlugin({
         syntax: 'scss'
       })
