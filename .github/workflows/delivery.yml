@@ -29,20 +29,20 @@ jobs:
         run: yarn install
       - name: Set theme_name
         run: |
-          theme_name=$(node --print "require('./package.json').name")
+          theme_name="$(node --print 'require("./package.json").name')"
           echo "::set-env name=theme_name::${theme_name}"
       - name: Build Release Artifacts
         run: |
           yarn run build:theme
-          mv dist/theme dist/${theme_name}
+          mv dist/theme "dist/${theme_name}"
       - name: Archive Release Artifacts
         run: |
           cp --recursive demo dist/site
           mkdir dist/site/themes
-          cp --recursive dist/${theme_name} dist/site/themes
+          cp --recursive "dist/${theme_name}" dist/site/themes
           cd dist
-          zip --recurse-paths ${theme_name}.zip ${theme_name}
-          tar --create --gzip --file ${theme_name}.tar.gz ${theme_name}
+          zip --recurse-paths "${theme_name}.zip" "${theme_name}"
+          tar --create --gzip --file "${theme_name}.tar.gz" "${theme_name}"
           zip --recurse-paths quickstart-site.zip site
           tar --create --gzip --file quickstart-site.tar.gz site
       - name: Create Release
