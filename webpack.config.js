@@ -1,6 +1,5 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const RTLPlugin = require('webpack-rtl-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
@@ -36,7 +35,6 @@ module.exports = (env) => {
       new CopyPlugin({
         patterns: [
           !isHotReload && { from: 'layouts', to: 'theme/layouts' },
-          { from: 'i18n', to: 'theme/i18n' },
           { from: 'public', to: 'theme' }
         ].filter(Boolean)
       }),
@@ -44,8 +42,6 @@ module.exports = (env) => {
       new MiniCssExtractPlugin({
         filename: 'theme/static/[name].css'
       }),
-      // Extracts an RTL processed CSS file.
-      new RTLPlugin(),
       // Lint during build.
       new ESLintPlugin({
         files: ['src/*.js', '*.js']

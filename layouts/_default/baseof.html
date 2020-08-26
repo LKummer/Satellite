@@ -6,15 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
-    {{/* Load localized stylesheet. */}}
-    {{ $direction := T "direction" }}
-    {{ if eq $direction "ltr" }}
     <link rel="stylesheet" href="{{ absURL "/main.css" }}">
-    {{ else if eq $direction "rtl" }}
-    <link rel="stylesheet" href="{{ absURL "/main.rtl.css" }}">
-    {{ else }}
-    {{ errorf "Direction translation definition must be 'ltr' or 'rtl' (%s)." $direction }}
-    {{ end }}
     <title>{{ .Title }}</title>
   </head>
   <body>
