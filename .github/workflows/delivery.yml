@@ -30,7 +30,7 @@ jobs:
       - name: Set theme_name
         run: |
           theme_name="$(node --print 'require("./package.json").name')"
-          echo "::set-env name=theme_name::${theme_name}"
+          echo "theme_name=${theme_name}" >> $GITHUB_ENV
       - name: Build Release Artifacts
         run: |
           yarn run build:theme
