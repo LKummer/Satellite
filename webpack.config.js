@@ -44,10 +44,11 @@ module.exports = (env) => {
       }),
       // Lint during build.
       new ESLintPlugin({
-        files: ['src/*.js', '*.js']
+        files: ['src/**/*.js', '*.js']
       }),
       new StylelintPlugin({
-        syntax: 'scss'
+        syntax: 'scss',
+        files: ['src/**/*.s?(a|c)ss']
       })
     ]
   };
