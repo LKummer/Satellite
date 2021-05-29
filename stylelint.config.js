@@ -6,6 +6,7 @@ module.exports = {
     'at-rule-no-unknown': null,
     'at-rule-empty-line-before': null,
     'media-query-list-comma-newline-after': null,
+    'declaration-colon-newline-after': null,
     'scss/at-rule-no-unknown': true,
     'scss/at-each-key-value-single-line': true,
     'scss/at-else-empty-line-before': 'never',
