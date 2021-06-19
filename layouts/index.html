@@ -1,5 +1,10 @@
 {{ define "main" }}
 <section class="l-page">
-  Hello World
+  <h1 class="introduction-title">
+    {{ .Page.Title }}
+  </h1>
+  <section class="introduction-content content">
+    {{ .Page.Content }}
+  </section>
 </section>
 {{ end }}

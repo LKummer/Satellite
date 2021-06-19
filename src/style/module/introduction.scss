@@ -1,0 +1,11 @@
+.introduction {
+  &-title {
+    font-size: var(--type-size-4);
+    font-weight: var(--type-weight-4);
+    margin-top: var(--space-16);
+  }
+
+  &-content {
+    margin-top: var(--space-8);
+  }
+}
