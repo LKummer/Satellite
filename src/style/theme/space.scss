@@ -1,0 +1,33 @@
+@mixin -space-variable($label, $value) {
+  --space-#{$label}: #{$value};
+  --space-n#{$label}: -#{$value};
+}
+
+:root {
+  @include -space-variable('1', 0.25rem);
+  @include -space-variable('2', 0.5rem);
+  @include -space-variable('3', 0.75rem);
+  @include -space-variable('4', 1rem);
+  @include -space-variable('5', 1.25rem);
+  @include -space-variable('6', 1.5rem);
+  @include -space-variable('7', 1.75rem);
+  @include -space-variable('8', 2rem);
+  @include -space-variable('9', 2.25rem);
+  @include -space-variable('10', 2.5rem);
+  @include -space-variable('11', 2.75rem);
+  @include -space-variable('12', 3rem);
+  @include -space-variable('14', 3.5rem);
+  @include -space-variable('16', 4rem);
+  @include -space-variable('20', 5rem);
+  @include -space-variable('24', 6rem);
+  @include -space-variable('28', 7rem);
+  @include -space-variable('32', 8rem);
+  @include -space-variable('36', 9rem);
+  @include -space-variable('40', 10rem);
+  @include -space-variable('44', 11rem);
+  @include -space-variable('48', 12rem);
+  @include -space-variable('52', 13rem);
+  @include -space-variable('56', 14rem);
+  @include -space-variable('60', 15rem);
+  @include -space-variable('64', 16rem);
+}
