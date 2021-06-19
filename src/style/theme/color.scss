@@ -1,0 +1,12 @@
+:root {
+  // Color naming scheme:
+  // Colors are named --color-<group>-<part><number>
+  //   <group> is primary, secondary, tertiary...
+  //   <part> is either b (background), f (foreground), a (accent).
+  //   <number> roughly means darkness.
+
+  --color-primary-b1: hsl(250, 0%, 100%);
+  --color-primary-b2: hsl(250, 4%, 97%);
+  --color-primary-a1: hsl(250, 5%, 96%);
+  --color-primary-f9: hsl(250, 10%, 30%);
+}
