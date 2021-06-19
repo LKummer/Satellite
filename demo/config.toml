@@ -7,4 +7,10 @@ DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
+[menu]
+
+  [[menu.main]]
+    title = "Github"
+    permalink = "https://github.com/LKummer"
+
 theme = "hugo-theme-boilerplate"

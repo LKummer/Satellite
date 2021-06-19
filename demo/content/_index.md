@@ -1,3 +1,4 @@
 +++
-author = "Hugo Authors"
+menu = "main"
+title = "Home"
 +++

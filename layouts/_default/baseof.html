@@ -10,6 +10,24 @@
     <title>{{ .Title }}</title>
   </head>
   <body>
+    <nav class="navbar">
+      <ul class="navbar-items">
+        {{ $current := . }}
+        <li>
+          <a href class="navbar-logo">
+            {{ .Site.Title }}
+          </a>
+        </li>
+        <span class="navbar-items-spacer"></span>
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}" class="navbar-item {{ if $current.IsMenuCurrent "main" . }} navbar-item-active{{ end }}">
+            {{ .Title }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
     {{- block "main" . }}{{- end }}
     <script src='{{ absURL "main.js" }}'></script>
   </body>
