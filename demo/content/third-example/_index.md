@@ -1,4 +1,4 @@
 +++
-title = "Example"
+title = "Third Example"
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, eros."
 +++
