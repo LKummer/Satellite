@@ -1,35 +1,33 @@
 {{ define "main" }}
-<section class="l-page">
-  <h1 class="introduction-title">
-    {{ .Page.Title }}
-  </h1>
-  <section class="introduction-content content">
-    {{ .Page.Content }}
-  </section>
-  <ul class="l-sections">
-    {{ range .Site.Sections }}
-    <li>
-      <section class="section-top">
-        <h2 class="section-top-title">
-          {{ .Title }}
-        </h2>
-        {{ with .Description }}
-        <p class="section-top-description">
-          {{ . }}
-        </p>
-        {{ end }}
-      </section>
-      <ul class="section-bottom">
-        {{ range .Pages }}
-        <li>
-          <a href="{{ .URL }}" class="section-bottom-item">
-            {{ .Title }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-    </li>
-    {{ end }}
-  </ul>
+<h1 class="introduction-title">
+  {{ .Page.Title }}
+</h1>
+<section class="introduction-content content">
+  {{ .Page.Content }}
 </section>
+<ul class="l-sections">
+  {{ range .Site.Sections }}
+  <li>
+    <section class="section-top">
+      <h2 class="section-top-title">
+        {{ .Title }}
+      </h2>
+      {{ with .Description }}
+      <p class="section-top-description">
+        {{ . }}
+      </p>
+      {{ end }}
+    </section>
+    <ul class="section-bottom">
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .URL }}" class="section-bottom-item">
+          {{ .Title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </li>
+  {{ end }}
+</ul>
 {{ end }}

@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{{ absURL "main.css" }}">
     <title>{{ .Title }}</title>
   </head>
-  <body>
-    <nav class="navbar">
+  <body class="l-page-wrapper">
+    <nav aria-label="Main" class="navbar">
       <ul class="navbar-items">
         {{ $current := . }}
         <li>
@@ -28,7 +28,36 @@
         {{ end }}
       </ul>
     </nav>
-    {{- block "main" . }}{{- end }}
+    <section class="l-page">
+      <nav aria-label="Sections" class="navmenu">
+        {{ range .Site.Sections }}
+        <details open class="navmenu-section">
+          <summary class="navmenu-section-summary">
+            <h2 class="navmenu-section-summary-title">
+              {{ .Title }}
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            {{ range .Pages }}
+            <li>
+              <a href="{{ .Permalink }}" class="navmenu-section-pages-item {{ if eq $current.Permalink .Permalink }} navmenu-section-pages-item-current{{ end }}">
+                {{ .Title }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </details>
+        {{ end }}
+      </nav>
+      <section class="l-page-main">
+        {{- block "main" . }}{{- end }}
+      </section>
+    </section>
     <script src='{{ absURL "main.js" }}'></script>
   </body>
 </html>
