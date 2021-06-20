@@ -14,6 +14,7 @@
       justify-content: space-between;
       list-style: none;
       padding: var(--space-2) var(--space-4);
+      transition: all var(--motion-fast);
 
       &-title {
         font-size: var(--type-size-2);
