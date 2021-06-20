@@ -1,6 +1,6 @@
 .section {
   &-top {
-    background: var(--color-primary-b2);
+    background: var(--color-primary-b3);
     border-radius: var(--space-4) var(--space-4) 0 0;
 
     &-title {
@@ -18,6 +18,7 @@
   }
 
   &-bottom {
+    background: var(--color-primary-b2);
     border-bottom: 1px solid var(--color-primary-a1);
     border-left: 1px solid var(--color-primary-a1);
     border-radius: 0 0 var(--space-4) var(--space-4);
