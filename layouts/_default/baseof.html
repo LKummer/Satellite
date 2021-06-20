@@ -31,8 +31,8 @@
     <section class="l-page">
       <nav aria-label="Sections" class="navmenu">
         {{ range .Site.Sections }}
-        <details open class="navmenu-section">
-          <summary class="navmenu-section-summary">
+        <details class="navmenu-section"{{ if eq $current.CurrentSection . }} open{{ end }}>
+          <summary class="navmenu-section-summary{{ if eq $current.CurrentSection . }} navmenu-section-summary-current{{ end }}">
             <h2 class="navmenu-section-summary-title">
               {{ .Title }}
             </h2>

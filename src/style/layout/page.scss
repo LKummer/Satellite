@@ -1,7 +1,7 @@
 .l-page {
   display: grid;
   flex-grow: 1;
-  grid-template-columns: var(--space-64) 1fr;
+  grid-template-columns: 30ch 1fr;
 
   &-main {
     margin-left: auto;

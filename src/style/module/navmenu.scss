@@ -1,18 +1,21 @@
 .navmenu {
   background: var(--color-tertiary-b5);
+  padding-top: var(--space-4);
 
   &-section {
     cursor: pointer;
-    padding: var(--space-8) var(--space-4) 0 var(--space-4);
+    padding: var(--space-4) var(--space-4) 0 var(--space-4);
     user-select: none;
 
     &-summary {
+      border-radius: var(--space-2);
+      color: var(--color-tertiary-f3);
       display: flex;
       justify-content: space-between;
       list-style: none;
+      padding: var(--space-2) var(--space-4);
 
       &-title {
-        color: var(--color-tertiary-f3);
         font-size: var(--type-size-2);
         font-weight: var(--type-weight-4);
         margin: 0;
@@ -28,6 +31,20 @@
           transition: all var(--motion-fast);
         }
       }
+
+      &-current {
+        color: var(--color-tertiary-f6);
+      }
+
+      &:hover {
+        background: var(--color-tertiary-b6);
+        color: var(--color-tertiary-f4);
+      }
+
+      &:active {
+        background: var(--color-tertiary-b7);
+        color: var(--color-tertiary-f5);
+      }
     }
 
     &[open] &-summary-indicator-path {
@@ -36,13 +53,13 @@
 
     &-pages {
       list-style: none;
-      margin: var(--space-2) 0 0 0;
-      padding: 0;
+      padding: 0 0 0 var(--space-4);
 
       &-item {
         border-radius: var(--space-2);
         color: var(--color-tertiary-f3);
         display: block;
+        margin: var(--space-2) 0 0 0;
         padding: var(--space-2) var(--space-4);
         text-decoration: none;
         transition: all var(--motion-fast);
@@ -56,6 +73,11 @@
         &:hover {
           background: var(--color-tertiary-b6);
           color: var(--color-tertiary-f4);
+        }
+
+        &:active {
+          background: var(--color-tertiary-b7);
+          color: var(--color-tertiary-f5);
         }
       }
     }
