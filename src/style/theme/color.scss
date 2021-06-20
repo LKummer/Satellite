@@ -8,14 +8,18 @@
   --color-primary-b1: hsl(250, 0%, 100%);
   --color-primary-b2: hsl(250, 60%, 98%);
   --color-primary-a1: hsl(250, 40%, 92%);
-  --color-primary-f5: hsl(250, 10%, 40%);
+  --color-primary-f5: hsl(250, 10%, 50%);
   --color-primary-f6: hsl(250, 15%, 35%);
   --color-primary-f7: hsl(250, 20%, 30%);
   --color-primary-f9: hsl(250, 10%, 30%);
-  --color-secondary-b5: hsl(250, 55%, 40%);
-  --color-secondary-b4: hsl(250, 52%, 45%);
-  --color-secondary-b3: hsl(250, 50%, 48%);
-  --color-secondary-f1: hsl(250, 15%, 80%);
+  --color-secondary-b3: hsl(260, 75%, 47%);
+  --color-secondary-b4: hsl(260, 70%, 48%);
+  --color-secondary-b5: linear-gradient(
+    30deg,
+    hsl(250, 55%, 45%),
+    hsl(260, 65%, 50%)
+  );
+  --color-secondary-f1: hsl(250, 50%, 82%);
   --color-tertiary-b5: hsl(250, 60%, 98%);
   --color-tertiary-b6: hsl(250, 70%, 95%);
   --color-tertiary-b7: hsl(250, 75%, 93%);

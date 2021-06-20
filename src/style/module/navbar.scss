@@ -1,11 +1,16 @@
 .navbar {
   background: var(--color-secondary-b5);
+  box-shadow: 0 0.1rem var(--space-2) hsla(0, 0%, 0%, 20%),
+    0 0.15rem var(--space-2) hsla(0, 0%, 0%, 10%);
+  padding: 0 var(--space-4) 0 0;
+  z-index: 10;
 
   &-logo {
     color: var(--color-secondary-f1);
     display: inline-block;
+    font-size: var(--type-size-2);
     font-weight: var(--type-weight-5);
-    padding: var(--space-6);
+    padding: var(--space-6) var(--space-8);
     text-decoration: none;
   }
 
@@ -23,8 +28,9 @@
   &-item {
     color: var(--color-secondary-f1);
     display: inline-block;
-    padding: var(--space-6);
+    padding: var(--space-6) var(--space-4);
     text-decoration: none;
+    transition: all var(--motion-fast);
 
     &-active {
       font-weight: var(--type-weight-5);
