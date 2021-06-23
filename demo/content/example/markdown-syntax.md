@@ -12,15 +12,27 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 # H1
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.
+
 ## H2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.
 
 ### H3
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.
+
 #### H4
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.
 
 ##### H5
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.
+
 ###### H6
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.
 
 ## Paragraph
 
@@ -124,8 +136,8 @@ html
 
 - Item
 
-1. First Sub-item
-2. Second Sub-item
+  1. First Sub-item
+  2. Second Sub-item
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 

@@ -1,3 +1,78 @@
 .content {
   font-family: var(--type-family-longform);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--type-family);
+    line-height: var(--type-height-1);
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  h1,
+  h2 {
+    font-size: var(--type-size-5);
+    margin-bottom: var(--space-6);
+    margin-top: var(--space-10);
+  }
+
+  h3 {
+    font-size: var(--type-size-4);
+  }
+
+  h4 {
+    font-size: var(--type-size-3);
+  }
+
+  h5 {
+    font-size: var(--type-size-2);
+  }
+
+  h6 {
+    font-size: var(--type-size-1);
+  }
+
+  p {
+    margin-bottom: var(--space-8);
+    margin-top: 0;
+  }
+
+  ul,
+  ol {
+    margin-bottom: var(--space-8);
+    margin-top: 0;
+    padding-left: var(--space-12);
+  }
+
+  li {
+    margin-bottom: var(--space-3);
+
+    > p {
+      margin-bottom: var(--space-3);
+    }
+  }
+
+  li::marker {
+    color: var(--color-primary-f4);
+    font-family: var(--type-family);
+  }
+
+  &-title {
+    font-family: var(--type-family);
+    font-size: var(--type-size-6);
+    font-weight: var(--type-weight-4);
+    line-height: var(--type-height-1);
+    margin-bottom: var(--space-12);
+    margin-top: var(--space-24);
+  }
 }
