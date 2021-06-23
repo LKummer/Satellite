@@ -26,6 +26,9 @@
   "author": "Lior Kummer",
   "license": "GPL-3.0",
   "devDependencies": {
+    "@openfonts/fira-code_latin": "^1.44.8",
+    "@openfonts/lora_latin": "^1.44.2",
+    "@openfonts/manrope_latin": "^1.0.2",
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.1.1",
     "eslint": "^7.21.0",
