@@ -84,7 +84,7 @@
 
   td,
   th {
-    padding: var(--space-2) var(--space-4);
+    padding: var(--space-2) var(--space-6);
   }
 
   tr:nth-of-type(2n) > td {
@@ -107,6 +107,15 @@
 
   th:last-child {
     border-radius: 0 var(--space-4) 0 0;
+  }
+
+  pre {
+    background: var(--color-syntax-background);
+    color: var(--color-syntax-foreground);
+    border-radius: var(--space-4);
+    padding: var(--space-4) var(--space-6);
+    margin-bottom: var(--space-8);
+    margin-top: 0;
   }
 
   &-title {
