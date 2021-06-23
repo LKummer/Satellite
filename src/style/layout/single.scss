@@ -1,0 +1,9 @@
+.l-single {
+  display: grid;
+  gap: var(--space-16);
+  grid-template-columns: auto 25ch;
+
+  &-side {
+    margin-top: var(--space-24);
+  }
+}
