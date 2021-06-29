@@ -1,3 +1,6 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
 .l-single {
   display: grid;
   gap: var(--space-16);
@@ -5,5 +8,13 @@
 
   &-side {
     margin-top: var(--space-24);
+  }
+
+  @include break.media-under('medium', screen.$breakpoints) {
+    grid-template-columns: auto;
+
+    &-side {
+      display: none;
+    }
   }
 }
