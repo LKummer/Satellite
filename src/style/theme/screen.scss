@@ -1,0 +1,12 @@
+$breakpoints: (
+  'small': (
+    'upper': 980px
+  ),
+  'medium': (
+    'lower': 980.1px,
+    'upper': 1270px
+  ),
+  'large': (
+    'lower': 1270.1px
+  )
+)
