@@ -22,4 +22,9 @@
       text-decoration: underline;
     }
   }
+
+  .is-active {
+    font-weight: var(--type-weight-4);
+    margin-bottom: var(--space-8);
+  }
 }
