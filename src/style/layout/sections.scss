@@ -3,8 +3,8 @@
 
 .l-sections {
   @include break.media-under('medium', screen.$breakpoints) {
-    grid-template-columns: 1fr;
     gap: var(--space-16);
+    grid-template-columns: 1fr;
   }
 
   display: grid;
