@@ -14,6 +14,10 @@
   z-index: 10;
 
   &-logo {
+    @include break.media-under('small', screen.$breakpoints) {
+      padding: var(--space-6) var(--space-4);
+    }
+
     color: var(--color-secondary-f1);
     display: inline-block;
     font-size: var(--type-size-2);
