@@ -3,9 +3,8 @@
 
 .l-page {
   @include break.media-under('small', screen.$breakpoints) {
+    display: block;
     grid-template-columns: 1fr;
-    margin-left: var(--space-4);
-    margin-right: var(--space-4);
 
     &-side {
       display: none;
@@ -15,8 +14,14 @@
   display: grid;
   flex-grow: 1;
   grid-template-columns: 30ch 1fr;
+  overflow: auto;
 
   &-main {
+    @include break.media-under('small', screen.$breakpoints) {
+      margin-left: var(--space-4);
+      margin-right: var(--space-4);
+    }
+
     @include break.media-under('medium', screen.$breakpoints) {
       max-width: 60ch;
     }

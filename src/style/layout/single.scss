@@ -3,6 +3,10 @@
 
 .l-single {
   @include break.media-under('medium', screen.$breakpoints) {
+    display: block;
+  }
+
+  @include break.media-under('medium', screen.$breakpoints) {
     grid-template-columns: auto;
 
     &-side {
@@ -12,7 +16,7 @@
 
   display: grid;
   gap: var(--space-16);
-  grid-template-columns: auto 25ch;
+  grid-template-columns: 1fr 25ch;
 
   &-side {
     margin-top: var(--space-24);
