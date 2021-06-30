@@ -1,5 +1,12 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
 .introduction {
   &-title {
+    @include break.media-under('small', screen.$breakpoints) {
+      margin-top: var(--space-32);
+    }
+
     font-size: var(--type-size-4);
     font-weight: var(--type-weight-4);
     margin-top: var(--space-24);

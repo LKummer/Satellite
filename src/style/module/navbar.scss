@@ -1,4 +1,12 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
 .navbar {
+  @include break.media-under('small', screen.$breakpoints) {
+    position: fixed;
+    width: 100%;
+  }
+
   background: var(--color-secondary-b5);
   box-shadow: 0 0.1rem var(--space-2) hsla(0, 0%, 0%, 20%),
     0 0.15rem var(--space-2) hsla(0, 0%, 0%, 10%);
@@ -26,8 +34,17 @@
   }
 
   &-item {
+    @include break.media-under('small', screen.$breakpoints) {
+      display: none;
+    }
+
+    background: inherit;
+    border: none;
     color: var(--color-secondary-f1);
     display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
     padding: var(--space-6) var(--space-4);
     text-decoration: none;
     transition: all var(--motion-fast);
@@ -43,5 +60,13 @@
     &:active {
       background: var(--color-secondary-b3);
     }
+  }
+
+  &-hamburger {
+    @include break.media-under('small', screen.$breakpoints) {
+      display: inline-block;
+    }
+
+    display: none;
   }
 }

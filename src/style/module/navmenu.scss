@@ -1,6 +1,50 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
 .navmenu {
+  @include break.media-under('small', screen.$breakpoints) {
+    padding-top: var(--space-24);
+  }
+
   background: var(--color-tertiary-b5);
+  padding-bottom: var(--space-4);
   padding-top: var(--space-4);
+
+  &-top {
+    list-style: none;
+    margin: 0;
+    padding: 0 var(--space-4);
+
+    &-item {
+      border-radius: var(--space-2);
+      color: var(--color-tertiary-f3);
+      display: block;
+      margin: var(--space-4) 0 0 0;
+      padding: var(--space-2) var(--space-4);
+      text-decoration: none;
+      transition: all var(--motion-fast);
+
+      &-active {
+        background: var(--color-tertiary-b6);
+        border-radius: var(--space-2);
+        color: var(--color-tertiary-f4);
+      }
+
+      &:hover {
+        background: var(--color-tertiary-b6);
+        color: var(--color-tertiary-f4);
+      }
+
+      &:active {
+        background: var(--color-tertiary-b7);
+        color: var(--color-tertiary-f5);
+      }
+
+      &:first-of-type {
+        margin: 0;
+      }
+    }
+  }
 
   &-section {
     cursor: pointer;
@@ -24,6 +68,7 @@
       }
 
       &-indicator {
+        margin-left: var(--space-4);
         width: var(--space-4);
 
         &-path {
@@ -54,6 +99,7 @@
 
     &-pages {
       list-style: none;
+      margin: var(--space-2) 0 0 0;
       padding: 0 0 0 var(--space-4);
 
       &-item {
