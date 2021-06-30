@@ -15,7 +15,7 @@
   height: 100%;
   overflow: auto;
   position: fixed;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: all var(--motion-fast);
   visibility: hidden;
   width: 100%;
