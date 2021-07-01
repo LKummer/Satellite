@@ -103,7 +103,8 @@
         }
 
         &-middle {
-          opacity: 0;
+          transform: rotate(45deg);
+          transform-origin: 8px 8px;
         }
 
         &-bottom {
