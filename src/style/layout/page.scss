@@ -16,8 +16,6 @@
   display: grid;
   flex-grow: 1;
   grid-template-columns: 30ch 1fr;
-  overflow: auto;
-  scroll-behavior: smooth;
 
   &-main {
     @include break.media-under('medium', screen.$breakpoints) {

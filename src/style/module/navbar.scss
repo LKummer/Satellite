@@ -4,7 +4,7 @@
 .navbar {
   @include break.media-under('small', screen.$breakpoints) {
     position: fixed;
-    width: 100%;
+    width: 100vw;
   }
 
   background: var(--color-secondary-b5);
