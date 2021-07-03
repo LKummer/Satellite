@@ -11,8 +11,15 @@ pygmentsUseClasses = true
 theme = "hugo-theme-boilerplate"
 
 [menu]
+[[menu.main]]
+  title = "Github"
+  permalink = "https://github.com/LKummer"
 
-  [[menu.main]]
-    title = "Github"
-    permalink = "https://github.com/LKummer"
-
+[params]
+[params.seo]
+  description = "Satelite Hugo theme demo."
+  [params.seo.images]
+    ldPaths = ["images/image-1x1.png", "images/image-4x3.png", "images/image-16x9.png"]
+    ogPath = "images/image.png"
+    ogHeight = "1080"
+    ogWidth = "1920"

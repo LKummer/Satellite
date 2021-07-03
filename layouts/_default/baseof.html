@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -8,6 +8,26 @@
     />
     <link rel="stylesheet" href="{{ absURL "main.css" }}">
     <title>{{ .Title }}</title>
+    {{- $description := .Description | default .Site.Params.seo.description }}
+    <meta name="description" content="{{ $description }}">
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ $description }}" />
+    <meta property="og:image" content="{{ absURL .Site.Params.seo.images.ogPath }}" />
+    <meta property="og:image:height" content="{{ .Site.Params.seo.images.ogHeight }}" />
+    <meta property="og:image:width" content="{{ .Site.Params.seo.images.ogWidth }}" />
+    {{- if .IsPage }}
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ .Title }}",
+      "image": {{ .Site.Params.seo.images.ldPaths }}
+    }
+    </script>
+    {{- end }}
   </head>
   <body class="l-page-wrapper">
     <nav aria-label="Main" class="navbar">
