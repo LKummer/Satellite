@@ -14,16 +14,38 @@
   z-index: 10;
 
   &-logo {
+    --logo-hover: 0;
+
     @include break.media-under('small', screen.$breakpoints) {
-      padding: var(--space-6) var(--space-4);
+      padding-left: var(--space-4);
     }
 
-    color: var(--color-secondary-f1);
-    display: inline-block;
-    font-size: var(--type-size-2);
-    font-weight: var(--type-weight-5);
-    padding: var(--space-6) var(--space-8);
+    align-items: center;
+    display: flex;
+    padding-left: var(--space-8);
     text-decoration: none;
+
+    &:hover {
+      --logo-hover: 1;
+    }
+
+    &-icon {
+      height: var(--space-14);
+      margin-right: var(--space-2);
+    }
+
+    &-title {
+      @include break.media-under('small', screen.$breakpoints) {
+        padding: var(--space-6) var(--space-4) var(--space-6) 0;
+      }
+
+      color: var(--color-secondary-f1);
+      display: inline-block;
+      font-size: var(--type-size-2);
+      font-weight: var(--type-weight-5);
+      margin: 0;
+      padding: var(--space-6) var(--space-8) var(--space-6) 0;
+    }
   }
 
   &-items {

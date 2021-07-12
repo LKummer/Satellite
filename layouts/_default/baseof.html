@@ -35,7 +35,12 @@
         {{ $current := . }}
         <li>
           <a href class="navbar-logo">
-            {{ .Site.Title }}
+            {{- with .Site.Params.icons.navbarIcon }}
+            {{ . | safeHTML }}
+            {{- end }}
+            <h1 class="navbar-logo-title">
+              {{ .Site.Title }}
+            </h1>
           </a>
         </li>
         <span class="navbar-items-spacer"></span>
