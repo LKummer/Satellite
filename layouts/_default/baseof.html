@@ -8,6 +8,9 @@
     />
     <link rel="stylesheet" href="{{ absURL "main.css" }}">
     <title>{{ .Title }}</title>
+    {{- with .Site.Params.icons.favicon }}
+    <link rel="icon" href="{{ absURL . }}">
+    {{- end }}
     {{- $description := .Description | default .Site.Params.seo.description }}
     <meta name="description" content="{{ $description }}">
     <meta name="twitter:card" content="summary" />
