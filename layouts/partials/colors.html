@@ -1,0 +1,14 @@
+{{ $valid := slice "primary-b1" "primary-b2" "primary-b3" "primary-b4" "primary-b5" "primary-a1" "primary-f4" "primary-f5" "primary-f6" "primary-f7" "primary-f9" "secondary-b3" "secondary-b4" "secondary-b5" "secondary-f1" "tertiary-b5" "tertiary-b6" "tertiary-b7" "tertiary-a3" "tertiary-f3" "tertiary-f4" "tertiary-f5" "tertiary-f6" "syntax-background" "syntax-foreground" "syntax-comment" "syntax-special" "syntax-operator" "syntax-literal" }}
+{{ with .Site.Params.colors }}
+<style>
+:root {
+    {{ range $key, $value := . -}}
+    {{ if in $valid $key -}}
+    --color-{{ $key }}: {{ safeCSS $value }};
+    {{ else -}}
+        {{ warnf "Invalid colors config parameter: %s." $key -}}
+    {{ end -}}
+    {{ end -}}
+}
+</style>
+{{ end }}
