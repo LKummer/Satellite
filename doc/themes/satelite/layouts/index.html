@@ -6,7 +6,7 @@
   {{ .Page.Content }}
 </section>
 <ul class="l-sections">
-  {{ range .Site.Sections }}
+  {{ range partial "sort-sections" .Site.Sections }}
   <li>
     <section class="section-top">
       <h2 class="section-top-title">

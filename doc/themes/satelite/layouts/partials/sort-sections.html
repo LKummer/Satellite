@@ -1,0 +1,8 @@
+{{/* Sort sections by weight. */}}
+{{ $weightedSectionsUnder0 := sort (where . "Params.weight" ">" 0) "Params.weight" }}
+{{ $weightedSectionsAbove0 := sort (where . "Params.weight" "<" 0) "Params.weight" }}
+{{/* Treat weight of 0 as unset weight. */}}
+{{ $unweightedSections := (where . "Params.weight" "==" nil) | append (where . "Params.weight" "==" 0) }}
+{{ $sortedUnweightedSections := sort $unweightedSections "Title" }}
+{{ $sortedSections := $weightedSectionsAbove0 | append $sortedUnweightedSections | append $weightedSectionsUnder0 }}
+{{ return $sortedSections }}
