@@ -124,6 +124,21 @@
     font-family: var(--type-family-monospace);
   }
 
+  a {
+    color: var(--color-primary-a2);
+    text-decoration: underline hsla(0, 0%, 0%, 0%);
+    transition: all var(--motion-fast);
+
+    &:hover {
+      color: var(--color-primary-a3);
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: var(--color-primary-a4);
+    }
+  }
+
   &-title {
     font-family: var(--type-family);
     font-size: var(--type-size-6);

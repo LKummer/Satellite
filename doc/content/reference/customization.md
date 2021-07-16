@@ -21,6 +21,9 @@ Used for the main section of the website, where content is displayed.
 | `primary-b4` | Table background.                        |
 | `primary-b5` | Table alternate background.              |
 | `primary-a1` | Card border.                             |
+| `primary-a2` | Content link.                            |
+| `primary-a3` | Content link hover.                      |
+| `primary-a4` | Content link active.                     |
 | `primary-f4` | List markers and table of contents text. |
 | `primary-f5` | Content text color.                      |
 | `primary-f6` | Page link hover.                         |
