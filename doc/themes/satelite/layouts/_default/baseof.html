@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="{{ absURL "main.css" }}">
+    <title>{{ .Title }}</title>
+    {{- with .Site.Params.icons.favicon }}
+    <link rel="icon" href="{{ absURL . }}">
+    {{- end }}
+    {{- $description := .Description | default .Site.Params.seo.description }}
+    <meta name="description" content="{{ $description }}">
+    {{- with .Site.Params.seo.twitterCard }}
+    <meta name="twitter:card" content="{{ . }}" />
+    {{- end }}
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ $description }}" />
+    <meta property="og:image" content="{{ absURL .Site.Params.seo.images.ogPath }}" />
+    <meta property="og:image:height" content="{{ .Site.Params.seo.images.ogHeight }}" />
+    <meta property="og:image:width" content="{{ .Site.Params.seo.images.ogWidth }}" />
+    {{- if .IsPage }}
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ .Title }}",
+      "image": {{ .Site.Params.seo.images.ldPaths }}
+    }
+    </script>
+    {{- end }}
+    {{ partial "colors" . }}
+  </head>
+  <body class="l-page-wrapper">
+    <nav aria-label="Main" class="navbar">
+      <ul class="navbar-items">
+        {{ $current := . }}
+        <li>
+          <a href class="navbar-logo">
+            {{- with .Site.Params.icons.navbarIcon }}
+            {{ . | safeHTML }}
+            {{- end }}
+            <h1 class="navbar-logo-title">
+              {{ .Site.Title }}
+            </h1>
+          </a>
+        </li>
+        <span class="navbar-items-spacer"></span>
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}" class="navbar-item {{ if $current.IsMenuCurrent "main" . }} navbar-item-active{{ end }}">
+            {{ .Title }}
+          </a>
+        </li>
+        {{ end }}
+        <li>
+          <button aria-label="Toggle Navigation Menu" aria-expanded="false" id="navbar-hamburger" class="navbar-item navbar-hamburger">
+            <svg class="navbar-hamburger-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navbar-hamburger-icon-top" d="M13.5,4h-11C1.7,4,1,3.3,1,2.5v0C1,1.7,1.7,1,2.5,1h11C14.3,1,15,1.7,15,2.5v0C15,3.3,14.3,4,13.5,4z"/>
+              <path class="navbar-hamburger-icon-middle" d="M13.5,9.5h-11C1.7,9.5,1,8.8,1,8v0c0-0.8,0.7-1.5,1.5-1.5h11C14.3,6.5,15,7.2,15,8v0C15,8.8,14.3,9.5,13.5,9.5z"/>
+              <path class="navbar-hamburger-icon-bottom" d="M13.5,15h-11C1.7,15,1,14.3,1,13.5v0C1,12.7,1.7,12,2.5,12h11c0.8,0,1.5,0.7,1.5,1.5v0C15,14.3,14.3,15,13.5,15z"/>
+            </g>
+            </svg>
+            Menu
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <section class="l-page">
+      <nav aria-label="Sections" class="navmenu l-page-side">
+        {{ range .Site.Sections }}
+        <details class="navmenu-section"{{ if eq $current.CurrentSection . }} open{{ end }}>
+          <summary class="navmenu-section-summary{{ if eq $current.CurrentSection . }} navmenu-section-summary-current{{ end }}">
+            <h2 class="navmenu-section-summary-title">
+              {{ .Title }}
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            {{ range .Pages }}
+            <li>
+              <a href="{{ .Permalink }}" class="navmenu-section-pages-item {{ if eq $current.Permalink .Permalink }} navmenu-section-pages-item-current{{ end }}">
+                {{ .Title }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </details>
+        {{ end }}
+      </nav>
+      <section class="l-page-main">
+        {{- block "main" . }}{{- end }}
+      </section>
+    </section>
+    <nav aria-label="Navigation Menu" id="hamburger-menu" class="l-sidemenu navmenu">
+      <ul class="navmenu-top">
+        <li>
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="navmenu-top-item {{ if $current.IsMenuCurrent "main" . }} navmenu-top-item-active{{ end }}">
+            {{ .Title }}
+          </a>
+        {{ end }}
+        </li>
+      </ul>
+      {{ range .Site.Sections }}
+      <details class="navmenu-section"{{ if eq $current.CurrentSection . }} open{{ end }}>
+        <summary class="navmenu-section-summary{{ if eq $current.CurrentSection . }} navmenu-section-summary-current{{ end }}">
+          <h2 class="navmenu-section-summary-title">
+            {{ .Title }}
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          {{ range .Pages }}
+          <li>
+            <a href="{{ .Permalink }}" class="navmenu-section-pages-item {{ if eq $current.Permalink .Permalink }} navmenu-section-pages-item-current{{ end }}">
+              {{ .Title }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </details>
+      {{ end }}
+    </nav>
+    <script src='{{ absURL "main.js" }}'></script>
+  </body>
+</html>

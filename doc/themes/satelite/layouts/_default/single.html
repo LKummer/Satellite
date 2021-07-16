@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="l-single">
+  <section>
+    <h1 class="content-title">
+      {{ .Title }}
+    </h1>
+    <section class="content">
+      {{ .Content }}
+    </section>
+  </section>
+  <aside class="l-single-side">
+    {{ .TableOfContents }}
+  </aside>
+</section>
+{{ end }}
