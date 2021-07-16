@@ -13,7 +13,9 @@
     {{- end }}
     {{- $description := .Description | default .Site.Params.seo.description }}
     <meta name="description" content="{{ $description }}">
-    <meta name="twitter:card" content="summary" />
+    {{- with .Site.Params.seo.twitterCard }}
+    <meta name="twitter:card" content="{{ . }}" />
+    {{- end }}
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="{{ $description }}" />

@@ -18,8 +18,13 @@ theme = "hugo-theme-boilerplate"
 [params]
 [params.seo]
   description = "Satelite Hugo theme demo."
+  twitterCard = "summary"
   [params.seo.images]
-    ldPaths = ["images/image-1x1.png", "images/image-4x3.png", "images/image-16x9.png"]
+    ldPaths = [
+      "images/image-1x1.png",
+      "images/image-4x3.png",
+      "images/image-16x9.png"
+    ]
     ogPath = "images/image.png"
     ogHeight = "1080"
     ogWidth = "1920"
