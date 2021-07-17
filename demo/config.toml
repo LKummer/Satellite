@@ -10,6 +10,11 @@ footnoteReturnLinkContents = "^"
 pygmentsUseClasses = true
 theme = "hugo-theme-boilerplate"
 
+taxonomies = []
+
+[outputs]
+  home = ["HTML", "JSON"]
+
 [menu]
 [[menu.main]]
   title = "Github"
