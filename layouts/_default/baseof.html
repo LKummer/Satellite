@@ -41,7 +41,7 @@
       <ul class="navbar-items">
         {{ $current := . }}
         <li>
-          <a href class="navbar-logo">
+          <a href={{ .Site.Params.logoPermalink | default .Site.BaseURL  }} class="navbar-logo">
             {{- with .Site.Params.icons.navbarIcon }}
             {{ . | safeHTML }}
             {{- end }}
