@@ -5,6 +5,14 @@
 <section class="introduction-content content">
   {{ .Page.Content }}
 </section>
+<section class="introduction-search">
+  <h2 class="introduction-search-title">
+    What are you looking for?
+  </h2>
+  <input id="introduction-search" class="introduction-search-input" type="search" name="home-search" placeholder="Type anything to search">
+  <nav id="introduction-search-popup" class="introduction-search-popup search-results" aria-hidden="true">
+  </nav>
+</section>
 <ul class="l-sections">
   {{ range partial "sort-sections" .Site.Sections }}
   <li>
