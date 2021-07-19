@@ -63,15 +63,10 @@
       bottom: -100%;
       box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
         hsla(0, 0%, 0%, 25%);
-      opacity: 0;
       padding: var(--space-6) var(--space-5);
       position: absolute;
       transition: opacity var(--motion-fast);
       width: 30rem;
-
-      &-active {
-        opacity: 1;
-      }
     }
   }
 }

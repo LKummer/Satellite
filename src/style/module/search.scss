@@ -1,8 +1,30 @@
 .search {
   &-results {
-    display: grid;
+    @keyframes popup-show {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    display: none;
     gap: var(--space-8);
     grid-template-columns: 5fr 8fr;
+
+    &-active {
+      display: grid;
+    }
+
+    &-show {
+      animation: popup-show var(--motion-fast);
+    }
+
+    &-hide {
+      animation: popup-show var(--motion-fast) reverse;
+    }
 
     &-section {
       color: var(--color-primary-f4);

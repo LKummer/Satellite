@@ -43,6 +43,42 @@ function renderResults(results) {
   return children;
 }
 
+class PopupAnimator {
+  constructor(
+    popup,
+    popper,
+    showClass,
+    showAnimationClass,
+    hideAnimationClass
+  ) {
+    this.popup = popup;
+    this.popper = popper;
+    this.showClass = showClass;
+    this.showAnimationClass = showAnimationClass;
+    this.hideAnimationClass = hideAnimationClass;
+    this.shown = false;
+    popup.addEventListener('animationend', (event) => {
+      event.target.classList.remove(this.showAnimationClass);
+      if (event.target.classList.contains(this.hideAnimationClass)) {
+        event.target.classList.remove(this.showClass, this.hideAnimationClass);
+      }
+    });
+  }
+  show() {
+    if (!this.shown) {
+      this.popup.classList.add(this.showClass, this.showAnimationClass);
+      this.popup.setAttribute('aria-hidden', false);
+      this.popper.update();
+      this.shown = true;
+    }
+  }
+  hide() {
+    this.popup.classList.add(this.hideAnimationClass);
+    this.popup.setAttribute('aria-hidden', true);
+    this.shown = false;
+  }
+}
+
 class Search {
   constructor() {
     this.fuse = null;
@@ -61,32 +97,19 @@ class Search {
 class SearchInput {
   constructor(
     input,
-    popup,
-    popper,
+    popupAnimator,
     searchEngine,
-    popupActiveClass,
     noResultsElements,
     resultCount = 6
   ) {
     this.input = input;
-    this.popup = popup;
-    this.popper = popper;
+    this.popupAnimator = popupAnimator;
     this.searchEngine = searchEngine;
-    this.activeClass = popupActiveClass;
     this.noResultsElement = noResultsElements;
     this.resultCount = resultCount;
   }
-  show() {
-    this.popup.classList.add(this.activeClass);
-    this.popup.setAttribute('aria-hidden', false);
-    this.popper.update();
-  }
-  hide() {
-    this.popup.classList.remove(this.activeClass);
-    this.popup.setAttribute('aria-hidden', true);
-  }
   clear() {
-    this.popup.replaceChildren();
+    this.popupAnimator.popup.replaceChildren();
   }
   async search(query) {
     if (query) {
@@ -94,14 +117,14 @@ class SearchInput {
       const results = await this.searchEngine.search(query);
       const children = renderResults(results.slice(0, this.resultCount));
       if (children.length !== 0) {
-        this.popup.replaceChildren(...children);
+        this.popupAnimator.popup.replaceChildren(...children);
       } else {
         console.log('no results');
-        this.popup.replaceChildren(...this.noResultsElement);
+        this.popupAnimator.popup.replaceChildren(...this.noResultsElement);
       }
-      this.show();
+      this.popupAnimator.show();
     } else {
-      this.hide();
+      this.popupAnimator.hide();
     }
   }
 }
@@ -118,15 +141,20 @@ export default function init() {
       placement: 'bottom',
       modifiers: [{ name: 'offset', options: { offset: [0, 16] } }]
     });
+    const popupAnimator = new PopupAnimator(
+      popup,
+      popper,
+      'search-results-active',
+      'search-results-show',
+      'search-results-hide'
+    );
 
     const searchEngine = new Search();
 
     const introductionSearch = new SearchInput(
       input,
-      popup,
-      popper,
+      popupAnimator,
       searchEngine,
-      'introduction-search-popup-active',
       [noResultsElement]
     );
 
