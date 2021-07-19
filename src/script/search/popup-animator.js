@@ -26,8 +26,10 @@ export class PopupAnimator {
     }
   }
   hide() {
-    this.popup.classList.add(this.hideAnimationClass);
-    this.popup.setAttribute('aria-hidden', true);
-    this.shown = false;
+    if (this.shown) {
+      this.popup.classList.add(this.hideAnimationClass);
+      this.popup.setAttribute('aria-hidden', true);
+      this.shown = false;
+    }
   }
 }

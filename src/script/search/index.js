@@ -65,13 +65,16 @@ export default function init() {
 
     const searchEngine = new Search();
 
-    const introductionSearch = new SearchInput(input, popupAnimator, {
+    const introductionSearch = new SearchInput(popupAnimator, {
       searchEngine,
       renderResults,
       noResultsElements: [noResultsElement]
     });
 
     input.addEventListener('keyup', (event) => {
+      introductionSearch.search(event.target.value);
+    });
+    input.addEventListener('focusin', (event) => {
       introductionSearch.search(event.target.value);
     });
   }

@@ -1,10 +1,8 @@
 export class SearchInput {
   constructor(
-    input,
     popupAnimator,
     { searchEngine, renderResults, noResultsElements, resultCount = 6 }
   ) {
-    this.input = input;
     this.popupAnimator = popupAnimator;
     this.searchEngine = searchEngine;
     this.renderResults = renderResults;
