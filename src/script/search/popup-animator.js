@@ -2,9 +2,7 @@ export class PopupAnimator {
   constructor(
     popup,
     popper,
-    showClass,
-    showAnimationClass,
-    hideAnimationClass
+    { showClass, showAnimationClass, hideAnimationClass }
   ) {
     this.popup = popup;
     this.popper = popper;
