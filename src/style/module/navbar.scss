@@ -136,4 +136,43 @@
       }
     }
   }
+
+  &-search {
+    @include break.media-under('small', screen.$breakpoints) {
+      display: none;
+    }
+
+    background: var(--color-secondary-b2);
+    border: solid 1px var(--color-secondary-a1);
+    border-radius: var(--space-4);
+    color: var(--color-secondary-f9);
+    font-size: var(--type-size-1);
+    margin-right: var(--space-4);
+    outline: 0 solid var(--color-secondary-a1);
+    padding: var(--space-3) var(--space-4);
+    transition: all var(--motion-fast);
+    width: 30ch;
+
+    &:focus {
+      outline: 3px solid var(--color-secondary-a1);
+    }
+
+    &-popup {
+      @include break.media-under('small', screen.$breakpoints) {
+        /* Important to hide navbar search results on mobile. */
+        display: none !important;
+      }
+
+      background: var(--color-primary-b2);
+      border: solid 1px var(--color-primary-a1);
+      border-radius: var(--space-4);
+      bottom: -100%;
+      box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
+        hsla(0, 0%, 0%, 25%);
+      padding: var(--space-6) var(--space-5);
+      position: absolute;
+      transition: opacity var(--motion-fast);
+      width: 30rem;
+    }
+  }
 }

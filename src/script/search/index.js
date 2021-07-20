@@ -46,24 +46,58 @@ function renderResults(results) {
 }
 
 export default function init() {
-  const input = document.getElementById('introduction-search');
-  if (input) {
-    const noResultsElement = document.createElement('h2');
-    noResultsElement.classList.add('search-results-empty');
-    noResultsElement.innerText = 'Sorry, could not find anything.';
+  const noResultsElement = document.createElement('h2');
+  noResultsElement.classList.add('search-results-empty');
+  noResultsElement.innerText = 'Sorry, could not find anything.';
 
-    const popup = document.getElementById('introduction-search-popup');
-    const popper = createPopper(input, popup, {
-      placement: 'bottom',
-      modifiers: [{ name: 'offset', options: { offset: [0, 16] } }]
-    });
-    const popupAnimator = new PopupAnimator(popup, popper, {
-      showClass: 'search-results-active',
-      showAnimationClass: 'search-results-show',
-      hideAnimationClass: 'search-results-hide'
-    });
+  const searchEngine = new Search();
 
-    const searchEngine = new Search();
+  const navbarInput = document.getElementById('navbar-search');
+  const navbarPopup = document.getElementById('navbar-search-popup');
+  const navbarPopper = createPopper(navbarInput, navbarPopup, {
+    placement: 'bottom-end',
+    modifiers: [{ name: 'offset', options: { offset: [0, 32] } }]
+  });
+  const navbarPopupAnimator = new PopupAnimator(navbarPopup, navbarPopper, {
+    showClass: 'search-results-active',
+    showAnimationClass: 'search-results-show',
+    hideAnimationClass: 'search-results-hide'
+  });
+  const navbarSearch = new SearchInput(navbarPopupAnimator, {
+    searchEngine,
+    renderResults,
+    noResultsElements: [noResultsElement]
+  });
+
+  navbarInput.addEventListener('keyup', (event) => {
+    navbarSearch.search(event.target.value);
+  });
+  navbarInput.addEventListener('focusin', (event) => {
+    navbarSearch.search(event.target.value);
+  });
+
+  const introductionInput = document.getElementById('introduction-search');
+  if (introductionInput) {
+    const introductionPopup = document.getElementById(
+      'introduction-search-popup'
+    );
+    const introductionPopper = createPopper(
+      introductionInput,
+      introductionPopup,
+      {
+        placement: 'bottom',
+        modifiers: [{ name: 'offset', options: { offset: [0, 16] } }]
+      }
+    );
+    const popupAnimator = new PopupAnimator(
+      introductionPopup,
+      introductionPopper,
+      {
+        showClass: 'search-results-active',
+        showAnimationClass: 'search-results-show',
+        hideAnimationClass: 'search-results-hide'
+      }
+    );
 
     const introductionSearch = new SearchInput(popupAnimator, {
       searchEngine,
@@ -71,10 +105,10 @@ export default function init() {
       noResultsElements: [noResultsElement]
     });
 
-    input.addEventListener('keyup', (event) => {
+    introductionInput.addEventListener('keyup', (event) => {
       introductionSearch.search(event.target.value);
     });
-    input.addEventListener('focusin', (event) => {
+    introductionInput.addEventListener('focusin', (event) => {
       introductionSearch.search(event.target.value);
     });
   }

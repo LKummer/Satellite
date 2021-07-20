@@ -51,6 +51,11 @@
           </a>
         </li>
         <span class="navbar-items-spacer"></span>
+        <li>
+          <input type="search" id="navbar-search" class="navbar-search" placeholder="Type to search">
+          <nav id="navbar-search-popup" class="navbar-search-popup search-results" aria-label="Search results" aria-hidden="true">
+          </nav>
+        </li>
         {{ range .Site.Menus.main }}
         <li>
           <a href="{{ .URL }}" class="navbar-item {{ if $current.IsMenuCurrent "main" . }} navbar-item-active{{ end }}">

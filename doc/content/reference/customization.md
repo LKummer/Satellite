@@ -35,10 +35,13 @@ Used for top navigation bar.
 
 | Option         | Description               |
 | -------------- | ------------------------- |
+| `secondary-b2` | Navbar search background. |
 | `secondary-b3` | Navbar background.        |
 | `secondary-b4` | Navbar hover background.  |
 | `secondary-b5` | Navbar active background. |
+| `secondary-a1` | Navbar search border.     |
 | `secondary-f1` | Navbar text.              |
+| `secondary-f9` | Navbar search text.       |
 
 ## Tertiary Colors
 
