@@ -1,13 +1,18 @@
-# Hugo Theme
+# Satelite Hugo Theme
 
-> Webpack boilerplate for Hugo theme development
+Satelite is a Hugo theme for creating beautiful documentation websites.
+
+- Provides quickstart-site archive with ready to build website.
+- Thorough documentation and guides for every feature of the theme.
+- Responsive design for great user experience everywhere.
+- Fuzzy search with no dependency on external services.
 
 ## Development Guide
 
 After cloning the project, install the required dependencies:
 
 ```s
-$ yarn install
+$ npm ci
 ```
 
 Quick summary of the development scripts:
@@ -24,11 +29,11 @@ Quick summary of the development scripts:
 The scripts can be invoked using `yarn run`:
 
 ```s
-$ yarn run <script>
+$ npm run <script>
 ```
 
 For example, if we want to build the theme we can use the `build` script:
 
 ```s
-$ yarn run build
+$ npm run build
 ```
