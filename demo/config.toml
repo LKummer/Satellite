@@ -1,7 +1,5 @@
-baseURL = "https://gohugo.io"
-title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
+baseURL = "https://lkummer.github.io/Satelite/demo"
+title = "Satelite Demo"
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
@@ -27,16 +25,6 @@ taxonomies = []
 [params]
 [params.seo]
   description = "Satelite Hugo theme demo."
-  twitterCard = "summary"
-  [params.seo.images]
-    ldPaths = [
-      "images/image-1x1.png",
-      "images/image-4x3.png",
-      "images/image-16x9.png"
-    ]
-    ogPath = "images/image.png"
-    ogHeight = "1080"
-    ogWidth = "1920"
 [params.icons]
   favicon = "images/favicon.svg"
   navbarIcon = """

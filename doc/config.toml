@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://lkummer.github.io/Satelite"
 title = "Satelite"
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -14,6 +14,9 @@ taxonomies = []
   home = ["HTML", "JSON"]
 
 [menu]
+[[menu.main]]
+  name = "Demo"
+  url = "https://lkummer.github.io/Satelite/demo"
 [[menu.main]]
   name = "Github"
   url = "https://github.com/LKummer/Satelite"
