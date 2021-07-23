@@ -1,12 +1,12 @@
 name = "satelite"
 license = "GPL-3.0"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = ""
 description = ""
-homepage = "http://example.com/"
+homepage = "https://lkummer.github.io/Satelite"
 tags = []
 features = []
-min_version = "0.41"
+min_version = "0.81.0"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Lior Kummer"
+  homepage = "https://github.com/LKummer"
