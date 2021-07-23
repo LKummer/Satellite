@@ -45,12 +45,12 @@ function renderResults(results) {
   return children;
 }
 
-export default function init() {
+export default function init(baseURL) {
   const noResultsElement = document.createElement('h2');
   noResultsElement.classList.add('search-results-empty');
   noResultsElement.innerText = 'Sorry, could not find anything.';
 
-  const searchEngine = new Search();
+  const searchEngine = new Search(baseURL);
 
   const navbarInput = document.getElementById('navbar-search');
   const navbarPopup = document.getElementById('navbar-search-popup');

@@ -4,4 +4,4 @@ import tocInit from './toc';
 
 hamburgerInit();
 tocInit();
-searchInit();
+searchInit(baseURL);
