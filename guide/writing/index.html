@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="https://lkummer.github.io/Satelite/main.css">
+    <title>Writing and Organizing Content</title>
+    <link rel="icon" href="https://lkummer.github.io/Satelite/images/favicon.svg">
+    <meta name="description" content="Satelite Hugo theme documentation.">
+    <meta property="og:url" content="https://lkummer.github.io/Satelite/guide/writing/" />
+    <meta property="og:title" content="Writing and Organizing Content" />
+    <meta property="og:description" content="Satelite Hugo theme documentation." />
+    <meta property="og:image" content="https://lkummer.github.io/Satelite" />
+    <meta property="og:image:height" content="" />
+    <meta property="og:image:width" content="" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Writing and Organizing Content",
+      "image":  null 
+    }
+    </script>
+    
+
+<style>
+:root {
+    --color-primary-a1: hsl(355, 20%, 90%);
+    --color-primary-a2: hsl(350, 50%, 50%);
+    --color-primary-a3: hsl(350, 60%, 40%);
+    --color-primary-a4: hsl(350, 70%, 35%);
+    --color-primary-b1: hsl(355, 5%, 98%);
+    --color-primary-b2: hsl(355, 5%, 97.5%);
+    --color-primary-b3: hsl(355, 5%, 95%);
+    --color-primary-b4: hsl(355, 7.5%, 96%);
+    --color-primary-b5: hsl(355, 5%, 94%);
+    --color-primary-f4: hsl(355, 20%, 45%);
+    --color-primary-f5: hsl(355, 5%, 40%);
+    --color-primary-f6: hsl(355, 25%, 30%);
+    --color-primary-f7: hsl(355, 35%, 25%);
+    --color-secondary-a1: hsl(355, 20%, 90%);
+    --color-secondary-b2: hsl(355, 5%, 97.5%);
+    --color-secondary-b3: hsl(355, 95%, 30%);
+    --color-secondary-b4: hsl(350, 95%, 28%);
+    --color-secondary-b5:   linear-gradient(
+    30deg,
+    hsl(0, 80%, 20%),
+    hsl(350, 90%, 25%));
+    --color-secondary-f1: hsl(350, 15%, 80%);
+    --color-secondary-f9: hsl(350, 5%, 50%);
+    --color-tertiary-a3: hsl(350, 35%, 70%);
+    --color-tertiary-b5: hsl(350, 2.5%, 95%);
+    --color-tertiary-b6: hsl(350, 30%, 90%);
+    --color-tertiary-b7: hsl(350, 35%, 88%);
+    --color-tertiary-f3: hsl(350, 20%, 45%);
+    --color-tertiary-f4: hsl(350, 50%, 50%);
+    --color-tertiary-f5: hsl(350, 60%, 50%);
+    --color-tertiary-f6: hsl(350, 50%, 50%);
+    }
+</style>
+
+
+  </head>
+  <body class="l-page-wrapper">
+    <nav aria-label="main navigation" class="navbar">
+      <ul class="navbar-items">
+        
+        <li>
+          <a href=https://lkummer.github.io/Satelite class="navbar-logo">
+                <svg class="navbar-logo-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+      <style type="text/css">
+        .logo-satelite {
+          fill: hsl(350, 50%, 85%);
+          transform-origin: 32px 32px;
+          transform: rotate(calc(var(--logo-hover) * 360deg));
+          transition: transform 1s;
+        }
+        .logo-planet {
+          fill: hsl(350, 50%, 85%);
+        }
+        .logo-planet-shade {
+          fill: hsl(350, 40%, 70%);
+        }
+      </style>
+      <path class="logo-satelite" d="M59.8,21.6c-0.1,0.1-0.2,0.1-0.3,0.2c-0.3,0.2-0.5,0.3-0.8,0.4c-1.8,0.6-3.9-0.2-4.9-1.9
+        c-1-1.7-0.6-3.9,0.8-5.2C46,3.9,30.2,0.6,17.6,7.9C5,15.1,0,30.4,5.3,43.5c0.5,1.2,1.1,2.5,1.8,3.7c0.2,0.3,0.1,0.6-0.2,0.8
+        c-0.3,0.2-0.6,0.1-0.8-0.2c-0.7-1.2-1.3-2.5-1.8-3.8C-1.3,30.4,3.9,14.4,17,6.8s29.6-4.1,38.6,7.5c2-1,4.3-0.2,5.5,1.7
+        C62.2,17.9,61.6,20.3,59.8,21.6z"/>
+      <circle class="logo-planet" cx="32" cy="32.8" r="20.4"/>
+      <path class="logo-planet-shade" d="M52.4,32.8c0,11.3-9.1,20.4-20.4,20.4c-3.5,0-6.7-0.9-9.5-2.4c-1.5-2.8-2.4-6.1-2.4-9.5
+        c0-11.3,9.1-20.4,20.4-20.4c3.4,0,6.7,0.9,9.5,2.4C51.5,26.1,52.4,29.3,52.4,32.8z"/>
+    </svg>
+    
+            <h1 class="navbar-logo-title">
+              Satelite
+            </h1>
+          </a>
+        </li>
+        <span class="navbar-items-spacer"></span>
+        <li class="navbar-search-wrapper">
+          <svg class="navbar-search-icon" viewBox="0 0 16 16">
+            <path class="navbar-search-icon-fill" d="M10.6,9.9C11.5,8.8,12,7.5,12,6c0-3.3-2.7-6-6-6S0,2.7,0,6s2.7,6,6,6c1.5,0,2.8-0.5,3.9-1.4l5.4,5.4l0.7-0.7
+              L10.6,9.9z M9.2,9.9C8.3,10.6,7.2,11,6,11c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5c0,1.2-0.4,2.3-1.1,3.2C9.7,9.4,9.4,9.7,9.2,9.9z"/>
+          </svg>
+          <input id="navbar-search" class="navbar-search" type="search" aria-label="search" placeholder="Search">
+          <nav id="navbar-search-popup" class="navbar-search-popup search-results" aria-label="search results" aria-live="polite" aria-hidden="true">
+          </nav>
+        </li>
+        
+        <li>
+          <a href="/Satelite/" class="navbar-item ">
+            Documentation
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://lkummer.github.io/Satelite/demo" class="navbar-item ">
+            Demo
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://github.com/LKummer/Satelite" class="navbar-item ">
+            Github
+          </a>
+        </li>
+        
+        <li>
+          <button aria-label="toggle navigation menu" aria-expanded="false" id="navbar-hamburger" class="navbar-item navbar-hamburger">
+            <svg class="navbar-hamburger-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navbar-hamburger-icon-top" d="M13.5,4h-11C1.7,4,1,3.3,1,2.5v0C1,1.7,1.7,1,2.5,1h11C14.3,1,15,1.7,15,2.5v0C15,3.3,14.3,4,13.5,4z"/>
+              <path class="navbar-hamburger-icon-middle" d="M13.5,9.5h-11C1.7,9.5,1,8.8,1,8v0c0-0.8,0.7-1.5,1.5-1.5h11C14.3,6.5,15,7.2,15,8v0C15,8.8,14.3,9.5,13.5,9.5z"/>
+              <path class="navbar-hamburger-icon-bottom" d="M13.5,15h-11C1.7,15,1,14.3,1,13.5v0C1,12.7,1.7,12,2.5,12h11c0.8,0,1.5,0.7,1.5,1.5v0C15,14.3,14.3,15,13.5,15z"/>
+            </g>
+            </svg>
+            Menu
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <section class="l-page">
+      <nav aria-label="section navigation" class="navmenu l-page-side">
+        
+        <details class="navmenu-section" open>
+          <summary class="navmenu-section-summary navmenu-section-summary-current">
+            <h2 class="navmenu-section-summary-title">
+              Guides
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/guide/getting-started/" class="navmenu-section-pages-item ">
+                Getting Started
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/guide/writing/" class="navmenu-section-pages-item  navmenu-section-pages-item-current">
+                Writing and Organizing Content
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+        <details class="navmenu-section">
+          <summary class="navmenu-section-summary">
+            <h2 class="navmenu-section-summary-title">
+              Reference
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/reference/customization/" class="navmenu-section-pages-item ">
+                Color Customization
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/reference/icons/" class="navmenu-section-pages-item ">
+                Icons and Logos
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/reference/menus/" class="navmenu-section-pages-item ">
+                Menus and Navigation
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/reference/seo/" class="navmenu-section-pages-item ">
+                Search Engine Optimizations
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+        <details class="navmenu-section">
+          <summary class="navmenu-section-summary">
+            <h2 class="navmenu-section-summary-title">
+              Contribution
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/contribution/development/" class="navmenu-section-pages-item ">
+                Development Workflow
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/contribution/architecture/" class="navmenu-section-pages-item ">
+                Theme Architecture
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+      </nav>
+      <section class="l-page-main">
+<section class="l-single">
+  <section>
+    <h1 class="content-title">
+      Writing and Organizing Content
+    </h1>
+    <section class="content">
+      <p>Just got Satelite installed and configured? You are probably looking to add
+sections and content to your website.</p>
+<p>In this guide we will create an example section, content page, and configure
+both to take advantage of Satelite&rsquo;s features.</p>
+<p>This guide assumes basic knowledge about Hugo.
+Specifically <a href="https://gohugo.io/content-management/sections/">knowledge about sections</a>,
+<a href="https://gohugo.io/content-management/front-matter/">front matter</a>
+and single content pages.</p>
+<h2 id="creating-sections">Creating Sections</h2>
+<p>Suppose we want a <code>guides</code> section.
+First, create a <code>guides</code> folder inside the site&rsquo;s <code>content</code> folder.
+The name of the section&rsquo;s folder will be used in the path of single pages inside
+that section.</p>
+<p>Create a <code>_index.md</code> inside the <code>guides</code> folder created. The <code>_index.md</code> file will
+contain the configuration of the section.</p>
+<p>Every section should have a <code>title</code> and a <code>description</code>.
+<code>title</code> will be used as the title of the section.
+<code>description</code> will be used in the index page to describe the section.</p>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Guides&#34;</span>
+<span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Great way to get up and running.&#34;</span>
+</code></pre></div><p>Optionally, sections can have <code>weight</code>. Lower weighted sections are listed first
+in section lists. Unweighted sections are treated as if their <code>weight</code> is <code>0</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">100</span>
+</code></pre></div><p>Putting everything together, our section&rsquo;s <code>_index.md</code> file should look somewhat
+like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">+++
+title = &#34;Guides&#34;
+description = &#34;Great way to get up and running.&#34;
+weight = 100
++++
+</code></pre></div><h2 id="creating-content-pages">Creating Content Pages</h2>
+<p>Let us create a quick start guide inside the <code>guides</code> section we just created.</p>
+<p>Inside the <code>guides</code> section folder, create a <code>quickstart.md</code> file.
+The name of the file will be used for the final path of the page.</p>
+<p>Every content page should have a <code>title</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Quick Start Guide&#34;</span>
+</code></pre></div><p>Optionally, pages can have a <code>description</code>.
+<code>description</code> will be used in social media and search engine meta tags,
+and indexed in the internal search.</p>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Awesome guide to get you started.&#34;</span>
+</code></pre></div><p>Optionally, pages can have a <code>keywords</code> array.
+<code>keywords</code> are indexed in the internal search, and can be used to help users find
+content easily.</p>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">keywords</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;Install&#34;</span><span class="p">,</span> <span class="s2">&#34;Deploy&#34;</span><span class="p">]</span>
+</code></pre></div><p>Putting everything together, our content page should look somewhat like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">+++
+title = &#34;Quick Start Guide&#34;
+description = &#34;Awesome guide to get you started.&#34;
+keywords = [&#34;Install&#34;, &#34;Deploy&#34;]
++++
+
+Markdown content of the page.
+</code></pre></div>
+    </section>
+  </section>
+  <aside class="l-single-side">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#creating-sections">Creating Sections</a></li>
+    <li><a href="#creating-content-pages">Creating Content Pages</a></li>
+  </ul>
+</nav>
+  </aside>
+</section>
+
+      </section>
+    </section>
+    <nav aria-label="Navigation Menu" id="hamburger-menu" class="l-sidemenu navmenu">
+      <ul class="navmenu-top">
+        <li>
+        
+          <a href="/Satelite/" class="navmenu-top-item ">
+            Documentation
+          </a>
+        
+          <a href="https://lkummer.github.io/Satelite/demo" class="navmenu-top-item ">
+            Demo
+          </a>
+        
+          <a href="https://github.com/LKummer/Satelite" class="navmenu-top-item ">
+            Github
+          </a>
+        
+        </li>
+      </ul>
+      
+      <details class="navmenu-section" open>
+        <summary class="navmenu-section-summary navmenu-section-summary-current">
+          <h2 class="navmenu-section-summary-title">
+            Guides
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/guide/getting-started/" class="navmenu-section-pages-item ">
+              Getting Started
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/guide/writing/" class="navmenu-section-pages-item  navmenu-section-pages-item-current">
+              Writing and Organizing Content
+            </a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details class="navmenu-section">
+        <summary class="navmenu-section-summary">
+          <h2 class="navmenu-section-summary-title">
+            Reference
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/reference/customization/" class="navmenu-section-pages-item ">
+              Color Customization
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/reference/icons/" class="navmenu-section-pages-item ">
+              Icons and Logos
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/reference/menus/" class="navmenu-section-pages-item ">
+              Menus and Navigation
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/reference/seo/" class="navmenu-section-pages-item ">
+              Search Engine Optimizations
+            </a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details class="navmenu-section">
+        <summary class="navmenu-section-summary">
+          <h2 class="navmenu-section-summary-title">
+            Contribution
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/contribution/development/" class="navmenu-section-pages-item ">
+              Development Workflow
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/contribution/architecture/" class="navmenu-section-pages-item ">
+              Theme Architecture
+            </a>
+          </li>
+          
+        </ul>
+      </details>
+      
+    </nav>
+    <script>
+      const baseURL = "https://lkummer.github.io/Satelite";
+    </script>
+    <script src='https://lkummer.github.io/Satelite/main.js'></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guides on Satelite</title>
+    <link>https://lkummer.github.io/Satelite/guide/</link>
+    <description>Recent content in Guides on Satelite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://lkummer.github.io/Satelite/guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started</title>
+      <link>https://lkummer.github.io/Satelite/guide/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satelite/guide/getting-started/</guid>
+      <description>The quickest way to get up and running with Satelite is using the provided quickstart-site archive.
+This guide assumes basic knowledge of Hugo website structure, and Hugo&amp;rsquo;s CLI. Specifically, hugo for building sites and hugo server hot reload server.
+For best compatibility, use Hugo v0.81.0. Newer versions should work fine.
+Download and Installation Head over to Satelite&amp;rsquo;s releases on Github and download the latest quickstart-site archive. Extract the quickstart-site archive to an empty folder.</description>
+    </item>
+    
+    <item>
+      <title>Writing and Organizing Content</title>
+      <link>https://lkummer.github.io/Satelite/guide/writing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satelite/guide/writing/</guid>
+      <description>Just got Satelite installed and configured? You are probably looking to add sections and content to your website.
+In this guide we will create an example section, content page, and configure both to take advantage of Satelite&amp;rsquo;s features.
+This guide assumes basic knowledge about Hugo. Specifically knowledge about sections, front matter and single content pages.
+Creating Sections Suppose we want a guides section. First, create a guides folder inside the site&amp;rsquo;s content folder.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="https://lkummer.github.io/Satelite/demo/main.css">
+    <title>Markdown Syntax Guide</title>
+    <link rel="icon" href="https://lkummer.github.io/Satelite/demo/images/favicon.svg">
+    <meta name="description" content="Satelite Hugo theme demo.">
+    <meta property="og:url" content="https://lkummer.github.io/Satelite/demo/example/markdown-syntax/" />
+    <meta property="og:title" content="Markdown Syntax Guide" />
+    <meta property="og:description" content="Satelite Hugo theme demo." />
+    <meta property="og:image" content="https://lkummer.github.io/Satelite/demo" />
+    <meta property="og:image:height" content="" />
+    <meta property="og:image:width" content="" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Markdown Syntax Guide",
+      "image":  null 
+    }
+    </script>
+    
+
+
+  </head>
+  <body class="l-page-wrapper">
+    <nav aria-label="main navigation" class="navbar">
+      <ul class="navbar-items">
+        
+        <li>
+          <a href=https://lkummer.github.io/Satelite/demo class="navbar-logo">
+                <svg class="navbar-logo-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+      <style type="text/css">
+        .logo-satelite {
+          fill: #CDC8E6;
+          transform-origin: 32px 32px;
+          transform: rotate(calc(var(--logo-hover) * 360deg));
+          transition: transform 1s;
+        }
+        .logo-planet {
+          fill: #CDC8E6;
+        }
+        .logo-planet-shade {
+          fill: #A69FD1;
+        }
+      </style>
+      <path class="logo-satelite" d="M59.8,21.6c-0.1,0.1-0.2,0.1-0.3,0.2c-0.3,0.2-0.5,0.3-0.8,0.4c-1.8,0.6-3.9-0.2-4.9-1.9
+        c-1-1.7-0.6-3.9,0.8-5.2C46,3.9,30.2,0.6,17.6,7.9C5,15.1,0,30.4,5.3,43.5c0.5,1.2,1.1,2.5,1.8,3.7c0.2,0.3,0.1,0.6-0.2,0.8
+        c-0.3,0.2-0.6,0.1-0.8-0.2c-0.7-1.2-1.3-2.5-1.8-3.8C-1.3,30.4,3.9,14.4,17,6.8s29.6-4.1,38.6,7.5c2-1,4.3-0.2,5.5,1.7
+        C62.2,17.9,61.6,20.3,59.8,21.6z"/>
+      <circle class="logo-planet" cx="32" cy="32.8" r="20.4"/>
+      <path class="logo-planet-shade" d="M52.4,32.8c0,11.3-9.1,20.4-20.4,20.4c-3.5,0-6.7-0.9-9.5-2.4c-1.5-2.8-2.4-6.1-2.4-9.5
+        c0-11.3,9.1-20.4,20.4-20.4c3.4,0,6.7,0.9,9.5,2.4C51.5,26.1,52.4,29.3,52.4,32.8z"/>
+    </svg>
+    
+            <h1 class="navbar-logo-title">
+              Satelite Demo
+            </h1>
+          </a>
+        </li>
+        <span class="navbar-items-spacer"></span>
+        <li class="navbar-search-wrapper">
+          <svg class="navbar-search-icon" viewBox="0 0 16 16">
+            <path class="navbar-search-icon-fill" d="M10.6,9.9C11.5,8.8,12,7.5,12,6c0-3.3-2.7-6-6-6S0,2.7,0,6s2.7,6,6,6c1.5,0,2.8-0.5,3.9-1.4l5.4,5.4l0.7-0.7
+              L10.6,9.9z M9.2,9.9C8.3,10.6,7.2,11,6,11c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5c0,1.2-0.4,2.3-1.1,3.2C9.7,9.4,9.4,9.7,9.2,9.9z"/>
+          </svg>
+          <input id="navbar-search" class="navbar-search" type="search" aria-label="search" placeholder="Search">
+          <nav id="navbar-search-popup" class="navbar-search-popup search-results" aria-label="search results" aria-live="polite" aria-hidden="true">
+          </nav>
+        </li>
+        
+        <li>
+          <a href="https://lkummer.github.io/Satelite" class="navbar-item ">
+            Documentation
+          </a>
+        </li>
+        
+        <li>
+          <a href="/Satelite/demo/" class="navbar-item ">
+            Demo
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://github.com/LKummer/Satelite" class="navbar-item ">
+            Github
+          </a>
+        </li>
+        
+        <li>
+          <button aria-label="toggle navigation menu" aria-expanded="false" id="navbar-hamburger" class="navbar-item navbar-hamburger">
+            <svg class="navbar-hamburger-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navbar-hamburger-icon-top" d="M13.5,4h-11C1.7,4,1,3.3,1,2.5v0C1,1.7,1.7,1,2.5,1h11C14.3,1,15,1.7,15,2.5v0C15,3.3,14.3,4,13.5,4z"/>
+              <path class="navbar-hamburger-icon-middle" d="M13.5,9.5h-11C1.7,9.5,1,8.8,1,8v0c0-0.8,0.7-1.5,1.5-1.5h11C14.3,6.5,15,7.2,15,8v0C15,8.8,14.3,9.5,13.5,9.5z"/>
+              <path class="navbar-hamburger-icon-bottom" d="M13.5,15h-11C1.7,15,1,14.3,1,13.5v0C1,12.7,1.7,12,2.5,12h11c0.8,0,1.5,0.7,1.5,1.5v0C15,14.3,14.3,15,13.5,15z"/>
+            </g>
+            </svg>
+            Menu
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <section class="l-page">
+      <nav aria-label="section navigation" class="navmenu l-page-side">
+        
+        <details class="navmenu-section" open>
+          <summary class="navmenu-section-summary navmenu-section-summary-current">
+            <h2 class="navmenu-section-summary-title">
+              Example
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/example/markdown-syntax/" class="navmenu-section-pages-item  navmenu-section-pages-item-current">
+                Markdown Syntax Guide
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/example/more-placeholder-text/" class="navmenu-section-pages-item ">
+                More Placeholder Text
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/example/placeholder-text/" class="navmenu-section-pages-item ">
+                Placeholder Text
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+        <details class="navmenu-section">
+          <summary class="navmenu-section-summary">
+            <h2 class="navmenu-section-summary-title">
+              Second Example
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/second-example/even-more-placeholder-text/" class="navmenu-section-pages-item ">
+                Even More Placeholder Text
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/second-example/more-placeholder-text/" class="navmenu-section-pages-item ">
+                More Placeholder Text
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/second-example/placeholder-text/" class="navmenu-section-pages-item ">
+                Placeholder Text
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+        <details class="navmenu-section">
+          <summary class="navmenu-section-summary">
+            <h2 class="navmenu-section-summary-title">
+              Third Example
+            </h2>
+            <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <g>
+                <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+              </g>
+            </svg>              
+          </summary>
+          <ul class="navmenu-section-pages">
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/third-example/even-more-placeholder-text/" class="navmenu-section-pages-item ">
+                Even More Placeholder Text
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/third-example/more-placeholder-text/" class="navmenu-section-pages-item ">
+                More Placeholder Text
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://lkummer.github.io/Satelite/demo/third-example/placeholder-text/" class="navmenu-section-pages-item ">
+                Placeholder Text
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+      </nav>
+      <section class="l-page-main">
+<section class="l-single">
+  <section>
+    <h1 class="content-title">
+      Markdown Syntax Guide
+    </h1>
+    <section class="content">
+      <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+<h2 id="headings">Headings</h2>
+<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="h1">H1</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.</p>
+<h2 id="h2">H2</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.</p>
+<h3 id="h3">H3</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.</p>
+<h4 id="h4">H4</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.</p>
+<h5 id="h5">H5</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.</p>
+<h6 id="h6">H6</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor, diam eu viverra facilisis, eros enim pretium dolor, sed semper metus mi a eros. Donec eu libero sit amet magna dignissim iaculis.</p>
+<h2 id="paragraph">Paragraph</h2>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
+<h3 id="blockquote-without-attribution">Blockquote without attribution</h3>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
+<h3 id="blockquote-with-attribution">Blockquote with attribution</h3>
+<blockquote>
+<p>Don&rsquo;t communicate by sharing memory, share memory by communicating.<!-- raw HTML omitted -->
+— <!-- raw HTML omitted -->Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><!-- raw HTML omitted --></p>
+</blockquote>
+<h2 id="tables">Tables</h2>
+<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bob</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inline-markdown-within-tables">Inline Markdown within tables</h3>
+<table>
+<thead>
+<tr>
+<th>Inline   </th>
+<th>Markdown   </th>
+<th>In   </th>
+<th>Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>italics</em></td>
+<td><strong>bold</strong></td>
+<td><del>strikethrough</del>   </td>
+<td><code>code</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-blocks">Code Blocks</h2>
+<h3 id="code-block-with-backticks">Code block with backticks</h3>
+<pre><code>html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="list-types">List Types</h2>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h3 id="nested-list">Nested list</h3>
+<ul>
+<li>
+<p>Item</p>
+<ol>
+<li>First Sub-item</li>
+<li>Second Sub-item</li>
+</ol>
+</li>
+</ul>
+<h2 id="other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h2>
+<p><!-- raw HTML omitted -->GIF<!-- raw HTML omitted --> is a bitmap image format.</p>
+<p>H<!-- raw HTML omitted -->2<!-- raw HTML omitted -->O</p>
+<p>X<!-- raw HTML omitted -->n<!-- raw HTML omitted --> + Y<!-- raw HTML omitted -->n<!-- raw HTML omitted --> = Z<!-- raw HTML omitted -->n<!-- raw HTML omitted --></p>
+<p>Press <!-- raw HTML omitted --><!-- raw HTML omitted -->CTRL<!-- raw HTML omitted -->+<!-- raw HTML omitted -->ALT<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Delete<!-- raw HTML omitted --><!-- raw HTML omitted --> to end the session.</p>
+<p>Most <!-- raw HTML omitted -->salamanders<!-- raw HTML omitted --> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </section>
+  </section>
+  <aside class="l-single-side">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#h2">H2</a>
+      <ul>
+        <li><a href="#h3">H3</a></li>
+      </ul>
+    </li>
+    <li><a href="#paragraph">Paragraph</a></li>
+    <li><a href="#blockquotes">Blockquotes</a>
+      <ul>
+        <li><a href="#blockquote-without-attribution">Blockquote without attribution</a></li>
+        <li><a href="#blockquote-with-attribution">Blockquote with attribution</a></li>
+      </ul>
+    </li>
+    <li><a href="#tables">Tables</a>
+      <ul>
+        <li><a href="#inline-markdown-within-tables">Inline Markdown within tables</a></li>
+      </ul>
+    </li>
+    <li><a href="#code-blocks">Code Blocks</a>
+      <ul>
+        <li><a href="#code-block-with-backticks">Code block with backticks</a></li>
+        <li><a href="#code-block-indented-with-four-spaces">Code block indented with four spaces</a></li>
+        <li><a href="#code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</a></li>
+      </ul>
+    </li>
+    <li><a href="#list-types">List Types</a>
+      <ul>
+        <li><a href="#ordered-list">Ordered List</a></li>
+        <li><a href="#unordered-list">Unordered List</a></li>
+        <li><a href="#nested-list">Nested list</a></li>
+      </ul>
+    </li>
+    <li><a href="#other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</a></li>
+  </ul>
+</nav>
+  </aside>
+</section>
+
+      </section>
+    </section>
+    <nav aria-label="Navigation Menu" id="hamburger-menu" class="l-sidemenu navmenu">
+      <ul class="navmenu-top">
+        <li>
+        
+          <a href="https://lkummer.github.io/Satelite" class="navmenu-top-item ">
+            Documentation
+          </a>
+        
+          <a href="/Satelite/demo/" class="navmenu-top-item ">
+            Demo
+          </a>
+        
+          <a href="https://github.com/LKummer/Satelite" class="navmenu-top-item ">
+            Github
+          </a>
+        
+        </li>
+      </ul>
+      
+      <details class="navmenu-section" open>
+        <summary class="navmenu-section-summary navmenu-section-summary-current">
+          <h2 class="navmenu-section-summary-title">
+            Example
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/example/markdown-syntax/" class="navmenu-section-pages-item  navmenu-section-pages-item-current">
+              Markdown Syntax Guide
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/example/more-placeholder-text/" class="navmenu-section-pages-item ">
+              More Placeholder Text
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/example/placeholder-text/" class="navmenu-section-pages-item ">
+              Placeholder Text
+            </a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details class="navmenu-section">
+        <summary class="navmenu-section-summary">
+          <h2 class="navmenu-section-summary-title">
+            Second Example
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/second-example/even-more-placeholder-text/" class="navmenu-section-pages-item ">
+              Even More Placeholder Text
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/second-example/more-placeholder-text/" class="navmenu-section-pages-item ">
+              More Placeholder Text
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/second-example/placeholder-text/" class="navmenu-section-pages-item ">
+              Placeholder Text
+            </a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details class="navmenu-section">
+        <summary class="navmenu-section-summary">
+          <h2 class="navmenu-section-summary-title">
+            Third Example
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/third-example/even-more-placeholder-text/" class="navmenu-section-pages-item ">
+              Even More Placeholder Text
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/third-example/more-placeholder-text/" class="navmenu-section-pages-item ">
+              More Placeholder Text
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://lkummer.github.io/Satelite/demo/third-example/placeholder-text/" class="navmenu-section-pages-item ">
+              Placeholder Text
+            </a>
+          </li>
+          
+        </ul>
+      </details>
+      
+    </nav>
+    <script>
+      const baseURL = "https://lkummer.github.io/Satelite/demo";
+    </script>
+    <script src='https://lkummer.github.io/Satelite/demo/main.js'></script>
+  </body>
+</html>
