@@ -8,12 +8,22 @@ footnoteReturnLinkContents = "^"
 theme = "satelite"
 pygmentsUseClasses = true
 
+taxonomies = []
+
+[outputs]
+  home = ["HTML", "JSON"]
+
+[menu]
+[[menu.main]]
+  title = "Github"
+  url = "https://github.com/LKummer/Satelite-Hugo-Theme"
+
 [params]
 [params.seo]
   description = "Satelite Hugo theme documentation."
 [params.colors]
   primary-b1 = "hsl(355, 5%, 98%)"
-  primary-b2 = "hsl(355, 5%, 97%)"
+  primary-b2 = "hsl(355, 5%, 97.5%)"
   primary-b3 = "hsl(355, 5%, 95%)"
   primary-b4 = "hsl(355, 7.5%, 96%)"
   primary-b5 = "hsl(355, 5%, 94%)"
@@ -25,6 +35,7 @@ pygmentsUseClasses = true
   primary-f5 = "hsl(355, 5%, 40%)"
   primary-f6 = "hsl(355, 25%, 30%)"
   primary-f7 = "hsl(355, 35%, 25%)"
+  secondary-b2 = "hsl(355, 5%, 97.5%)"
   secondary-b3 = "hsl(355, 95%, 30%)"
   secondary-b4 = "hsl(350, 95%, 28%)"
   secondary-b5 = """
@@ -32,7 +43,9 @@ pygmentsUseClasses = true
     30deg,
     hsl(0, 80%, 20%),
     hsl(350, 90%, 25%))"""
+  secondary-a1 = "hsl(355, 20%, 90%)"
   secondary-f1 = "hsl(350, 15%, 80%)"
+  secondary-f9 = "hsl(350, 5%, 50%)"
   tertiary-b5 = "hsl(350, 2.5%, 95%)"
   tertiary-b6 = "hsl(350, 30%, 90%)"
   tertiary-b7 = "hsl(350, 35%, 88%)"
