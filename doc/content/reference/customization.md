@@ -1,6 +1,7 @@
----
-title: 'Color Customization'
----
++++
+title = "Color Customization"
+keywords = ["Personalization", "Theme"]
++++
 
 Looking to make your Satelite website _yours_?
 You arrived at the right place.
@@ -8,6 +9,10 @@ This page lists all color customization options Satelite offers.
 
 Each section of a Satelite site can be colored independently, allowing you to
 theme your website however you want.
+
+Colors can be customized using `params.colors` configuration options.
+This page lists all color options.
+Check out the config example at the bottom for a concrete example.
 
 ## Primary Colors
 
