@@ -147,7 +147,7 @@
       {{ end }}
     </nav>
     <script>
-      const baseURL = {{ .Site.BaseURL }};
+      const baseURL = {{ .Site.BaseURL | replaceRE "/?^" "/" }};
     </script>
     <script src='{{ absURL "main.js" }}'></script>
   </body>
