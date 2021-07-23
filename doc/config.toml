@@ -15,8 +15,8 @@ taxonomies = []
 
 [menu]
 [[menu.main]]
-  title = "Github"
-  url = "https://github.com/LKummer/Satelite-Hugo-Theme"
+  name = "Github"
+  url = "https://github.com/LKummer/Satelite"
 
 [params]
 [params.seo]

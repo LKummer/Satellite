@@ -63,7 +63,7 @@
         {{ range .Site.Menus.main }}
         <li>
           <a href="{{ .URL }}" class="navbar-item {{ if $current.IsMenuCurrent "main" . }} navbar-item-active{{ end }}">
-            {{ .Title }}
+            {{ .Name }}
           </a>
         </li>
         {{ end }}
@@ -117,7 +117,7 @@
         <li>
         {{ range .Site.Menus.main }}
           <a href="{{ .URL }}" class="navmenu-top-item {{ if $current.IsMenuCurrent "main" . }} navmenu-top-item-active{{ end }}">
-            {{ .Title }}
+            {{ .Name }}
           </a>
         {{ end }}
         </li>

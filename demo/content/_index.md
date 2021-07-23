@@ -1,5 +1,5 @@
 +++
-title = "Home"
+title = "Demo"
 [menu.main]
   weight = -10
 +++

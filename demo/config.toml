@@ -17,8 +17,12 @@ taxonomies = []
 
 [menu]
 [[menu.main]]
-  title = "Github"
-  url = "https://github.com/LKummer"
+  name = "Documentation"
+  url = "https://lkummer.github.io/Satelite"
+  weight = -20
+[[menu.main]]
+  name = "Github"
+  url = "https://github.com/LKummer/Satelite"
 
 [params]
 [params.seo]
