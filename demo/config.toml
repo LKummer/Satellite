@@ -6,7 +6,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 pygmentsUseClasses = true
-theme = "hugo-theme-boilerplate"
+theme = "satelite"
 
 taxonomies = []
 
