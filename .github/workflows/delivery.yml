@@ -14,9 +14,9 @@ jobs:
         with:
           node-version: '12'
       - name: Install Dependencies
-        run: yarn install
+        run: npm ci
       - name: Lint
-        run: yarn run lint
+        run: npm run lint
   release:
     runs-on: ubuntu-latest
     needs: lint
@@ -26,14 +26,14 @@ jobs:
         with:
           node-version: '12'
       - name: Install Dependencies
-        run: yarn install
+        run: npm ci
       - name: Set theme_name
         run: |
           theme_name="$(node --print 'require("./package.json").name')"
           echo "theme_name=${theme_name}" >> $GITHUB_ENV
       - name: Build Release Artifacts
         run: |
-          yarn run build:theme
+          npm run build:theme
           mv dist/theme "dist/${theme_name}"
       - name: Archive Release Artifacts
         run: |
@@ -98,9 +98,9 @@ jobs:
         with:
           node-version: '12'
       - name: Install Dependencies
-        run: yarn install
+        run: npm ci
       - name: Build Websites
-        run: yarn run build
+        run: npm run build
       - name: Prepare for Deployment
         run: |
           echo > dist/doc/.nojekyll

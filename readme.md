@@ -7,7 +7,7 @@
 After cloning the project, install the required dependencies:
 
 ```s
-$ yarn install
+$ npm ci
 ```
 
 Quick summary of the development scripts:
@@ -21,14 +21,14 @@ Quick summary of the development scripts:
 - `lint` - Lint all files with ESLint, Stylelint and Prettier.
 - `format` - Format all files with ESLint, Stylelint and Prettier.
 
-The scripts can be invoked using `yarn run`:
+The scripts can be invoked using `npm run`:
 
 ```s
-$ yarn run <script>
+$ npm run <script>
 ```
 
 For example, if we want to build the theme we can use the `build` script:
 
 ```s
-$ yarn run build
+$ npm run build
 ```
