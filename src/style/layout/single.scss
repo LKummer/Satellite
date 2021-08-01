@@ -16,7 +16,7 @@
 
   display: grid;
   gap: var(--space-16);
-  grid-template-columns: 1fr 25ch;
+  grid-template-columns: minmax(0, 1fr) 25ch;
 
   &-side {
     margin-top: var(--space-24);
