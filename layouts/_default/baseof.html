@@ -35,7 +35,12 @@
     {{- end }}
     {{ partial "colors" . }}
   </head>
-  {{- $sortedSections := partial "sort-sections" .Site.Sections }}
+  {{- $sortedSections := slice }}
+  {{- if (gt (len .Site.Sections) 0)}}
+  {{- $sortedSections = partial "sort-sections" .Site.Sections }}
+  {{- else }}
+  {{- warnf "Site should contain sections for optimal user experience." }}
+  {{- end }}
   <body class="l-page-wrapper">
     <nav aria-label="main navigation" class="navbar">
       <ul class="navbar-items">

@@ -20,7 +20,13 @@
   </nav>
 </section>
 <ul class="l-sections">
-  {{ range partial "sort-sections" .Site.Sections }}
+  {{- $sortedSections := slice }}
+  {{- if (gt (len .Site.Sections) 0)}}
+  {{- $sortedSections = partial "sort-sections" .Site.Sections }}
+  {{- else }}
+  {{- warnf "Site should contain sections for optimal user experience." }}
+  {{- end }}
+  {{- range $sortedSections }}
   <li>
     <section class="section-top">
       <h2 class="section-top-title">
