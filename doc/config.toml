@@ -24,6 +24,16 @@ taxonomies = []
 [params]
 [params.seo]
   description = "Satelite Hugo theme documentation."
+  twitterCard = "summary"
+  [params.seo.images]
+    ogPath = "images/1x1.png"
+    ogHeight = "1200"
+    ogWidth = "1200"
+    ldPaths = [
+      "images/1x1.png",
+      "images/4x3.png",
+      "images/16x9.png"
+    ]
 [params.colors]
   primary-b1 = "hsl(205, 5%, 98%)"
   primary-b2 = "hsl(205, 5%, 97.5%)"
