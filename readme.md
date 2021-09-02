@@ -26,7 +26,7 @@ Quick summary of the development scripts:
 - `lint` - Lint all files with ESLint, Stylelint and Prettier.
 - `format` - Format all files with ESLint, Stylelint and Prettier.
 
-The scripts can be invoked using `yarn run`:
+The scripts can be invoked using `npm run`:
 
 ```s
 $ npm run <script>

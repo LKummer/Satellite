@@ -1,3 +1,5 @@
+const { join } = require('path');
+
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
@@ -9,7 +11,7 @@ module.exports = (env) => {
   return {
     mode: isProduction ? 'production' : 'development',
     output: {
-      filename: 'theme/static/[name].js'
+      path: join(process.cwd(), 'dist/theme/static')
     },
     module: {
       rules: [
@@ -21,11 +23,9 @@ module.exports = (env) => {
         {
           // Load fonts.
           test: /\.woff2?$/u,
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'theme/static/fonts',
-            publicPath: './fonts/'
+          type: 'asset/resource',
+          generator: {
+            filename: 'fonts/[name][ext]'
           }
         }
       ]
@@ -34,13 +34,13 @@ module.exports = (env) => {
       // Copies files to the dist/theme folder.
       new CopyPlugin({
         patterns: [
-          !isHotReload && { from: 'layouts', to: 'theme/layouts' },
-          { from: 'public', to: 'theme' }
+          !isHotReload && { from: 'layouts', to: '../layouts' },
+          { from: 'public', to: '..' }
         ].filter(Boolean)
       }),
       // Extracts a CSS file.
       new MiniCssExtractPlugin({
-        filename: 'theme/static/[name].css'
+        filename: '[name].css'
       }),
       // Lint during build.
       new ESLintPlugin({
