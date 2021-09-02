@@ -19,23 +19,34 @@
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="{{ $description }}" />
-    <meta property="og:image" content="{{ absURL .Site.Params.seo.images.ogPath }}" />
-    <meta property="og:image:height" content="{{ .Site.Params.seo.images.ogHeight }}" />
-    <meta property="og:image:width" content="{{ .Site.Params.seo.images.ogWidth }}" />
+    {{- with .Site.Params.seo.images.ogPath }}
+    <meta property="og:image" content="{{ absURL . }}" />
+    {{- end }}
+    {{- with .Site.Params.seo.images.ogHeight }}
+    <meta property="og:image:height" content="{{ . }}" />
+    {{- end }}
+    {{- with .Site.Params.seo.images.ogWidth }}
+    <meta property="og:image:width" content="{{ . }}" />
+    {{- end }}
     {{- if .IsPage }}
     <meta property="og:type" content="article" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "{{ .Title }}",
-      "image": {{ .Site.Params.seo.images.ldPaths }}
+      "headline": "{{ .Title }}"{{ with .Site.Params.seo.images.ldPaths }},
+      "image": {{ apply . "absURL" "." }}{{ end }}
     }
     </script>
     {{- end }}
     {{ partial "colors" . }}
   </head>
-  {{- $sortedSections := partial "sort-sections" .Site.Sections }}
+  {{- $sortedSections := slice }}
+  {{- if (gt (len .Site.Sections) 0)}}
+  {{- $sortedSections = partial "sort-sections" .Site.Sections }}
+  {{- else }}
+  {{- warnf "Site should contain sections for optimal user experience." }}
+  {{- end }}
   <body class="l-page-wrapper">
     <nav aria-label="main navigation" class="navbar">
       <ul class="navbar-items">
@@ -147,7 +158,7 @@
       {{ end }}
     </nav>
     <script>
-      const baseURL = {{ .Site.BaseURL }};
+      const baseURL = {{ .Site.BaseURL | replaceRE "/?^" "/" }};
     </script>
     <script src='{{ absURL "main.js" }}'></script>
   </body>
