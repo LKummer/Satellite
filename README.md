@@ -13,6 +13,9 @@
   <a href="https://github.com/LKummer/Satelite/actions/workflows/delivery.yml">
     <img src="https://img.shields.io/github/workflow/status/LKummer/Satelite/Delivery?label=delivery&style=flat-square">
   </a>
+  <a href="https://github.com/LKummer/Satelite/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/github/license/LKummer/Satelite?style=flat-square">
+  </a>
 </p>
 
 <p align="center">
