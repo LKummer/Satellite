@@ -158,7 +158,7 @@
       {{ end }}
     </nav>
     <script>
-      const baseURL = {{ .Site.BaseURL | replaceRE "/?^" "/" }};
+      const baseURL = {{ printf "%s/" (strings.TrimSuffix "/" .Site.BaseURL) }};
     </script>
     <script src='{{ absURL "main.js" }}'></script>
   </body>
