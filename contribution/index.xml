@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Contribution on Satelite</title>
-    <link>https://lkummer.github.io/Satelite/contribution/</link>
-    <description>Recent content in Contribution on Satelite</description>
+    <title>Contribution on Satellite</title>
+    <link>https://lkummer.github.io/Satellite/contribution/</link>
+    <description>Recent content in Contribution on Satellite</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://lkummer.github.io/Satelite/contribution/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://lkummer.github.io/Satellite/contribution/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development Workflow</title>
-      <link>https://lkummer.github.io/Satelite/contribution/development/</link>
+      <link>https://lkummer.github.io/Satellite/contribution/development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lkummer.github.io/Satelite/contribution/development/</guid>
+      <guid>https://lkummer.github.io/Satellite/contribution/development/</guid>
       <description>Familiarize yourself with the development workflow of the project.
 This guide assumes you are somewhat familiar with Hugo theme development. If not, check out the Hugo documentation.
-Basic Workflow Describes the basic workflow of Satelite development.
-Installation After cloning the Satelite repository, install the required dependencies:
+Basic Workflow Describes the basic workflow of Satellite development.
+Installation After cloning the Satellite repository, install the required dependencies:
 $ npm ci Development Server When making changes, a development server with the demo site should be used. To run demo site development server:</description>
     </item>
     
     <item>
       <title>Theme Architecture</title>
-      <link>https://lkummer.github.io/Satelite/contribution/architecture/</link>
+      <link>https://lkummer.github.io/Satellite/contribution/architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lkummer.github.io/Satelite/contribution/architecture/</guid>
-      <description>Satelite is built using a custom Webpack setup which processes SCSS files and copies files to different folders in order to use Sass without requiring extended Hugo and reduce folder nesting. The Webpack Hugo theme boilerplate is available on Github.
+      <guid>https://lkummer.github.io/Satellite/contribution/architecture/</guid>
+      <description>Satellite is built using a custom Webpack setup which processes SCSS files and copies files to different folders in order to use Sass without requiring extended Hugo and reduce folder nesting. The Webpack Hugo theme boilerplate is available on Github.
 Folder Structure The project has a somewhat unique folder structure for a Hugo theme as it uses Webpack to build the theme itself.
  layouts/ is copied to the theme&amp;rsquo;s layouts folder.</description>
     </item>
