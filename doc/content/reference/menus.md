@@ -27,7 +27,7 @@ External pages can be added through the site configuration, for example:
 [menu]
 [[menu.main]]
   name = "Github"
-  url = "https://github.com/LKummer/Satelite-Hugo-Theme"
+  url = "https://github.com/LKummer/Satellite-Hugo-Theme"
 ```
 
 ## Section Navigation

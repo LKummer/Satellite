@@ -10,11 +10,11 @@ If not, [check out the Hugo documentation](https://gohugo.io/documentation/).
 
 ## Basic Workflow
 
-Describes the basic workflow of Satelite development.
+Describes the basic workflow of Satellite development.
 
 ### Installation
 
-After cloning the Satelite repository, install the required dependencies:
+After cloning the Satellite repository, install the required dependencies:
 
 ```s
 $ npm ci

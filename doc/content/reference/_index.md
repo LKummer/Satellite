@@ -1,4 +1,4 @@
 +++
 title = "Reference"
-description = "Every bit of detail about Satelite theme configuration."
+description = "Every bit of detail about Satellite theme configuration."
 +++

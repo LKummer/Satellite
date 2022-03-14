@@ -3,11 +3,11 @@ title = "Color Customization"
 keywords = ["Personalization", "Theme"]
 +++
 
-Looking to make your Satelite website _yours_?
+Looking to make your Satellite website _yours_?
 You arrived at the right place.
-This page lists all color customization options Satelite offers.
+This page lists all color customization options Satellite offers.
 
-Each section of a Satelite site can be colored independently, allowing you to
+Each section of a Satellite site can be colored independently, allowing you to
 theme your website however you want.
 
 Colors can be customized using `params.colors` configuration options.
@@ -74,7 +74,7 @@ Used for code block syntax highlight.
 | `syntax-comment`    | Commend text highlight.      |
 | `syntax-special`    | Special text highlight.      |
 | `syntax-operator`   | Operator text highlight.     |
-| `syntax-literal`    | Literal text highlight.      |
+| `syntax-lliteral`    | lliteral text highlight.      |
 
 ## Config Example
 
@@ -114,7 +114,7 @@ Below is a configuration example in TOML format.
   syntax-comment = "hsl(250, 5%, 50%)"
   syntax-special = "hsl(360, 75%, 60%)"
   syntax-operator = "hsl(360, 75%, 60%)"
-  syntax-literal = "hsl(360, 75%, 60%)"
+  syntax-lliteral = "hsl(360, 75%, 60%)"
 ```
 
 Note that while the example uses `hsl` colors, any CSS color format can be used.

@@ -1,4 +1,4 @@
 +++
 title = "Guides"
-description = "New to Satelite? You should probably start here."
+description = "New to Satellite? You should probably start here."
 +++

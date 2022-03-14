@@ -3,11 +3,11 @@ title = "Writing and Organizing Content"
 keywords = ["Section", "Front", "Matter"]
 +++
 
-Just got Satelite installed and configured? You are probably looking to add
+Just got Satellite installed and configured? You are probably looking to add
 sections and content to your website.
 
 In this guide we will create an example section, content page, and configure
-both to take advantage of Satelite's features.
+both to take advantage of Satellite's features.
 
 This guide assumes basic knowledge about Hugo.
 Specifically [knowledge about sections](https://gohugo.io/content-management/sections/),

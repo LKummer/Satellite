@@ -3,7 +3,7 @@ title = "Theme Architecture"
 keywords = ["Structure", "Folder", "Directory"]
 +++
 
-Satelite is built using a custom Webpack setup which processes `SCSS` files
+Satellite is built using a custom Webpack setup which processes `SCSS` files
 and copies files to different folders in order to use Sass without requiring
 extended Hugo and reduce folder nesting.
 The [Webpack Hugo theme boilerplate is available on Github](https://github.com/LKummer/hugo-theme-boilerplate).

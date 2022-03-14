@@ -3,7 +3,7 @@ title = "Getting Started"
 keywords = ["Quick", "Install", "Build", "Deploy"]
 +++
 
-The quickest way to get up and running with Satelite is using the provided
+The quickest way to get up and running with Satellite is using the provided
 quickstart-site archive.
 
 This guide assumes basic knowledge of Hugo website structure, and Hugo's CLI.
@@ -14,7 +14,7 @@ For best compatibility, use Hugo `v0.81.0`. Newer versions should work fine.
 
 ## Download and Installation
 
-Head over [to Satelite's releases on Github](https://github.com/LKummer/Satelite/releases)
+Head over [to Satellite's releases on Github](https://github.com/LKummer/Satellite/releases)
 and download the latest quickstart-site archive.
 Extract the quickstart-site archive to an empty folder.
 The site should be ready to build.

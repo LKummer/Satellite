@@ -1,8 +1,8 @@
-name = "satelite"
+name = "satellite"
 license = "GPL-3.0"
 licenselink = ""
 description = ""
-homepage = "https://lkummer.github.io/Satelite"
+homepage = "https://lkummer.github.io/Satellite"
 tags = []
 features = []
 min_version = "0.81.0"

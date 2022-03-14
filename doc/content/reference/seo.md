@@ -3,7 +3,7 @@ title = "Search Engine Optimizations"
 +++
 
 Do you need Google enhanced search results and enhanced social media sharing?
-This page documents Satelite's SEO related configuration options.
+This page documents Satellite's SEO related configuration options.
 
 ## General
 
@@ -11,11 +11,11 @@ The `title` and `params.seo.description` configuration options can be used to se
 a title and description for your website.
 
 ```toml
-title = "Satelite"
+title = "Satellite"
 
 [params]
 [params.seo]
-  description = "Satelite Hugo theme demo."
+  description = "Satellite Hugo theme demo."
 ```
 
 In content pages, the title and description of the current page are used.
@@ -71,7 +71,7 @@ Below is a site configuration example in TOML format.
 ```toml
 [params]
 [params.seo]
-  description = "Satelite Hugo theme demo."
+  description = "Satellite Hugo theme demo."
   twitterCard = "summary"
   [params.seo.images]
     ldPaths = [

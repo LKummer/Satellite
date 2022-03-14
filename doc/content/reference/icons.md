@@ -2,9 +2,9 @@
 title = "Icons and Logos"
 +++
 
-Want to make your Satelite website _pop_ with beautiful SVG logos?
+Want to make your Satellite website _pop_ with beautiful SVG logos?
 This page contains everything you need to know to configure the customizable icons
-and logos of your Satelite website.
+and logos of your Satellite website.
 
 ## Favicon
 
@@ -28,7 +28,7 @@ For example, Using `static/images/favicon.svg`:
 
 The navigation bar logo can be customized using the `params.icons.navbarIcon`
 configuration option.
-Note the navigation bar logo is completely optional and Satelite is designed to
+Note the navigation bar logo is completely optional and Satellite is designed to
 look great even without it.
 
 `params.icons.navbarIcon` should contain an SVG logo with the `navbar-logo-icon`

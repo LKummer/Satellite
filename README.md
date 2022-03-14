@@ -1,26 +1,26 @@
 <p align="center">
-  <a href="https://lkummer.github.io/Satelite/">
-    <img width="55%" src="https://lkummer.github.io/Satelite/images/readme-logo.svg">
+  <a href="https://lkummer.github.io/Satellite/">
+    <img width="55%" src="https://lkummer.github.io/Satellite/images/readme-logo.svg">
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/LKummer/Satelite/releases">
-    <img src="https://img.shields.io/github/v/tag/LKummer/Satelite?style=flat-square">
+  <a href="https://github.com/LKummer/Satellite/releases">
+    <img src="https://img.shields.io/github/v/tag/LKummer/Satellite?style=flat-square">
   </a>
-  <a href="https://github.com/LKummer/Satelite/actions/workflows/integration.yml">
-    <img src="https://img.shields.io/github/workflow/status/LKummer/Satelite/Integration?label=integration&style=flat-square">
+  <a href="https://github.com/LKummer/Satellite/actions/workflows/integration.yml">
+    <img src="https://img.shields.io/github/workflow/status/LKummer/Satellite/Integration?label=integration&style=flat-square">
   </a>
-  <a href="https://github.com/LKummer/Satelite/actions/workflows/delivery.yml">
-    <img src="https://img.shields.io/github/workflow/status/LKummer/Satelite/Delivery?label=delivery&style=flat-square">
+  <a href="https://github.com/LKummer/Satellite/actions/workflows/delivery.yml">
+    <img src="https://img.shields.io/github/workflow/status/LKummer/Satellite/Delivery?label=delivery&style=flat-square">
   </a>
-  <a href="https://github.com/LKummer/Satelite/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/github/license/LKummer/Satelite?style=flat-square">
+  <a href="https://github.com/LKummer/Satellite/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/github/license/LKummer/Satellite?style=flat-square">
   </a>
 </p>
 
 <p align="center">
-  Satelite is a Hugo theme for creating beautiful documentation websites.
-  <a href="https://lkummer.github.io/Satelite/">
+  Satellite is a Hugo theme for creating beautiful documentation websites.
+  <a href="https://lkummer.github.io/Satellite/">
     Check out the documentation.
   </a>
 </p>
@@ -32,8 +32,8 @@
 </p>
 
 <p>
-  <a href="https://lkummer.github.io/Satelite/">
-    <img src="https://lkummer.github.io/Satelite/images/readme-banner.svg" align="center">
+  <a href="https://lkummer.github.io/Satellite/">
+    <img src="https://lkummer.github.io/Satellite/images/readme-banner.svg" align="center">
   </a>
 </p>
 
@@ -50,11 +50,11 @@
 
 Make sure to have Hugo `v0.81.0` or later installed for best compatibility.
 
-Download the latest `quickstart-site` archive [from the releases](https://github.com/LKummer/Satelite/releases).
+Download the latest `quickstart-site` archive [from the releases](https://github.com/LKummer/Satellite/releases).
 Once extracted, you should have a ready to build website.
 Run `hugo` to build the site, or `hugo server` to start a hot reload server.
 
-[Check out the detailed guide](https://lkummer.github.io/Satelite/guide/getting-started/) for more information.
+[Check out the detailed guide](https://lkummer.github.io/Satellite/guide/getting-started/) for more information.
 
 ## Contribution
 
@@ -96,4 +96,4 @@ For example, if we want to build the theme we can use the `build` script:
 $ npm run build
 ```
 
-For more information [check out the detailed guide](https://lkummer.github.io/Satelite/contribution/development/).
+For more information [check out the detailed guide](https://lkummer.github.io/Satellite/contribution/development/).
