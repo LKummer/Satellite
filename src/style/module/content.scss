@@ -1,3 +1,6 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
 .content {
   font-family: var(--type-family-longform);
   line-height: var(--type-height-3);
@@ -44,7 +47,7 @@
   }
 
   p {
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-6);
     margin-top: 0;
   }
 
@@ -56,10 +59,10 @@
   }
 
   li {
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-1);
 
     > p {
-      margin-bottom: var(--space-3);
+      margin-bottom: var(--space-1);
     }
   }
 
@@ -71,7 +74,7 @@
   table {
     background: var(--color-primary-b4);
     border-collapse: separate;
-    border-radius: var(--space-4);
+    border-radius: var(--space-2);
     border-spacing: 0;
     margin-bottom: var(--space-8);
     margin-top: var(--space-4);
@@ -85,7 +88,7 @@
 
   td,
   th {
-    padding: var(--space-2) var(--space-6);
+    padding: var(--space-2) var(--space-4);
   }
 
   tr:nth-of-type(2n) > td {
@@ -94,30 +97,30 @@
 
   tr:last-child {
     td:first-child {
-      border-radius: 0 0 0 var(--space-4);
+      border-radius: 0 0 0 var(--space-2);
     }
 
     td:last-child {
-      border-radius: 0 0 var(--space-4) 0;
+      border-radius: 0 0 var(--space-2) 0;
     }
   }
 
   th:first-child {
-    border-radius: var(--space-4) 0 0 0;
+    border-radius: var(--space-2) 0 0 0;
   }
 
   th:last-child {
-    border-radius: 0 var(--space-4) 0 0;
+    border-radius: 0 var(--space-2) 0 0;
   }
 
   pre {
     background: var(--color-syntax-background);
-    border-radius: var(--space-4);
+    border-radius: var(--space-2);
     color: var(--color-syntax-foreground);
     margin-bottom: var(--space-8);
     margin-top: 0;
     overflow: auto;
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-2) var(--space-4);
   }
 
   code {
@@ -140,11 +143,16 @@
   }
 
   &-title {
+    @include break.media-under('small', screen.$breakpoints) {
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-24);
+    }
+
     font-family: var(--type-family);
     font-size: var(--type-size-6);
     font-weight: var(--type-weight-4);
     line-height: var(--type-height-1);
-    margin-bottom: var(--space-12);
-    margin-top: var(--space-24);
+    margin-bottom: var(--space-8);
+    margin-top: var(--space-12);
   }
 }
