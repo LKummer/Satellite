@@ -67,7 +67,7 @@
 
     background: inherit;
     border: none;
-    border-radius: var(--space-4);
+    border-radius: var(--space-2);
     color: var(--color-secondary-f1);
     display: inline-block;
     font-family: inherit;
@@ -140,7 +140,7 @@
   &-search {
     background: var(--color-secondary-b2);
     border: solid 1px var(--color-secondary-a1);
-    border-radius: var(--space-4);
+    border-radius: var(--space-2);
     color: var(--color-secondary-f9);
     font-size: var(--type-size-1);
     outline: 0 solid var(--color-secondary-a1);
@@ -180,7 +180,7 @@
 
       background: var(--color-primary-b2);
       border: solid 1px var(--color-primary-a1);
-      border-radius: var(--space-4);
+      border-radius: var(--space-2);
       bottom: -100%;
       box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
         hsla(0, 0%, 0%, 25%);
