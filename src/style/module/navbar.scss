@@ -30,13 +30,13 @@
     }
 
     &-icon {
-      height: var(--space-14);
+      height: var(--space-12);
       margin-right: var(--space-2);
     }
 
     &-title {
       @include break.media-under('small', screen.$breakpoints) {
-        padding: var(--space-6) var(--space-4) var(--space-6) 0;
+        padding: var(--space-4) var(--space-4) var(--space-4) 0;
       }
 
       color: var(--color-secondary-f1);
@@ -44,7 +44,7 @@
       font-size: var(--type-size-2);
       font-weight: var(--type-weight-5);
       margin: 0;
-      padding: var(--space-6) var(--space-8) var(--space-6) 0;
+      padding: var(--space-4) var(--space-2) var(--space-4) 0;
     }
   }
 
@@ -73,8 +73,8 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    margin-left: var(--space-4);
-    padding: var(--space-3) var(--space-4);
+    margin-left: var(--space-2);
+    padding: var(--space-2) var(--space-4);
     text-decoration: none;
     transition: all var(--motion-fast);
 
@@ -144,7 +144,7 @@
     color: var(--color-secondary-f9);
     font-size: var(--type-size-1);
     outline: 0 solid var(--color-secondary-a1);
-    padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
     transition: outline var(--motion-fast);
     width: 30ch;
 
