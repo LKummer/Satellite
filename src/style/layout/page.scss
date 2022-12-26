@@ -15,7 +15,7 @@
 
   display: grid;
   flex-grow: 1;
-  grid-template-columns: 30ch 1fr;
+  grid-template-columns: 28ch 1fr;
 
   &-main {
     @include break.media-under('medium', screen.$breakpoints) {
