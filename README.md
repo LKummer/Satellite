@@ -8,10 +8,10 @@
     <img src="https://img.shields.io/github/v/tag/LKummer/Satellite?style=flat-square">
   </a>
   <a href="https://github.com/LKummer/Satellite/actions/workflows/integration.yml">
-    <img src="https://img.shields.io/github/workflow/status/LKummer/Satellite/Integration?label=integration&style=flat-square">
+    <img src="https://img.shields.io/github/actions/workflow/status/LKummer/Satellite/integration.yml?label=integration&style=flat-square">
   </a>
   <a href="https://github.com/LKummer/Satellite/actions/workflows/delivery.yml">
-    <img src="https://img.shields.io/github/workflow/status/LKummer/Satellite/Delivery?label=delivery&style=flat-square">
+    <img src="https://img.shields.io/github/actions/workflow/status/LKummer/Satellite/delivery.yml?label=delivery&style=flat-square">
   </a>
   <a href="https://github.com/LKummer/Satellite/blob/master/LICENSE.md">
     <img src="https://img.shields.io/github/license/LKummer/Satellite?style=flat-square">
