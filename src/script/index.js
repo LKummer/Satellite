@@ -1,7 +1,7 @@
 import hamburgerInit from './hamburger';
+import lightDarkInit from './light-dark';
 import searchInit from './search';
 import tocInit from './toc';
-import lightDarkInit from './light-dark';
 
 hamburgerInit();
 tocInit();

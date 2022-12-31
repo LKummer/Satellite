@@ -48,7 +48,7 @@ function renderResults(results) {
 export default function init(baseURL) {
   const noResultsElement = document.createElement('h2');
   noResultsElement.classList.add('search-results-empty');
-  noResultsElement.innerText = 'Sorry, could not find anything.';
+  noResultsElement.innerText = 'Could not find anything.';
 
   const searchEngine = new Search(baseURL);
 
