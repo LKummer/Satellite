@@ -1,10 +1,10 @@
 name = "satellite"
 license = "GPL-3.0"
-licenselink = ""
-description = ""
+licenselink = "https://github.com/LKummer/Satellite/blob/master/LICENSE.md"
+description = "Create beautiful documentation websites"
 homepage = "https://lkummer.github.io/Satellite"
-tags = []
-features = []
+tags = ["Documentation", "Wiki"]
+features = ["Search", "SEO", "Color Customization", "Responsive"]
 min_version = "0.81.0"
 
 [author]
