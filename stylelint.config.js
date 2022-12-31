@@ -2,6 +2,12 @@ module.exports = {
   extends: ['stylelint-config-standard', 'prettier'],
   plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
+    'media-feature-name-no-unknown': [
+      true,
+      {
+        ignoreMediaFeatureNames: ['preferes-color-scheme']
+      }
+    ],
     'block-closing-brace-newline-after': null,
     'at-rule-no-unknown': null,
     'at-rule-empty-line-before': null,

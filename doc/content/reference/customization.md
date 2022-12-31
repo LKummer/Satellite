@@ -74,7 +74,18 @@ Used for code block syntax highlight.
 | `syntax-comment`    | Commend text highlight.      |
 | `syntax-special`    | Special text highlight.      |
 | `syntax-operator`   | Operator text highlight.     |
-| `syntax-lliteral`    | lliteral text highlight.      |
+| `syntax-lliteral`   | lliteral text highlight.     |
+
+## Dark Theme Customization
+
+Add `dark-` before a color name to set it in dark mode.
+For example, to set the `primary-b1` color in dark theme:
+
+```toml
+[params]
+[params.colors]
+  dark-primary-b1 = "hsl(355, 20%, 10%)"
+```
 
 ## Config Example
 
