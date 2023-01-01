@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en" prefix="og: https://ogp.me/ns#" class="theme-light">
   <head>
 	<meta name="generator" content="Hugo 0.87.0" />
     <meta charset="UTF-8" />
@@ -14,9 +14,18 @@
     <meta property="og:url" content="https://lkummer.github.io/Satellite/demo/" />
     <meta property="og:title" content="Demo" />
     <meta property="og:description" content="Satellite Hugo theme demo." />
+    <script>
+      const rootElement = document.querySelector(':root')
+      const mode = localStorage.getItem('theme');
+      if (mode === 'dark') {
+        rootElement.classList.add('theme-dark');
+        rootElement.classList.remove('theme-light');
+      } else if (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        rootElement.classList.add('theme-dark');
+        rootElement.classList.remove('theme-light');
+      }
+    </script>
     
-
-
   </head>
   <body class="l-page-wrapper">
     <nav aria-label="main navigation" class="navbar">
@@ -55,6 +64,33 @@
           </a>
         </li>
         <span class="navbar-items-spacer"></span>
+        <li>
+          <button id="light-dark-toggle" class="navbar-mode-icon navbar-button navbar-item">
+            <svg viewBox="0 0 24 24" style="display: block">
+              <mask id="shadow-mask">
+                <rect x="0" y="0" width="24" height="24" fill="white" />
+                <circle class="navbar-mode-icon-shadow" cx="0" cy="12" r="12" />
+              </mask>
+              <g mask="url(#shadow-mask)">
+                <circle class="navbar-mode-icon-main" cx="12" cy="12" r="8" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-1" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-2" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-3" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-4" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-5" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-6" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-7" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-8" cx="12" cy="12" r="1.5" />
+              </g>
+            </svg>
+            <span class="navbar-mode-text-light">
+              Light
+            </span>
+            <span class="navbar-mode-text-dark">
+              Dark
+            </span>
+          </button>
+        </li>
         <li class="navbar-search-wrapper">
           <svg class="navbar-search-icon" viewBox="0 0 16 16">
             <path class="navbar-search-icon-fill" d="M10.6,9.9C11.5,8.8,12,7.5,12,6c0-3.3-2.7-6-6-6S0,2.7,0,6s2.7,6,6,6c1.5,0,2.8-0.5,3.9-1.4l5.4,5.4l0.7-0.7
@@ -83,8 +119,8 @@
           </a>
         </li>
         
-        <li>
-          <button aria-label="toggle navigation menu" aria-expanded="false" id="navbar-hamburger" class="navbar-item navbar-hamburger">
+        <li class="navbar-hamburger-wrapper">
+          <button aria-label="toggle navigation menu" aria-expanded="false" id="navbar-hamburger" class="navbar-item navbar-button navbar-hamburger">
             <svg class="navbar-hamburger-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
             <g>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en" prefix="og: https://ogp.me/ns#" class="theme-light">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -26,45 +26,31 @@
       "image": ["https://lkummer.github.io/Satellite/images/1x1.png","https://lkummer.github.io/Satellite/images/4x3.png","https://lkummer.github.io/Satellite/images/16x9.png"]
     }
     </script>
-    
-
-<style>
-:root {
-    --color-primary-a1: hsl(205, 20%, 90%);
-    --color-primary-a2: hsl(205, 60%, 42.5%);
-    --color-primary-a3: hsl(205, 60%, 40%);
-    --color-primary-a4: hsl(205, 70%, 35%);
-    --color-primary-b1: hsl(205, 5%, 98%);
-    --color-primary-b2: hsl(205, 5%, 97.5%);
-    --color-primary-b3: hsl(205, 5%, 95%);
-    --color-primary-b4: hsl(205, 7.5%, 96%);
-    --color-primary-b5: hsl(205, 5%, 94%);
-    --color-primary-f4: hsl(205, 20%, 45%);
-    --color-primary-f5: hsl(205, 5%, 40%);
-    --color-primary-f6: hsl(205, 25%, 30%);
-    --color-primary-f7: hsl(205, 35%, 25%);
-    --color-secondary-a1: hsl(190, 60%, 40%);
-    --color-secondary-b2: hsl(205, 5%, 97.5%);
-    --color-secondary-b3: hsl(190, 95%, 30%);
-    --color-secondary-b4: hsl(190, 95%, 28%);
-    --color-secondary-b5:   linear-gradient(
+    <script>
+      const rootElement = document.querySelector(':root')
+      const mode = localStorage.getItem('theme');
+      if (mode === 'dark') {
+        rootElement.classList.add('theme-dark');
+        rootElement.classList.remove('theme-light');
+      } else if (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        rootElement.classList.add('theme-dark');
+        rootElement.classList.remove('theme-light');
+      }
+    </script>
+    <style>
+    .theme-light {
+      --color-primary-a1: hsl(205, 20%, 90%);--color-primary-a2: hsl(205, 60%, 42.5%);--color-primary-a3: hsl(205, 60%, 40%);--color-primary-a4: hsl(205, 70%, 35%);--color-primary-b1: hsl(205, 5%, 98%);--color-primary-b2: hsl(205, 5%, 97.5%);--color-primary-b3: hsl(205, 5%, 95%);--color-primary-b4: hsl(205, 7.5%, 96%);--color-primary-b5: hsl(205, 5%, 94%);--color-primary-f4: hsl(205, 20%, 45%);--color-primary-f5: hsl(205, 5%, 40%);--color-primary-f6: hsl(205, 25%, 30%);--color-primary-f7: hsl(205, 35%, 25%);--color-secondary-a1: hsl(190, 60%, 40%);--color-secondary-b2: hsl(205, 5%, 97.5%);--color-secondary-b3: hsl(190, 95%, 30%);--color-secondary-b4: hsl(190, 95%, 28%);--color-secondary-b5:   linear-gradient(
     30deg,
     hsl(205, 85%, 25%),
-    hsl(190, 90%, 25%));
-    --color-secondary-f1: hsl(190, 15%, 80%);
-    --color-secondary-f9: hsl(190, 5%, 50%);
-    --color-tertiary-a3: hsl(205, 35%, 70%);
-    --color-tertiary-b5: hsl(190, 2%, 96%);
-    --color-tertiary-b6: hsl(205, 30%, 90%);
-    --color-tertiary-b7: hsl(205, 35%, 88%);
-    --color-tertiary-f3: hsl(205, 15%, 50%);
-    --color-tertiary-f4: hsl(205, 85%, 40%);
-    --color-tertiary-f5: hsl(205, 60%, 40%);
-    --color-tertiary-f6: hsl(205, 85%, 40%);
+    hsl(190, 90%, 25%));--color-secondary-f1: hsl(190, 15%, 80%);--color-secondary-f9: hsl(190, 5%, 50%);--color-tertiary-a3: hsl(205, 35%, 70%);--color-tertiary-b5: hsl(190, 2%, 96%);--color-tertiary-b6: hsl(205, 30%, 90%);--color-tertiary-b7: hsl(205, 35%, 88%);--color-tertiary-f3: hsl(205, 15%, 50%);--color-tertiary-f4: hsl(205, 85%, 40%);--color-tertiary-f5: hsl(205, 60%, 40%);--color-tertiary-f6: hsl(205, 85%, 40%);
     }
-</style>
-
-
+    .theme-dark {
+      --color-primary-a1: hsl(205, 40%, 30%);--color-primary-a2: hsl(205, 100%, 75%);--color-primary-a3: hsl(205, 90%, 70%);--color-primary-a4: hsl(205, 90%, 65%);--color-primary-b1: hsl(205, 15%, 15%);--color-primary-b2: hsl(205, 15%, 17%);--color-primary-b3: hsl(205, 15%, 20%);--color-primary-b4: hsl(205, 15%, 17%);--color-primary-b5: hsl(205, 15%, 20%);--color-primary-f4: hsl(205, 5%, 80%);--color-primary-f5: hsl(205, 10%, 93%);--color-primary-f6: hsl(205, 15%, 85%);--color-primary-f7: hsl(205, 20%, 80%);--color-secondary-a1: hsl(190, 80%, 60%);--color-secondary-b2: hsl(205, 45%, 25%);--color-secondary-b3: hsl(190, 65%, 40%);--color-secondary-b4: hsl(190, 65%, 35%);--color-secondary-b5:   linear-gradient(
+    30deg,
+    hsl(205, 65%, 20%),
+    hsl(190, 70%, 25%));--color-secondary-f1: hsl(190, 30%, 85%);--color-secondary-f9: hsl(190, 80%, 65%);--color-syntax-background: hsl(205, 15%, 20%);--color-tertiary-a3: hsl(205, 75%, 65%);--color-tertiary-b5: hsl(205, 15%, 20%);--color-tertiary-b6: hsl(205, 25%, 25%);--color-tertiary-b7: hsl(205, 25%, 25%);--color-tertiary-f3: hsl(205, 10%, 93%);--color-tertiary-f4: hsl(205, 80%, 85%);--color-tertiary-f5: hsl(205, 90%, 70%);--color-tertiary-f6: hsl(205, 90%, 70%);
+    }
+    </style>
   </head>
   <body class="l-page-wrapper">
     <nav aria-label="main navigation" class="navbar">
@@ -103,6 +89,33 @@
           </a>
         </li>
         <span class="navbar-items-spacer"></span>
+        <li>
+          <button id="light-dark-toggle" class="navbar-mode-icon navbar-button navbar-item">
+            <svg viewBox="0 0 24 24" style="display: block">
+              <mask id="shadow-mask">
+                <rect x="0" y="0" width="24" height="24" fill="white" />
+                <circle class="navbar-mode-icon-shadow" cx="0" cy="12" r="12" />
+              </mask>
+              <g mask="url(#shadow-mask)">
+                <circle class="navbar-mode-icon-main" cx="12" cy="12" r="8" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-1" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-2" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-3" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-4" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-5" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-6" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-7" cx="12" cy="12" r="1.5" />
+                <circle class="navbar-mode-icon-ray navbar-mode-icon-ray-8" cx="12" cy="12" r="1.5" />
+              </g>
+            </svg>
+            <span class="navbar-mode-text-light">
+              Light
+            </span>
+            <span class="navbar-mode-text-dark">
+              Dark
+            </span>
+          </button>
+        </li>
         <li class="navbar-search-wrapper">
           <svg class="navbar-search-icon" viewBox="0 0 16 16">
             <path class="navbar-search-icon-fill" d="M10.6,9.9C11.5,8.8,12,7.5,12,6c0-3.3-2.7-6-6-6S0,2.7,0,6s2.7,6,6,6c1.5,0,2.8-0.5,3.9-1.4l5.4,5.4l0.7-0.7
@@ -131,8 +144,8 @@
           </a>
         </li>
         
-        <li>
-          <button aria-label="toggle navigation menu" aria-expanded="false" id="navbar-hamburger" class="navbar-item navbar-hamburger">
+        <li class="navbar-hamburger-wrapper">
+          <button aria-label="toggle navigation menu" aria-expanded="false" id="navbar-hamburger" class="navbar-item navbar-button navbar-hamburger">
             <svg class="navbar-hamburger-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
             <g>
@@ -445,7 +458,13 @@ Check out the config example at the bottom for a concrete example.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="config-example">Config Example</h2>
+<h2 id="dark-theme-customization">Dark Theme Customization</h2>
+<p>Add <code>dark-</code> before a color name to set it in dark mode.
+For example, to set the <code>primary-b1</code> color in dark theme:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+<span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">colors</span><span class="p">]</span>
+  <span class="nx">dark-primary-b1</span> <span class="p">=</span> <span class="s2">&#34;hsl(355, 20%, 10%)&#34;</span>
+</code></pre></div><h2 id="config-example">Config Example</h2>
 <p>Below is a configuration example in TOML format.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
 <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">colors</span><span class="p">]</span>
@@ -492,6 +511,7 @@ Check out the config example at the bottom for a concrete example.</p>
     <li><a href="#secondary-colors">Secondary Colors</a></li>
     <li><a href="#tertiary-colors">Tertiary Colors</a></li>
     <li><a href="#syntax-highlight-colors">Syntax Highlight Colors</a></li>
+    <li><a href="#dark-theme-customization">Dark Theme Customization</a></li>
     <li><a href="#config-example">Config Example</a></li>
   </ul>
 </nav>
