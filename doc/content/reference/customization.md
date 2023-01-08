@@ -71,10 +71,11 @@ Used for code block syntax highlight.
 | ------------------- | ---------------------------- |
 | `syntax-background` | Syntax highlight background. |
 | `syntax-foreground` | Syntax highlight text.       |
-| `syntax-comment`    | Commend text highlight.      |
+| `syntax-comment`    | Comment highlight.           |
+| `syntax-string`     | String literal highlight.    |
 | `syntax-special`    | Special text highlight.      |
-| `syntax-operator`   | Operator text highlight.     |
-| `syntax-lliteral`   | lliteral text highlight.     |
+| `syntax-operator`   | Keyword highlight.           |
+| `syntax-literal`    | Literal highlight.           |
 
 ## Dark Theme Customization
 
@@ -123,9 +124,10 @@ Below is a configuration example in TOML format.
   syntax-background = "hsl(250, 15%, 97%)"
   syntax-foreground = "hsl(250, 35%, 40%)"
   syntax-comment = "hsl(250, 5%, 50%)"
+  syntax-string = "hsl(210, 100%, 45%)"
   syntax-special = "hsl(360, 75%, 60%)"
   syntax-operator = "hsl(360, 75%, 60%)"
-  syntax-lliteral = "hsl(360, 75%, 60%)"
+  syntax-literal = "hsl(360, 75%, 60%)"
 ```
 
 Note that while the example uses `hsl` colors, any CSS color format can be used.

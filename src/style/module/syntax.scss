@@ -3,6 +3,8 @@
   $text: var(--color-syntax-foreground);
   // Comments.
   $comment: var(--color-syntax-comment);
+  // String literals.
+  $string: var(--color-syntax-string);
   // Exceptions and types.
   $special: var(--color-syntax-special);
   // Operators and parenthesis.
@@ -58,37 +60,42 @@
 
   /* Keyword */
   .k {
-    color: $literal;
+    color: $operator;
   }
 
   /* KeywordConstant */
   .kc {
-    color: $literal;
+    color: $operator;
   }
 
   /* KeywordDeclaration */
   .kd {
-    color: $literal;
+    color: $operator;
   }
 
   /* KeywordNamespace */
   .kn {
-    color: $literal;
+    color: $operator;
   }
 
   /* KeywordPseudo */
   .kp {
-    color: $literal;
+    color: $operator;
   }
 
   /* KeywordReserved */
   .kr {
-    color: $literal;
+    color: $operator;
   }
 
   /* KeywordType */
   .kt {
-    color: $special;
+    color: $text;
+  }
+
+  /* Name */
+  .n {
+    color: $text;
   }
 
   /* NameAttribute */
@@ -158,69 +165,68 @@
 
   /* LiteralString */
   .s {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringAffix */
   .sa {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringBacktick */
   .sb {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringChar */
   .sc {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringDelimiter */
   .dl {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringDoc */
   .sd {
-    color: $text;
+    color: $string;
     font-style: italic;
   }
 
   /* LiteralStringDouble */
   .s2 {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringEscape */
   .se {
-    color: $text;
+    color: $operator;
   }
 
   /* LiteralStringHeredoc */
   .sh {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringInterpol */
   .si {
     color: $operator;
-    font-style: italic;
   }
 
   /* LiteralStringOther */
   .sx {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringRegex */
   .sr {
-    color: $text;
+    color: $literal;
   }
 
   /* LiteralStringSingle */
   .s1 {
-    color: $text;
+    color: $string;
   }
 
   /* LiteralStringSymbol */
@@ -265,7 +271,7 @@
 
   /* Operator */
   .o {
-    color: $operator;
+    color: $text;
   }
 
   /* OperatorWord */
@@ -275,7 +281,7 @@
 
   /* Parenthesis */
   .p {
-    color: $operator;
+    color: $text;
   }
 
   /* Comment */
@@ -314,7 +320,7 @@
 
   /* CommentPreprocFile */
   .cpf {
-    color: $special;
+    color: $text;
   }
 
   /* GenericDeleted */

@@ -42,6 +42,7 @@
   --color-syntax-comment: hsl(250, 5%, 50%);
   --color-syntax-special: hsl(360, 75%, 60%);
   --color-syntax-operator: hsl(360, 75%, 60%);
+  --color-syntax-string: hsl(210, 100%, 45%);
   --color-syntax-literal: hsl(360, 75%, 60%);
 }
 
@@ -83,5 +84,6 @@
   --color-syntax-comment: hsl(250, 20%, 50%);
   --color-syntax-special: hsl(360, 75%, 60%);
   --color-syntax-operator: hsl(250, 100%, 85%);
+  --color-syntax-string: hsl(210, 100%, 85%);
   --color-syntax-literal: hsl(360, 75%, 60%);
 }
