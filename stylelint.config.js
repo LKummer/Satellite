@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['stylelint-config-standard', 'prettier'],
   plugins: ['stylelint-scss', 'stylelint-order'],
+  customSyntax: 'postcss-scss',
   rules: {
     'block-closing-brace-newline-after': null,
     'at-rule-no-unknown': null,

@@ -47,7 +47,6 @@ module.exports = (env) => {
         files: ['src/**/*.js', '*.js']
       }),
       new StylelintPlugin({
-        syntax: 'scss',
         files: ['src/**/*.s?(a|c)ss']
       })
     ]
