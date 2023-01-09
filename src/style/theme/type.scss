@@ -1,0 +1,37 @@
+@use '@lkummer/break' as break;
+@use './screen.scss';
+
+@import '@openfonts/manrope_latin/index.css';
+@import '@openfonts/lora_latin/index.css';
+@import '@openfonts/fira-code_latin/index.css';
+
+:root {
+  --type-family: 'Manrope', sans-serif;
+  --type-family-longform: 'Lora', serif;
+  --type-family-monospace: 'Fira Code', monospace;
+  --type-size-00: 8pt;
+  --type-size-0: 11pt;
+  --type-size-1: 12pt;
+  --type-size-2: 14pt;
+  --type-size-3: 16pt;
+  --type-size-4: 18pt;
+  --type-size-5: 20pt;
+  --type-size-6: 32pt;
+  --type-weight-1: 300;
+  --type-weight-2: 400;
+  --type-weight-3: 500;
+  --type-weight-4: 700;
+  --type-weight-5: 800;
+  --type-height-1: 1.2;
+  --type-height-2: 1.5;
+  --type-height-3: 1.8;
+
+  @include break.media-under('small', screen.$breakpoints) {
+    --type-size-1: 12pt;
+    --type-size-2: 13pt;
+    --type-size-3: 14pt;
+    --type-size-4: 16pt;
+    --type-size-5: 18pt;
+    --type-size-6: 20pt;
+  }
+}

@@ -1,0 +1,385 @@
+.chroma {
+  // Names and namespaces.
+  $text: var(--color-syntax-foreground);
+  // Comments.
+  $comment: var(--color-syntax-comment);
+  // String literals.
+  $string: var(--color-syntax-string);
+  // Exceptions and types.
+  $special: var(--color-syntax-special);
+  // Operators and parenthesis.
+  $operator: var(--color-syntax-operator);
+  // Literals and keywords.
+  $literal: var(--color-syntax-literal);
+  // Background.
+  $background: var(--color-syntax-background);
+
+  /* Background */
+  background: $background;
+  color: $text;
+
+  /* LineTableTD */
+  .lntd {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  /* LineTable */
+  .lntable {
+    border: 0;
+    border-spacing: 0;
+    display: block;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    width: auto;
+  }
+
+  /* LineHighlight */
+  .hl {
+    background-color: $background;
+    display: block;
+    width: 100%;
+  }
+
+  /* LineNumbersTable */
+  .lnt {
+    color: $operator;
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+  }
+
+  /* LineNumbers */
+  .ln {
+    color: $operator;
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+  }
+
+  /* Keyword */
+  .k {
+    color: $operator;
+  }
+
+  /* KeywordConstant */
+  .kc {
+    color: $operator;
+  }
+
+  /* KeywordDeclaration */
+  .kd {
+    color: $operator;
+  }
+
+  /* KeywordNamespace */
+  .kn {
+    color: $operator;
+  }
+
+  /* KeywordPseudo */
+  .kp {
+    color: $operator;
+  }
+
+  /* KeywordReserved */
+  .kr {
+    color: $operator;
+  }
+
+  /* KeywordType */
+  .kt {
+    color: $text;
+  }
+
+  /* Name */
+  .n {
+    color: $text;
+  }
+
+  /* NameAttribute */
+  .na {
+    color: $text;
+  }
+
+  /* NameBuiltin */
+  .nb {
+    color: $text;
+  }
+
+  /* NameClass */
+  .nc {
+    color: $text;
+  }
+
+  /* NameConstant */
+  .no {
+    color: $text;
+  }
+
+  /* NameDecorator */
+  .nd {
+    color: $operator;
+  }
+
+  /* NameEntity */
+  .ni {
+    color: $text;
+  }
+
+  /* NameException */
+  .ne {
+    color: $special;
+  }
+
+  /* NameFunction */
+  .nf {
+    color: $text;
+  }
+
+  /* NameLabel */
+  .nl {
+    color: $text;
+  }
+
+  /* NameNamespace */
+  .nn {
+    color: $text;
+  }
+
+  /* NameTag */
+  .nt {
+    color: $text;
+  }
+
+  /* NameVariable */
+  .nv {
+    color: $text;
+  }
+
+  /* NameExtra (?) */
+  .nx {
+    color: $text;
+  }
+
+  /* LiteralString */
+  .s {
+    color: $string;
+  }
+
+  /* LiteralStringAffix */
+  .sa {
+    color: $string;
+  }
+
+  /* LiteralStringBacktick */
+  .sb {
+    color: $string;
+  }
+
+  /* LiteralStringChar */
+  .sc {
+    color: $string;
+  }
+
+  /* LiteralStringDelimiter */
+  .dl {
+    color: $string;
+  }
+
+  /* LiteralStringDoc */
+  .sd {
+    color: $string;
+    font-style: italic;
+  }
+
+  /* LiteralStringDouble */
+  .s2 {
+    color: $string;
+  }
+
+  /* LiteralStringEscape */
+  .se {
+    color: $operator;
+  }
+
+  /* LiteralStringHeredoc */
+  .sh {
+    color: $string;
+  }
+
+  /* LiteralStringInterpol */
+  .si {
+    color: $operator;
+  }
+
+  /* LiteralStringOther */
+  .sx {
+    color: $string;
+  }
+
+  /* LiteralStringRegex */
+  .sr {
+    color: $literal;
+  }
+
+  /* LiteralStringSingle */
+  .s1 {
+    color: $string;
+  }
+
+  /* LiteralStringSymbol */
+  .ss {
+    color: $operator;
+  }
+
+  /* LiteralNumber */
+  .m {
+    color: $literal;
+  }
+
+  /* LiteralNumberBin */
+  .mb {
+    color: $literal;
+  }
+
+  /* LiteralNumberFloat */
+  .mf {
+    color: $literal;
+  }
+
+  /* LiteralNumberHex */
+  .mh {
+    color: $literal;
+  }
+
+  /* LiteralNumberInteger */
+  .mi {
+    color: $literal;
+  }
+
+  /* LiteralNumberIntegerLong */
+  .il {
+    color: $literal;
+  }
+
+  /* LiteralNumberOct */
+  .mo {
+    color: $literal;
+  }
+
+  /* Operator */
+  .o {
+    color: $text;
+  }
+
+  /* OperatorWord */
+  .ow {
+    color: $operator;
+  }
+
+  /* Parenthesis */
+  .p {
+    color: $text;
+  }
+
+  /* Comment */
+  .c {
+    color: $comment;
+    font-style: italic;
+  }
+
+  /* CommentHashbang */
+  .ch {
+    color: $comment;
+    font-style: italic;
+  }
+
+  /* CommentMultiline */
+  .cm {
+    color: $comment;
+    font-style: italic;
+  }
+
+  /* CommentSingle */
+  .c1 {
+    color: $comment;
+    font-style: italic;
+  }
+
+  /* CommentSpecial */
+  .cs {
+    color: $comment;
+  }
+
+  /* CommentPreproc */
+  .cp {
+    color: $special;
+  }
+
+  /* CommentPreprocFile */
+  .cpf {
+    color: $text;
+  }
+
+  /* GenericDeleted */
+  .gd {
+    color: $text;
+  }
+
+  /* GenericEmph */
+  .ge {
+    font-style: italic;
+  }
+
+  /* GenericError */
+  .gr {
+    color: $text;
+  }
+
+  /* GenericHeading */
+  .gh {
+    color: $text;
+  }
+
+  /* GenericInserted */
+  .gi {
+    color: $text;
+  }
+
+  /* GenericOutput */
+  .go {
+    color: $text;
+  }
+
+  /* GenericPrompt */
+  .gp {
+    color: $text;
+  }
+
+  /* GenericStrong
+  .gs {
+  }
+  */
+
+  /* GenericSubheading */
+  .gu {
+    color: $text;
+  }
+
+  /* GenericTraceback */
+  .gt {
+    color: $text;
+  }
+
+  /* GenericUnderline */
+  .gl {
+    text-decoration: underline;
+  }
+
+  /* TextWhitespace */
+  .w {
+    color: $text;
+  }
+}

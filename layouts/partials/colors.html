@@ -1,0 +1,26 @@
+{{- $valid := slice "primary-b1" "primary-b2" "primary-b3" "primary-b4" "primary-b5" "primary-a1" "primary-a2" "primary-a3" "primary-a4" "primary-f4" "primary-f5" "primary-f6" "primary-f7" "secondary-b2" "secondary-b3" "secondary-b4" "secondary-b5" "secondary-a1" "secondary-f1" "secondary-f9" "tertiary-b5" "tertiary-b6" "tertiary-b7" "tertiary-a3" "tertiary-f3" "tertiary-f4" "tertiary-f5" "tertiary-f6" "syntax-background" "syntax-foreground" "syntax-comment" "syntax-special" "syntax-operator" "syntax-literal" "syntax-string" }}
+{{- with .Site.Params.colors }}
+    {{- $lightColors := dict }}
+    {{- $darkColors := dict }}
+    {{- range $key, $value := . -}}
+        {{- if in $valid $key -}}
+            {{- $lightColors = $lightColors | merge (dict $key $value) }}
+        {{- else if (and (in $valid (strings.TrimPrefix "dark-" $key)) (hasPrefix $key "dark-")) -}}
+            {{- $darkColors = $darkColors | merge (dict (strings.TrimPrefix "dark-" $key) $value) }}
+        {{- else -}}
+            {{- warnf "Invalid colors config parameter: %s." $key -}}
+        {{- end -}}
+    {{- end -}}
+    <style>
+    .theme-light {
+      {{ range $key, $value := $lightColors -}}
+      --color-{{ $key }}: {{ safeCSS $value }};
+      {{- end }}
+    }
+    .theme-dark {
+      {{ range $key, $value := $darkColors -}}
+      --color-{{ $key }}: {{ safeCSS $value }};
+      {{- end }}
+    }
+    </style>
+{{- end -}}

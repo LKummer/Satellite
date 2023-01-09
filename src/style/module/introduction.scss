@@ -1,0 +1,89 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
+.introduction {
+  &-title {
+    @include break.media-under('small', screen.$breakpoints) {
+      margin-top: var(--space-24);
+    }
+
+    font-size: var(--type-size-4);
+    font-weight: var(--type-weight-4);
+    margin-top: var(--space-12);
+  }
+
+  &-content {
+    margin-top: var(--space-8);
+  }
+
+  &-search {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-16);
+
+    &-title {
+      font-size: var(--type-size-4);
+      font-weight: var(--type-weight-3);
+      margin: 0 0 var(--space-8) 0;
+    }
+
+    &-input {
+      @include break.media-under('small', screen.$breakpoints) {
+        width: 100%;
+      }
+
+      background: var(--color-primary-b2);
+      border: solid 1px var(--color-primary-a1);
+      border-radius: var(--space-4);
+      color: var(--color-primary-f5);
+      font-size: var(--type-size-1);
+      outline: 0 solid var(--color-primary-a1);
+      padding: var(--space-3) var(--space-5) var(--space-3) var(--space-12);
+      transition: outline var(--motion-fast);
+      width: 30rem;
+
+      &:focus {
+        outline: 3px solid var(--color-primary-a1);
+      }
+
+      &-wrapper {
+        @include break.media-under('small', screen.$breakpoints) {
+          width: 100%;
+        }
+
+        align-items: center;
+        display: flex;
+      }
+
+      &-icon {
+        margin-left: var(--space-5);
+        margin-right: var(--space-n9);
+        pointer-events: none;
+        position: relative;
+        width: var(--space-4);
+
+        &-fill {
+          fill: var(--color-primary-f5);
+        }
+      }
+    }
+
+    &-popup {
+      @include break.media-under('small', screen.$breakpoints) {
+        width: min(60ch, 100% - var(--space-8));
+      }
+
+      background: var(--color-primary-b2);
+      border: solid 1px var(--color-primary-a1);
+      border-radius: var(--space-4);
+      bottom: -100%;
+      box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
+        hsla(0, 0%, 0%, 25%);
+      padding: var(--space-6) var(--space-5);
+      position: absolute;
+      transition: opacity var(--motion-fast);
+      width: 30rem;
+    }
+  }
+}

@@ -1,14 +1,9 @@
----
-title: 'Home'
-menu:
-  footer:
-    weight: 10
-# Section Configuration:
-masthead:
-  title: 'Build Hugo Themes with Webpack'
-  subtitle: 'Integrate Hugo and the JS ecosystem'
-  buttons:
-    - label: 'Getting Started Guide'
-      to: 'guide/getting-started/'
-      color: 'accent'
----
++++
+title = "Documentation"
+[menu.main]
+  weight = -10
++++
+
+Satellite is a Hugo theme for creating beautiful documentation websites.
+
+This documentation is built with Satellite, [there is also a demo for you to check out](https://lkummer.github.io/Satellite/demo).

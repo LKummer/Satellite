@@ -1,0 +1,283 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
+.navbar {
+  @include break.media-under('small', screen.$breakpoints) {
+    position: fixed;
+    width: 100vw;
+  }
+
+  background: var(--color-secondary-b5);
+  box-shadow: 0 0.1rem var(--space-2) hsla(0, 0%, 0%, 20%),
+    0 0.15rem var(--space-2) hsla(0, 0%, 0%, 10%);
+  padding: 0 var(--space-4) 0 0;
+  z-index: 10;
+
+  &-logo {
+    --logo-hover: 0;
+
+    @include break.media-under('small', screen.$breakpoints) {
+      padding-left: var(--space-4);
+    }
+
+    align-items: center;
+    display: flex;
+    padding-left: var(--space-8);
+    text-decoration: none;
+
+    &:hover {
+      --logo-hover: 1;
+    }
+
+    &-icon {
+      height: var(--space-12);
+      margin-right: var(--space-2);
+    }
+
+    &-title {
+      @include break.media-under('small', screen.$breakpoints) {
+        padding: var(--space-4) var(--space-4) var(--space-4) 0;
+      }
+
+      color: var(--color-secondary-f1);
+      display: inline-block;
+      font-size: var(--type-size-2);
+      font-weight: var(--type-weight-5);
+      margin: 0;
+      padding: var(--space-4) var(--space-2) var(--space-4) 0;
+    }
+  }
+
+  &-items {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-spacer {
+      flex-grow: 1;
+    }
+  }
+
+  &-item {
+    @include break.media-under('small', screen.$breakpoints) {
+      display: none;
+    }
+
+    background: inherit;
+    border: none;
+    border-radius: var(--space-2);
+    color: var(--color-secondary-f1);
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-left: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    text-decoration: none;
+    transition: all var(--motion-fast);
+
+    &-active {
+      background: var(--color-secondary-b4);
+      font-weight: var(--type-weight-5);
+    }
+
+    &[aria-expanded='true'] {
+      background: var(--color-secondary-b4);
+    }
+
+    &:hover {
+      background: var(--color-secondary-b4);
+    }
+
+    &:active {
+      background: var(--color-secondary-b3);
+    }
+  }
+
+  &-hamburger {
+    display: flex;
+
+    &-wrapper {
+      @include break.media-over('medium', screen.$breakpoints) {
+        display: none;
+      }
+    }
+
+    &-icon {
+      transform: scale(0.8);
+
+      &-top,
+      &-middle,
+      &-bottom {
+        fill: var(--color-secondary-f1);
+        transition: all var(--motion-fast);
+      }
+    }
+
+    &[aria-expanded='true'] {
+      .navbar-hamburger-icon {
+        &-top {
+          transform: translateY(5.5px) rotate(45deg);
+          transform-origin: 8px 2.5px;
+        }
+
+        &-middle {
+          transform: rotate(45deg);
+          transform-origin: 8px 8px;
+        }
+
+        &-bottom {
+          transform: translateY(-5.5px) rotate(-45deg);
+          transform-origin: 8px 13.5px;
+        }
+      }
+    }
+  }
+
+  &-search {
+    background: var(--color-secondary-b2);
+    border: solid 1px var(--color-secondary-a1);
+    border-radius: var(--space-2);
+    color: var(--color-secondary-f9);
+    font-size: var(--type-size-1);
+    height: var(--space-10);
+    outline: 0 solid var(--color-secondary-a1);
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
+    transition: outline var(--motion-fast);
+    width: 30ch;
+
+    &:focus {
+      outline: 3px solid var(--color-secondary-a1);
+    }
+
+    &-wrapper {
+      @include break.media-under('small', screen.$breakpoints) {
+        display: none;
+      }
+
+      align-items: center;
+      display: flex;
+      margin-left: var(--space-6);
+    }
+
+    &-icon {
+      margin-right: var(--space-n8);
+      pointer-events: none;
+      position: relative;
+      width: var(--space-4);
+
+      &-fill {
+        fill: var(--color-secondary-f9);
+      }
+    }
+
+    &-popup {
+      @include break.media-under('small', screen.$breakpoints) {
+        /* Important to hide navbar search results on mobile. */
+        display: none !important;
+      }
+
+      background: var(--color-primary-b2);
+      border: solid 1px var(--color-primary-a1);
+      border-radius: var(--space-2);
+      bottom: -100%;
+      box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
+        hsla(0, 0%, 0%, 25%);
+      padding: var(--space-6) var(--space-5);
+      position: absolute;
+      transition: opacity var(--motion-fast);
+      width: 30rem;
+    }
+  }
+
+  &-button {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--type-size-00);
+    height: var(--space-10);
+    margin-left: var(--space-2);
+    padding: var(--space-1) var(--space-2) 0.1rem var(--space-2);
+    transition: all var(--motion-fast);
+    width: var(--space-10);
+  }
+
+  &-mode {
+    &-text {
+      .theme-dark &-light {
+        display: none;
+      }
+
+      .theme-light &-dark {
+        display: none;
+      }
+    }
+
+    &-icon {
+      --mode-icon-mode: 1;
+
+      fill: var(--color-secondary-f1);
+
+      .theme-dark & {
+        --mode-icon-mode: 0;
+      }
+
+      &-main {
+        transform: scale(calc(1 - (0.25 * var(--mode-icon-mode))));
+        transform-origin: 12px 12px;
+        transition: transform var(--motion-slow);
+      }
+
+      &-shadow {
+        fill: black;
+        transform: translateX(calc(-12px * var(--mode-icon-mode)));
+        transition: transform var(--motion-slow);
+      }
+
+      &-ray {
+        transform-origin: 12px 12px;
+        transition: transform var(--motion-slow);
+
+        &-1 {
+          transform: translateX(calc(9px * var(--mode-icon-mode)));
+        }
+
+        &-2 {
+          transform: rotate(45deg) translateX(calc(9px * var(--mode-icon-mode)));
+        }
+
+        &-3 {
+          transform: rotate(90deg) translateX(calc(9px * var(--mode-icon-mode)));
+        }
+
+        &-4 {
+          transform: rotate(135deg)
+            translateX(calc(9px * var(--mode-icon-mode)));
+        }
+
+        &-5 {
+          transform: rotate(180deg)
+            translateX(calc(9px * var(--mode-icon-mode)));
+        }
+
+        &-6 {
+          transform: rotate(225deg)
+            translateX(calc(9px * var(--mode-icon-mode)));
+        }
+
+        &-7 {
+          transform: rotate(270deg)
+            translateX(calc(9px * var(--mode-icon-mode)));
+        }
+
+        &-8 {
+          transform: rotate(315deg)
+            translateX(calc(9px * var(--mode-icon-mode)));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
+.l-single {
+  @include break.media-under('medium', screen.$breakpoints) {
+    display: block;
+  }
+
+  @include break.media-under('medium', screen.$breakpoints) {
+    grid-template-columns: auto;
+
+    &-side {
+      display: none;
+    }
+  }
+
+  display: grid;
+  gap: var(--space-16);
+  grid-template-columns: minmax(0, 1fr) 25ch;
+
+  &-side {
+    margin-top: var(--space-8);
+  }
+}

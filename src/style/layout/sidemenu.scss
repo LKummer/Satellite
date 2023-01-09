@@ -1,0 +1,28 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
+.l-sidemenu {
+  @include break.media-over('medium', screen.$breakpoints) {
+    display: none;
+  }
+
+  @include break.media-under('small', screen.$breakpoints) {
+    &-noscroll {
+      overflow: hidden;
+    }
+  }
+
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  transform: translateY(-100%);
+  transition: all var(--motion-fast);
+  visibility: hidden;
+  width: 100%;
+
+  &-active {
+    right: initial;
+    transform: translateX(0%);
+    visibility: visible;
+  }
+}
