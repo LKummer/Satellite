@@ -1,14 +1,9 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'prettier'],
+  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   plugins: ['stylelint-scss', 'stylelint-order'],
   customSyntax: 'postcss-scss',
   rules: {
-    'media-feature-name-no-unknown': [
-      true,
-      {
-        ignoreMediaFeatureNames: ['preferes-color-scheme']
-      }
-    ],
+    'selector-id-pattern': null,
     'block-closing-brace-newline-after': null,
     'at-rule-no-unknown': null,
     'at-rule-empty-line-before': null,

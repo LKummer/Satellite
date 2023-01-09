@@ -30,7 +30,7 @@
       color: var(--color-primary-f4);
       font-size: var(--type-size-1);
       font-weight: var(--type-weight-2);
-      margin: 0 0 0 0;
+      margin: 0;
     }
 
     &-links {
@@ -43,7 +43,7 @@
         display: inline-block;
         font-weight: var(--type-weight-4);
         margin-bottom: var(--space-2);
-        text-decoration: underline hsla(0, 0%, 0%, 0%);
+        text-decoration: underline hsl(0deg 0% 0% / 0%);
         transition: all var(--motion-fast);
 
         &:hover {

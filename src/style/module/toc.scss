@@ -14,7 +14,7 @@
     display: inline-block;
     font-size: var(--type-size-0);
     margin-top: var(--space-4);
-    text-decoration: underline hsla(0, 0%, 0%, 0%);
+    text-decoration: underline hsl(0deg 0% 0% / 0%);
     transition: all var(--motion-fast);
 
     &:hover {

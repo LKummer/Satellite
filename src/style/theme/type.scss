@@ -1,9 +1,9 @@
 @use '@lkummer/break' as break;
 @use './screen.scss';
 
-@import '@openfonts/manrope_latin/index.css';
-@import '@openfonts/lora_latin/index.css';
-@import '@openfonts/fira-code_latin/index.css';
+@import url('@openfonts/manrope_latin/index.css');
+@import url('@openfonts/lora_latin/index.css');
+@import url('@openfonts/fira-code_latin/index.css');
 
 :root {
   --type-family: 'Manrope', sans-serif;

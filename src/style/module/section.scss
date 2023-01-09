@@ -30,7 +30,7 @@
       color: var(--color-primary-f5);
       display: inline-block;
       margin-top: var(--space-4);
-      text-decoration: underline hsla(0, 0%, 0%, 0%);
+      text-decoration: underline hsl(0deg 0% 0% / 0%);
       transition: all var(--motion-fast);
 
       &:hover {

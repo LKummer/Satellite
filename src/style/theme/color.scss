@@ -5,85 +5,85 @@
 //   <number> roughly means darkness.
 
 .theme-light {
-  --color-primary-b1: hsl(250, 0%, 100%);
-  --color-primary-b2: hsl(250, 5%, 99.5%);
-  --color-primary-b3: hsl(250, 60%, 98%);
-  --color-primary-b4: hsl(250, 5%, 99.5%);
-  --color-primary-b5: hsl(250, 15%, 97%);
-  --color-primary-a1: hsl(250, 40%, 92%);
-  --color-primary-a2: hsl(250, 80%, 65%);
-  --color-primary-a3: hsl(250, 85%, 60%);
-  --color-primary-a4: hsl(250, 90%, 58%);
-  --color-primary-f4: hsl(250, 5%, 60%);
-  --color-primary-f5: hsl(250, 10%, 50%);
-  --color-primary-f6: hsl(250, 15%, 35%);
-  --color-primary-f7: hsl(250, 20%, 30%);
-  --color-secondary-b2: hsl(250, 5%, 99.5%);
-  --color-secondary-b3: hsl(260, 62%, 58%);
-  --color-secondary-b4: hsl(260, 65%, 55%);
+  --color-primary-b1: hsl(250deg 0% 100%);
+  --color-primary-b2: hsl(250deg 5% 99.5%);
+  --color-primary-b3: hsl(250deg 60% 98%);
+  --color-primary-b4: hsl(250deg 5% 99.5%);
+  --color-primary-b5: hsl(250deg 15% 97%);
+  --color-primary-a1: hsl(250deg 40% 92%);
+  --color-primary-a2: hsl(250deg 80% 65%);
+  --color-primary-a3: hsl(250deg 85% 60%);
+  --color-primary-a4: hsl(250deg 90% 58%);
+  --color-primary-f4: hsl(250deg 5% 60%);
+  --color-primary-f5: hsl(250deg 10% 50%);
+  --color-primary-f6: hsl(250deg 15% 35%);
+  --color-primary-f7: hsl(250deg 20% 30%);
+  --color-secondary-b2: hsl(250deg 5% 99.5%);
+  --color-secondary-b3: hsl(260deg 62% 58%);
+  --color-secondary-b4: hsl(260deg 65% 55%);
   --color-secondary-b5: linear-gradient(
     30deg,
-    hsl(250, 55%, 45%),
-    hsl(260, 65%, 50%)
+    hsl(250deg 55% 45%),
+    hsl(260deg 65% 50%)
   );
-  --color-secondary-a1: hsl(250, 60%, 85%);
-  --color-secondary-f1: hsl(250, 50%, 82%);
-  --color-secondary-f9: hsl(250, 15%, 50%);
-  --color-tertiary-b5: hsl(250, 60%, 98%);
-  --color-tertiary-b6: hsl(250, 70%, 95%);
-  --color-tertiary-b7: hsl(250, 75%, 93%);
-  --color-tertiary-a3: hsl(250, 75%, 85%);
-  --color-tertiary-f3: hsl(250, 15%, 55%);
-  --color-tertiary-f4: hsl(250, 50%, 60%);
-  --color-tertiary-f5: hsl(250, 65%, 60%);
-  --color-tertiary-f6: hsl(250, 50%, 60%);
-  --color-syntax-background: hsl(250, 15%, 97%);
-  --color-syntax-foreground: hsl(250, 35%, 40%);
-  --color-syntax-comment: hsl(250, 5%, 50%);
-  --color-syntax-special: hsl(360, 75%, 60%);
-  --color-syntax-operator: hsl(360, 75%, 60%);
-  --color-syntax-string: hsl(210, 100%, 45%);
-  --color-syntax-literal: hsl(360, 75%, 60%);
+  --color-secondary-a1: hsl(250deg 60% 85%);
+  --color-secondary-f1: hsl(250deg 50% 82%);
+  --color-secondary-f9: hsl(250deg 15% 50%);
+  --color-tertiary-b5: hsl(250deg 60% 98%);
+  --color-tertiary-b6: hsl(250deg 70% 95%);
+  --color-tertiary-b7: hsl(250deg 75% 93%);
+  --color-tertiary-a3: hsl(250deg 75% 85%);
+  --color-tertiary-f3: hsl(250deg 15% 55%);
+  --color-tertiary-f4: hsl(250deg 50% 60%);
+  --color-tertiary-f5: hsl(250deg 65% 60%);
+  --color-tertiary-f6: hsl(250deg 50% 60%);
+  --color-syntax-background: hsl(250deg 15% 97%);
+  --color-syntax-foreground: hsl(250deg 35% 40%);
+  --color-syntax-comment: hsl(250deg 5% 50%);
+  --color-syntax-special: hsl(360deg 75% 60%);
+  --color-syntax-operator: hsl(360deg 75% 60%);
+  --color-syntax-string: hsl(210deg 100% 45%);
+  --color-syntax-literal: hsl(360deg 75% 60%);
 }
 
 .theme-dark {
-  --color-primary-b1: hsl(250, 15%, 15%);
-  --color-primary-b2: hsl(250, 15%, 17%);
-  --color-primary-b3: hsl(250, 20%, 20%);
-  --color-primary-b4: hsl(250, 15%, 17%);
-  --color-primary-b5: hsl(250, 20%, 20%);
-  --color-primary-a1: hsl(250, 40%, 30%);
-  --color-primary-a2: hsl(250, 100%, 75%);
-  --color-primary-a3: hsl(250, 90%, 70%);
-  --color-primary-a4: hsl(250, 90%, 65%);
-  --color-primary-f4: hsl(250, 5%, 80%);
-  --color-primary-f5: hsl(250, 10%, 95%);
-  --color-primary-f6: hsl(250, 15%, 85%);
-  --color-primary-f7: hsl(250, 20%, 80%);
-  --color-secondary-b2: hsl(260, 55%, 27%);
-  --color-secondary-b3: hsl(260, 65%, 40%);
-  --color-secondary-b4: hsl(260, 65%, 35%);
+  --color-primary-b1: hsl(250deg 15% 15%);
+  --color-primary-b2: hsl(250deg 15% 17%);
+  --color-primary-b3: hsl(250deg 20% 20%);
+  --color-primary-b4: hsl(250deg 15% 17%);
+  --color-primary-b5: hsl(250deg 20% 20%);
+  --color-primary-a1: hsl(250deg 40% 30%);
+  --color-primary-a2: hsl(250deg 100% 75%);
+  --color-primary-a3: hsl(250deg 90% 70%);
+  --color-primary-a4: hsl(250deg 90% 65%);
+  --color-primary-f4: hsl(250deg 5% 80%);
+  --color-primary-f5: hsl(250deg 10% 95%);
+  --color-primary-f6: hsl(250deg 15% 85%);
+  --color-primary-f7: hsl(250deg 20% 80%);
+  --color-secondary-b2: hsl(260deg 55% 27%);
+  --color-secondary-b3: hsl(260deg 65% 40%);
+  --color-secondary-b4: hsl(260deg 65% 35%);
   --color-secondary-b5: linear-gradient(
     30deg,
-    hsl(250, 50%, 20%),
-    hsl(260, 60%, 25%)
+    hsl(250deg 50% 20%),
+    hsl(260deg 60% 25%)
   );
-  --color-secondary-a1: hsl(250, 100%, 65%);
-  --color-secondary-f1: hsl(250, 30%, 85%);
-  --color-secondary-f9: hsl(250, 100%, 80%);
-  --color-tertiary-b5: hsl(250, 20%, 20%);
-  --color-tertiary-b6: hsl(250, 25%, 25%);
-  --color-tertiary-b7: hsl(250, 25%, 25%);
-  --color-tertiary-a3: hsl(250, 75%, 65%);
-  --color-tertiary-f3: hsl(250, 10%, 95%);
-  --color-tertiary-f4: hsl(250, 100%, 85%);
-  --color-tertiary-f5: hsl(250, 100%, 80%);
-  --color-tertiary-f6: hsl(250, 100%, 80%);
-  --color-syntax-background: hsl(250, 15%, 17%);
-  --color-syntax-foreground: hsl(250, 10%, 92.5%);
-  --color-syntax-comment: hsl(250, 20%, 50%);
-  --color-syntax-special: hsl(360, 75%, 60%);
-  --color-syntax-operator: hsl(250, 100%, 85%);
-  --color-syntax-string: hsl(210, 100%, 85%);
-  --color-syntax-literal: hsl(360, 75%, 60%);
+  --color-secondary-a1: hsl(250deg 100% 65%);
+  --color-secondary-f1: hsl(250deg 30% 85%);
+  --color-secondary-f9: hsl(250deg 100% 80%);
+  --color-tertiary-b5: hsl(250deg 20% 20%);
+  --color-tertiary-b6: hsl(250deg 25% 25%);
+  --color-tertiary-b7: hsl(250deg 25% 25%);
+  --color-tertiary-a3: hsl(250deg 75% 65%);
+  --color-tertiary-f3: hsl(250deg 10% 95%);
+  --color-tertiary-f4: hsl(250deg 100% 85%);
+  --color-tertiary-f5: hsl(250deg 100% 80%);
+  --color-tertiary-f6: hsl(250deg 100% 80%);
+  --color-syntax-background: hsl(250deg 15% 17%);
+  --color-syntax-foreground: hsl(250deg 10% 92.5%);
+  --color-syntax-comment: hsl(250deg 20% 50%);
+  --color-syntax-special: hsl(360deg 75% 60%);
+  --color-syntax-operator: hsl(250deg 100% 85%);
+  --color-syntax-string: hsl(210deg 100% 85%);
+  --color-syntax-literal: hsl(360deg 75% 60%);
 }

@@ -129,7 +129,7 @@
 
   a {
     color: var(--color-primary-a2);
-    text-decoration: underline hsla(0, 0%, 0%, 0%);
+    text-decoration: underline hsl(0deg 0% 0% / 0%);
     transition: all var(--motion-fast);
 
     &:hover {

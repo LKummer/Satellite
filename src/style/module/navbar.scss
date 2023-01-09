@@ -8,8 +8,8 @@
   }
 
   background: var(--color-secondary-b5);
-  box-shadow: 0 0.1rem var(--space-2) hsla(0, 0%, 0%, 20%),
-    0 0.15rem var(--space-2) hsla(0, 0%, 0%, 10%);
+  box-shadow: 0 0.1rem var(--space-2) hsl(0deg 0% 0% / 20%),
+    0 0.15rem var(--space-2) hsl(0deg 0% 0% / 10%);
   padding: 0 var(--space-4) 0 0;
   z-index: 10;
 
@@ -184,7 +184,7 @@
       border-radius: var(--space-2);
       bottom: -100%;
       box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
-        hsla(0, 0%, 0%, 25%);
+        hsl(0deg 0% 0% / 25%);
       padding: var(--space-6) var(--space-5);
       position: absolute;
       transition: opacity var(--motion-fast);
