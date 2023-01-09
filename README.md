@@ -47,6 +47,12 @@
 - **Responsive design** for great user experience everywhere.
 - **Search and sharing optimization** for Google, Facebook and Twitter.
 
+<p>
+  <a href="https://lkummer.github.io/Satellite/">
+    <img src="https://lkummer.github.io/Satellite/images/readme-theme.svg" align="center">
+  </a>
+</p>
+
 ## Getting Started
 
 Make sure to have Hugo `v0.81.0` or later installed for best compatibility.
