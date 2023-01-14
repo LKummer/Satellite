@@ -29,4 +29,13 @@ export default function init() {
   modeButton.addEventListener('click', () => {
     toggleLightDarkMode();
   });
+
+  const darkModePreference = window.matchMedia('(prefers-color-scheme: dark)');
+  darkModePreference.addListener((e) => {
+    if (e.matches) {
+      setDarkMode();
+      return;
+    }
+    setLightMode();
+  });
 }
