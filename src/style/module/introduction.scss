@@ -80,6 +80,8 @@
       bottom: -100%;
       box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
         hsl(0deg 0% 0% / 25%);
+      max-height: 60vh;
+      overflow: auto;
       padding: var(--space-6) var(--space-5);
       position: absolute;
       transition: opacity var(--motion-fast);
