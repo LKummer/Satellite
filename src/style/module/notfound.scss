@@ -1,0 +1,45 @@
+@use '@lkummer/break' as break;
+@use '../theme/screen.scss';
+
+.notfound {
+  text-align: center;
+
+  &-title {
+    @include break.media-under('small', screen.$breakpoints) {
+      font-size: var(--space-32);
+      margin: var(--space-24) 0 var(--space-4) 0;
+    }
+
+    color: var(--color-primary-f4);
+    font-size: var(--space-48);
+    font-weight: var(--type-weight-0);
+    line-height: var(--type-height-1);
+    margin: var(--space-12) 0 var(--space-4) 0;
+  }
+
+  &-subtitle {
+    font-size: var(--type-size-4);
+    font-weight: var(--type-weight-1);
+    margin: 0 0 var(--space-2) 0;
+  }
+
+  &-text {
+    font-size: var(--type-size-2);
+    margin: 0 0 var(--space-8) 0;
+
+    &-link {
+      color: var(--color-primary-a2);
+      text-decoration: underline hsl(0deg 0% 0% / 0%);
+      transition: all var(--motion-fast);
+
+      &:hover {
+        color: var(--color-primary-a3);
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: var(--color-primary-a4);
+      }
+    }
+  }
+}
