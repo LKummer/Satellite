@@ -52,7 +52,8 @@ function renderContentMatch(
   matchStart,
   matchEnd,
   permalink,
-  headings
+  headings,
+  onClose
 ) {
   const line = lineInContent(content, matchStart);
   const matchCard = document.createElement('a');
@@ -61,6 +62,7 @@ function renderContentMatch(
     'search-results-links-match'
   );
   matchCard.href = findHeadingPermalink(headings, line, permalink);
+  matchCard.addEventListener('click', onClose);
   const previewBegin = document.createElement('span');
   previewBegin.innerText = content.substring(
     findWordsBefore(content, matchStart, 4),
@@ -85,7 +87,7 @@ function renderContentMatch(
   return li;
 }
 
-function renderItem({ item, matches }) {
+function renderItem({ item, matches }, onClose) {
   const { title, permalink, content, headings } = item;
   const renderedElements = [];
   const li = document.createElement('li');
@@ -93,6 +95,7 @@ function renderItem({ item, matches }) {
   const anchor = document.createElement('a');
   anchor.href = permalink;
   anchor.innerText = title;
+  anchor.addEventListener('click', onClose);
   anchor.classList.add('search-results-links-item');
   li.appendChild(anchor);
   matches.forEach((match) => {
@@ -117,7 +120,8 @@ function renderItem({ item, matches }) {
             longestMatch[0],
             longestMatch[1],
             permalink,
-            headings
+            headings,
+            onClose
           )
         );
       }
@@ -126,13 +130,13 @@ function renderItem({ item, matches }) {
   return renderedElements;
 }
 
-function renderSection(name, items) {
+function renderSection(name, items, onClose) {
   const title = document.createElement('h2');
   title.innerText = name;
   title.classList.add('search-results-section');
   const list = document.createElement('ul');
   for (const item of items) {
-    for (const renderedItem of renderItem(item)) {
+    for (const renderedItem of renderItem(item, onClose)) {
       list.appendChild(renderedItem);
     }
   }
@@ -140,7 +144,7 @@ function renderSection(name, items) {
   return [title, list];
 }
 
-export function renderResults(results) {
+export function renderResults(results, onClose) {
   const sections = new Map();
   for (const result of results) {
     const currentSection = sections.get(result.item.section);
@@ -153,7 +157,7 @@ export function renderResults(results) {
   const children = [];
   // Should sort sections somehow other than alphabetically.
   for (const [name, links] of sections) {
-    const [title, items] = renderSection(name, links);
+    const [title, items] = renderSection(name, links, onClose);
     children.push(title);
     children.push(items);
   }

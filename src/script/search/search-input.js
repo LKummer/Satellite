@@ -16,7 +16,12 @@ export class SearchInput {
     if (query) {
       this.clear();
       const results = await this.searchEngine.search(query);
-      const children = this.renderResults(results.slice(0, this.resultCount));
+      const children = this.renderResults(
+        results.slice(0, this.resultCount),
+        () => {
+          this.popupAnimator.hide();
+        }
+      );
       if (children.length !== 0) {
         this.popupAnimator.popup.replaceChildren(...children);
       } else {
