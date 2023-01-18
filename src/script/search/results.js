@@ -96,7 +96,10 @@ function renderItem({ item, matches }, onClose) {
   anchor.href = permalink;
   anchor.innerText = title;
   anchor.addEventListener('click', onClose);
-  anchor.classList.add('search-results-links-item');
+  anchor.classList.add(
+    'search-results-links-item',
+    'search-results-links-item-title'
+  );
   li.appendChild(anchor);
   matches.forEach((match) => {
     const longestMatches = match.indices.reduce((acc, cur) => {

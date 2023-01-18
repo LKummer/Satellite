@@ -63,6 +63,23 @@ Used for side navigation menu and mobile hamburger navigation menu.
 | `tertiary-f5` | Side menu text active.       |
 | `tertiary-f6` | Side menu active title.      |
 
+## Quaternary Colors
+
+Used for search results popup.
+
+| Option          | Description                           |
+| --------------- | ------------------------------------- |
+| `quaternary-b1` | Search popup background.              |
+| `quaternary-b2` | Search result link background.        |
+| `quaternary-b3` | Search result link hover background.  |
+| `quaternary-b4` | Search result link active background. |
+| `quaternary-a1` | Search popup border.                  |
+| `quaternary-f3` | Search results section title.         |
+| `quaternary-f4` | Search result page title.             |
+| `quaternary-f5` | Search result link text.              |
+| `quaternary-f6` | Search result link hover text.        |
+| `quaternary-f7` | Search result link active text.       |
+
 ## Syntax Highlight Colors
 
 Used for code block syntax highlight.

@@ -74,17 +74,7 @@
         width: min(60ch, 100% - var(--space-8));
       }
 
-      background: var(--color-primary-b2);
-      border: solid 1px var(--color-primary-a1);
-      border-radius: var(--space-4);
-      bottom: -100%;
-      box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
-        hsl(0deg 0% 0% / 25%);
       max-height: 60vh;
-      overflow: auto;
-      padding: var(--space-6) var(--space-5);
-      position: absolute;
-      transition: opacity var(--motion-fast);
       width: 30rem;
     }
   }
