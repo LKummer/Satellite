@@ -25,7 +25,6 @@ export class SearchInput {
       if (children.length !== 0) {
         this.popupAnimator.popup.replaceChildren(...children);
       } else {
-        console.log('no results');
         this.popupAnimator.popup.replaceChildren(...this.noResultsElement);
       }
       this.popupAnimator.show();

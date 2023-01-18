@@ -9,8 +9,6 @@ export class Search {
       const { getSearchIndex } = await import('./search-index');
       this.fuse = await getSearchIndex(this.baseURL);
     }
-    const result = this.fuse.search(query);
-    console.log(result);
-    return result;
+    return this.fuse.search(query);
   }
 }

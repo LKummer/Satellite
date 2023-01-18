@@ -17,9 +17,8 @@
     box-shadow: 0 var(--space-1) var(--space-2) var(--space-n1)
       hsl(0deg 0% 0% / 25%);
     display: none;
-    gap: var(--space-4);
     overflow: auto;
-    padding: var(--space-6) var(--space-5);
+    padding: var(--space-6) var(--space-5) var(--space-2) var(--space-5);
     position: absolute;
     transition: opacity var(--motion-fast);
 
@@ -39,13 +38,13 @@
       color: var(--color-quaternary-f3);
       font-size: var(--type-size-1);
       font-weight: var(--type-weight-2);
-      margin: 0;
+      margin: 0 0 var(--space-2) 0;
     }
 
     &-links {
       list-style: none;
       margin: 0 0 var(--space-n2) 0;
-      padding: 0;
+      padding: 0 0 var(--space-4) 0;
 
       &-item {
         background: var(--color-quaternary-b2);
