@@ -1,8 +1,8 @@
 import { PopupAnimator } from './popup-animator';
 import { Search } from './search';
 import { SearchInput } from './search-input';
-import { renderResults } from './results';
 import { createPopper } from '@popperjs/core';
+import { renderResults } from './results';
 
 export default function init(baseURL) {
   const noResultsElement = document.createElement('h2');
