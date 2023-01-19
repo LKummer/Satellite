@@ -1,6 +1,5 @@
 +++
 title = "Development Workflow"
-keywords = ["Build"]
 +++
 
 Familiarize yourself with the development workflow of the project.

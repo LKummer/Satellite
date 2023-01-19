@@ -1,6 +1,5 @@
 +++
 title = "Color Customization"
-keywords = ["Personalization", "Theme"]
 +++
 
 Looking to make your Satellite website _yours_?

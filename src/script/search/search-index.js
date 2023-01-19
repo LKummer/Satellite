@@ -36,7 +36,7 @@ export async function getSearchIndex(baseURL) {
     return { ...page, headings };
   });
   return new Fuse(data, {
-    keys: ['title', 'description', 'section', 'keywords', 'content'],
+    keys: ['title', 'description', 'section', 'content'],
     threshold: 0.2,
     ignoreLocation: true,
     minMatchCharLength: 3,

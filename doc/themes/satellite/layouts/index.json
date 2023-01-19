@@ -2,6 +2,7 @@
 {{- range where .Site.Pages "IsSection" false }}
 {{- $page := dict "title" .Title "permalink" .Permalink }}
 {{- $page = $page | merge (dict "section" .CurrentSection.Title)}}
+{{- $page = $page | merge (dict "content" .RawContent)}}
 {{- with .Description }}
 {{- $page = $page | merge (dict "description" .) }}
 {{- end }}

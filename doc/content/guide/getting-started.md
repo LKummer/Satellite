@@ -1,6 +1,5 @@
 +++
 title = "Getting Started"
-keywords = ["Quick", "Install", "Build", "Deploy"]
 +++
 
 The quickest way to get up and running with Satellite is using the provided

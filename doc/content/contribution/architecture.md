@@ -1,6 +1,5 @@
 +++
 title = "Theme Architecture"
-keywords = ["Structure", "Folder", "Directory"]
 +++
 
 Satellite is built using a custom Webpack setup which processes `SCSS` files

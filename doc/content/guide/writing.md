@@ -1,6 +1,5 @@
 +++
 title = "Writing and Organizing Content"
-keywords = ["Section", "Front", "Matter"]
 +++
 
 Just got Satellite installed and configured? You are probably looking to add
@@ -72,21 +71,12 @@ and indexed in the internal search.
 description = "Awesome guide to get you started."
 ```
 
-Optionally, pages can have a `keywords` array.
-`keywords` are indexed in the internal search, and can be used to help users find
-content easily.
-
-```toml
-keywords = ["Install", "Deploy"]
-```
-
 Putting everything together, our content page should look somewhat like this:
 
 ```md
 +++
 title = "Quick Start Guide"
 description = "Awesome guide to get you started."
-keywords = ["Install", "Deploy"]
 +++
 
 Markdown content of the page.

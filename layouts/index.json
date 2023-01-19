@@ -6,9 +6,6 @@
 {{- with .Description }}
 {{- $page = $page | merge (dict "description" .) }}
 {{- end }}
-{{- with .Params.keywords }}
-{{- $page = $page | merge (dict "keywords" .) }}
-{{- end }}
 {{- $pages = $pages | append $page }}
 {{- end }}
 {{- $pages | jsonify }}

@@ -1,6 +1,5 @@
 +++
 title = "Menus and Navigation"
-keywords = ["Bar", "Top", "Side", "Section"]
 +++
 
 This document assumes basic knowledge of [Hugo menus](https://gohugo.io/content-management/menus/).

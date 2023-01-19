@@ -43,7 +43,7 @@
 - **Thorough documentation and guides** for every feature of the theme.
 - **Color customization** to make it yours.
 - **Automatic dark mode** and manual toggle.
-- **Fuzzy search** with no dependency on external services.
+- **Fuzzy full-text search** with no dependency on external services.
 - **Responsive design** for great user experience everywhere.
 - **Search and sharing optimization** for Google, Facebook and Twitter.
 
