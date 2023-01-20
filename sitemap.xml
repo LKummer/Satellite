@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lkummer.github.io/Satellite/tutorial/</loc>
+  </url><url>
     <loc>https://lkummer.github.io/Satellite/contribution/</loc>
   </url><url>
-    <loc>https://lkummer.github.io/Satellite/reference/customization/</loc>
+    <loc>https://lkummer.github.io/Satellite/reference/color-customization/</loc>
   </url><url>
     <loc>https://lkummer.github.io/Satellite/contribution/development/</loc>
   </url><url>
     <loc>https://lkummer.github.io/Satellite/</loc>
   </url><url>
-    <loc>https://lkummer.github.io/Satellite/guide/getting-started/</loc>
-  </url><url>
-    <loc>https://lkummer.github.io/Satellite/guide/</loc>
-  </url><url>
     <loc>https://lkummer.github.io/Satellite/reference/icons/</loc>
   </url><url>
     <loc>https://lkummer.github.io/Satellite/reference/menus/</loc>
+  </url><url>
+    <loc>https://lkummer.github.io/Satellite/tutorial/part-1-getting-started/</loc>
+  </url><url>
+    <loc>https://lkummer.github.io/Satellite/tutorial/part-2-adding-content/</loc>
   </url><url>
     <loc>https://lkummer.github.io/Satellite/reference/</loc>
   </url><url>
     <loc>https://lkummer.github.io/Satellite/reference/seo/</loc>
   </url><url>
     <loc>https://lkummer.github.io/Satellite/contribution/architecture/</loc>
-  </url><url>
-    <loc>https://lkummer.github.io/Satellite/guide/writing/</loc>
   </url>
 </urlset>

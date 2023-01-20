@@ -8,10 +8,10 @@
     <language>en</language><atom:link href="https://lkummer.github.io/Satellite/reference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Color Customization</title>
-      <link>https://lkummer.github.io/Satellite/reference/customization/</link>
+      <link>https://lkummer.github.io/Satellite/reference/color-customization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lkummer.github.io/Satellite/reference/customization/</guid>
+      <guid>https://lkummer.github.io/Satellite/reference/color-customization/</guid>
       <description>Looking to make your Satellite website yours? You arrived at the right place. This page lists all color customization options Satellite offers.
 Each section of a Satellite site can be colored independently, allowing you to theme your website however you want.
 Colors can be customized using params.colors configuration options. This page lists all color options. Check out the config example at the bottom for a concrete example.

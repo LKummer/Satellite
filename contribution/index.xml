@@ -27,7 +27,7 @@ $ npm ci Development Server When making changes, a development server with the d
       <guid>https://lkummer.github.io/Satellite/contribution/architecture/</guid>
       <description>Satellite is built using a custom Webpack setup which processes SCSS files and copies files to different folders in order to use Sass without requiring extended Hugo and reduce folder nesting. The Webpack Hugo theme boilerplate is available on Github.
 Folder Structure The project has a somewhat unique folder structure for a Hugo theme as it uses Webpack to build the theme itself.
- layouts/ is copied to the theme&amp;rsquo;s layouts folder.</description>
+layouts/ is copied to the theme&amp;rsquo;s layouts folder.</description>
     </item>
     
   </channel>

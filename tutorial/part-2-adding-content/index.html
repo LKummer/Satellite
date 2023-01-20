@@ -7,16 +7,25 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <link rel="stylesheet" href="https://lkummer.github.io/Satellite/main.css">
-    <title>Guides</title>
+    <title>Part 2 - Adding Content</title>
     <link rel="icon" href="https://lkummer.github.io/Satellite/images/favicon.svg">
-    <meta name="description" content="New to Satellite? You should probably start here.">
+    <meta name="description" content="Satellite Hugo theme documentation.">
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://lkummer.github.io/Satellite/guide/" />
-    <meta property="og:title" content="Guides" />
-    <meta property="og:description" content="New to Satellite? You should probably start here." />
+    <meta property="og:url" content="https://lkummer.github.io/Satellite/tutorial/part-2-adding-content/" />
+    <meta property="og:title" content="Part 2 - Adding Content" />
+    <meta property="og:description" content="Satellite Hugo theme documentation." />
     <meta property="og:image" content="https://lkummer.github.io/Satellite/images/1x1.png" />
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:width" content="1200" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Part 2 - Adding Content",
+      "image": ["https://lkummer.github.io/Satellite/images/1x1.png","https://lkummer.github.io/Satellite/images/4x3.png","https://lkummer.github.io/Satellite/images/16x9.png"]
+    }
+    </script>
     <script>
       const rootElement = document.querySelector(':root')
       const mode = localStorage.getItem('theme');
@@ -30,13 +39,13 @@
     </script>
     <style>
     .theme-light {
-      --color-primary-a1: hsl(205, 20%, 90%);--color-primary-a2: hsl(205, 60%, 42.5%);--color-primary-a3: hsl(205, 60%, 40%);--color-primary-a4: hsl(205, 70%, 35%);--color-primary-b1: hsl(205, 5%, 98%);--color-primary-b2: hsl(205, 5%, 97.5%);--color-primary-b3: hsl(205, 5%, 95%);--color-primary-b4: hsl(205, 7.5%, 96%);--color-primary-b5: hsl(205, 5%, 94%);--color-primary-f4: hsl(205, 20%, 45%);--color-primary-f5: hsl(205, 5%, 40%);--color-primary-f6: hsl(205, 25%, 30%);--color-primary-f7: hsl(205, 35%, 25%);--color-secondary-a1: hsl(190, 60%, 40%);--color-secondary-b2: hsl(205, 5%, 97.5%);--color-secondary-b3: hsl(190, 95%, 30%);--color-secondary-b4: hsl(190, 95%, 28%);--color-secondary-b5:   linear-gradient(
+      --color-primary-a1: hsl(205, 20%, 90%);--color-primary-a2: hsl(205, 60%, 42.5%);--color-primary-a3: hsl(205, 60%, 40%);--color-primary-a4: hsl(205, 70%, 35%);--color-primary-b1: hsl(205, 5%, 98%);--color-primary-b2: hsl(205, 5%, 97.5%);--color-primary-b3: hsl(205, 5%, 95%);--color-primary-b4: hsl(205, 7.5%, 96%);--color-primary-b5: hsl(205, 5%, 94%);--color-primary-f4: hsl(205, 20%, 45%);--color-primary-f5: hsl(205, 5%, 40%);--color-primary-f6: hsl(205, 25%, 30%);--color-primary-f7: hsl(205, 35%, 25%);--color-quaternary-a1: hsl(205, 20%, 90%);--color-quaternary-b1: hsl(190, 2%, 96%);--color-quaternary-b2: hsl(205, 5%, 93%);--color-quaternary-b3: hsl(205, 30%, 90%);--color-quaternary-b4: hsl(205, 35%, 88%);--color-quaternary-f3: hsl(205, 20%, 45%);--color-quaternary-f4: hsl(205, 15%, 50%);--color-quaternary-f5: hsl(205, 30%, 40%);--color-quaternary-f6: hsl(205, 85%, 40%);--color-quaternary-f7: hsl(205, 60%, 40%);--color-secondary-a1: hsl(190, 60%, 40%);--color-secondary-b2: hsl(205, 5%, 97.5%);--color-secondary-b3: hsl(190, 95%, 30%);--color-secondary-b4: hsl(190, 95%, 28%);--color-secondary-b5:   linear-gradient(
     30deg,
     hsl(205, 85%, 25%),
     hsl(190, 90%, 25%));--color-secondary-f1: hsl(190, 15%, 80%);--color-secondary-f9: hsl(190, 5%, 50%);--color-tertiary-a3: hsl(205, 35%, 70%);--color-tertiary-b5: hsl(190, 2%, 96%);--color-tertiary-b6: hsl(205, 30%, 90%);--color-tertiary-b7: hsl(205, 35%, 88%);--color-tertiary-f3: hsl(205, 15%, 50%);--color-tertiary-f4: hsl(205, 85%, 40%);--color-tertiary-f5: hsl(205, 60%, 40%);--color-tertiary-f6: hsl(205, 85%, 40%);
     }
     .theme-dark {
-      --color-primary-a1: hsl(205, 40%, 30%);--color-primary-a2: hsl(205, 100%, 75%);--color-primary-a3: hsl(205, 90%, 70%);--color-primary-a4: hsl(205, 90%, 65%);--color-primary-b1: hsl(205, 15%, 15%);--color-primary-b2: hsl(205, 15%, 17%);--color-primary-b3: hsl(205, 15%, 20%);--color-primary-b4: hsl(205, 15%, 17%);--color-primary-b5: hsl(205, 15%, 20%);--color-primary-f4: hsl(205, 5%, 80%);--color-primary-f5: hsl(205, 10%, 93%);--color-primary-f6: hsl(205, 15%, 85%);--color-primary-f7: hsl(205, 20%, 80%);--color-secondary-a1: hsl(190, 80%, 60%);--color-secondary-b2: hsl(205, 45%, 25%);--color-secondary-b3: hsl(190, 65%, 40%);--color-secondary-b4: hsl(190, 65%, 35%);--color-secondary-b5:   linear-gradient(
+      --color-primary-a1: hsl(205, 40%, 30%);--color-primary-a2: hsl(205, 100%, 75%);--color-primary-a3: hsl(205, 90%, 70%);--color-primary-a4: hsl(205, 90%, 65%);--color-primary-b1: hsl(205, 15%, 15%);--color-primary-b2: hsl(205, 15%, 17%);--color-primary-b3: hsl(205, 15%, 20%);--color-primary-b4: hsl(205, 15%, 17%);--color-primary-b5: hsl(205, 15%, 20%);--color-primary-f4: hsl(205, 5%, 80%);--color-primary-f5: hsl(205, 10%, 93%);--color-primary-f6: hsl(205, 15%, 85%);--color-primary-f7: hsl(205, 20%, 80%);--color-quaternary-a1: hsl(205, 40%, 30%);--color-quaternary-b1: hsl(205, 15%, 20%);--color-quaternary-b2: hsl(205, 20%, 23%);--color-quaternary-b3: hsl(205, 25%, 25%);--color-quaternary-b4: hsl(205, 25%, 25%);--color-quaternary-f3: hsl(205, 15%, 80%);--color-quaternary-f4: hsl(205, 60%, 93%);--color-quaternary-f5: hsl(205, 60%, 85%);--color-quaternary-f6: hsl(205, 80%, 85%);--color-quaternary-f7: hsl(205, 90%, 70%);--color-secondary-a1: hsl(190, 80%, 60%);--color-secondary-b2: hsl(205, 45%, 25%);--color-secondary-b3: hsl(190, 65%, 40%);--color-secondary-b4: hsl(190, 65%, 35%);--color-secondary-b5:   linear-gradient(
     30deg,
     hsl(205, 65%, 20%),
     hsl(190, 70%, 25%));--color-secondary-f1: hsl(190, 30%, 85%);--color-secondary-f9: hsl(190, 80%, 65%);--color-syntax-background: hsl(205, 15%, 20%);--color-tertiary-a3: hsl(205, 75%, 65%);--color-tertiary-b5: hsl(205, 15%, 20%);--color-tertiary-b6: hsl(205, 25%, 25%);--color-tertiary-b7: hsl(205, 25%, 25%);--color-tertiary-f3: hsl(205, 10%, 93%);--color-tertiary-f4: hsl(205, 80%, 85%);--color-tertiary-f5: hsl(205, 90%, 70%);--color-tertiary-f6: hsl(205, 90%, 70%);
@@ -156,7 +165,7 @@
         <details class="navmenu-section" open>
           <summary class="navmenu-section-summary navmenu-section-summary-current">
             <h2 class="navmenu-section-summary-title">
-              Guides
+              Tutorial
             </h2>
             <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
               <g>
@@ -167,14 +176,14 @@
           <ul class="navmenu-section-pages">
             
             <li>
-              <a href="https://lkummer.github.io/Satellite/guide/getting-started/" class="navmenu-section-pages-item ">
-                Getting Started
+              <a href="https://lkummer.github.io/Satellite/tutorial/part-1-getting-started/" class="navmenu-section-pages-item ">
+                Part 1 - Getting Started
               </a>
             </li>
             
             <li>
-              <a href="https://lkummer.github.io/Satellite/guide/writing/" class="navmenu-section-pages-item ">
-                Writing and Organizing Content
+              <a href="https://lkummer.github.io/Satellite/tutorial/part-2-adding-content/" class="navmenu-section-pages-item  navmenu-section-pages-item-current">
+                Part 2 - Adding Content
               </a>
             </li>
             
@@ -195,7 +204,7 @@
           <ul class="navmenu-section-pages">
             
             <li>
-              <a href="https://lkummer.github.io/Satellite/reference/customization/" class="navmenu-section-pages-item ">
+              <a href="https://lkummer.github.io/Satellite/reference/color-customization/" class="navmenu-section-pages-item ">
                 Color Customization
               </a>
             </li>
@@ -251,19 +260,76 @@
         
       </nav>
       <section class="l-page-main">
-<nav>
+<section class="l-single">
+  <section>
+    <h1 class="content-title">
+      Part 2 - Adding Content
+    </h1>
+    <section class="content">
+      <p>Continuing where we finished part 1, in this part we will create a section and a
+page with our own content.</p>
+<p>This guide assumes basic familiarity with Hugo terms.
+Specifically familiarity <a href="https://gohugo.io/content-management/sections/">with sections</a>,
+<a href="https://gohugo.io/content-management/front-matter/">front matter</a>
+and single content pages.</p>
+<p>Make sure <a href="/Satellite/tutorial/part-1-getting-started/">to complete part 1 of the tutorial</a>
+before continuing.</p>
+<h2 id="starting-the-development-server">Starting the Development Server</h2>
+<p>Go to your site&rsquo;s folder and run the following command:</p>
+<pre tabindex="0"><code>hugo server
+</code></pre><p>Hugo will start a hot-reload development server.
+Leave this server running during the tutorial, when following the next steps you should be able to see the site change in your browser.</p>
+<p>Open a browser and go to the URL <code>hugo server</code> wrote to the shell.
+It is usually <code>http://localhost:1313</code>.
+You should see your Satellite site.</p>
+<h2 id="creating-a-section">Creating a Section</h2>
+<p>For the purpose of this tutorial, we will create a Tutorial section.</p>
+<p>Create a <code>content/tutorial</code> folder.
+Create a <code>content/tutorial/_index.md</code> file.
+Paste the following text inside the <code>_index.md</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Tutorial&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Make your first steps.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span></code></pre></div><p>The <code>_index.md</code> file of the section contains section configuration in it&rsquo;s front matter.
+Optionally, sections can have <code>weight</code>. Lower weighted sections are listed first
+in section lists. Unweighted sections are treated as if their <code>weight</code> is <code>0</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">100</span>
+</span></span></code></pre></div><p>We now have a Tutorial section in our site.
+You should be able to see it in the browser.</p>
+<h2 id="creating-a-page">Creating a Page</h2>
+<p>Next we will create a page inside the Tutorial section.</p>
+<p>Create a <code>content/tutorial/part-1-getting-started.md</code> file.
+Paste the following text insie it:</p>
+<pre tabindex="0"><code>+++
+title = &#34;Part 1 - Getting Started&#34;
++++
+
+Markdown content of the page.
+</code></pre><p>Optionally, pages can have a <code>description</code> front matter property.
+the <code>description</code> is used in social media and search engine meta tags,
+and indexed in the internal search.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Awesome guide to get you started.&#34;</span>
+</span></span></code></pre></div><p>We now have a page inside our Tutorial section.
+You should be able to see it in the browser.</p>
+<h2 id="final-words">Final Words</h2>
+<p>We have achieved the goal of this tutorial.
+We have a Satellite site with a section with our own content.</p>
+<p>You can now publish your Satellite site with GitHub Pages, GitLab Pages or any other way to host static sites.</p>
+
+    </section>
+  </section>
+  <aside class="l-single-side">
+    <nav id="TableOfContents">
   <ul>
-    
-    <li>
-      <a href="https://lkummer.github.io/Satellite/guide/getting-started/">Getting Started</a>
-    </li>
-    
-    <li>
-      <a href="https://lkummer.github.io/Satellite/guide/writing/">Writing and Organizing Content</a>
-    </li>
-    
+    <li><a href="#starting-the-development-server">Starting the Development Server</a></li>
+    <li><a href="#creating-a-section">Creating a Section</a></li>
+    <li><a href="#creating-a-page">Creating a Page</a></li>
+    <li><a href="#final-words">Final Words</a></li>
   </ul>
 </nav>
+  </aside>
+</section>
 
       </section>
     </section>
@@ -289,7 +355,7 @@
       <details class="navmenu-section" open>
         <summary class="navmenu-section-summary navmenu-section-summary-current">
           <h2 class="navmenu-section-summary-title">
-            Guides
+            Tutorial
           </h2>
           <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
             <g>
@@ -300,14 +366,14 @@
         <ul class="navmenu-section-pages">
           
           <li>
-            <a href="https://lkummer.github.io/Satellite/guide/getting-started/" class="navmenu-section-pages-item ">
-              Getting Started
+            <a href="https://lkummer.github.io/Satellite/tutorial/part-1-getting-started/" class="navmenu-section-pages-item ">
+              Part 1 - Getting Started
             </a>
           </li>
           
           <li>
-            <a href="https://lkummer.github.io/Satellite/guide/writing/" class="navmenu-section-pages-item ">
-              Writing and Organizing Content
+            <a href="https://lkummer.github.io/Satellite/tutorial/part-2-adding-content/" class="navmenu-section-pages-item  navmenu-section-pages-item-current">
+              Part 2 - Adding Content
             </a>
           </li>
           
@@ -328,7 +394,7 @@
         <ul class="navmenu-section-pages">
           
           <li>
-            <a href="https://lkummer.github.io/Satellite/reference/customization/" class="navmenu-section-pages-item ">
+            <a href="https://lkummer.github.io/Satellite/reference/color-customization/" class="navmenu-section-pages-item ">
               Color Customization
             </a>
           </li>
