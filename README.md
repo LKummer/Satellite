@@ -61,7 +61,7 @@ Download the latest `quickstart-site` archive [from the releases](https://github
 Once extracted, you should have a ready to build website.
 Run `hugo` to build the site, or `hugo server` to start a hot reload server.
 
-[Check out the detailed guide](https://lkummer.github.io/Satellite/guide/getting-started/) for more information.
+[Check out the detailed tutorial](https://lkummer.github.io/Satellite/tutorial/part-1-getting-started/) for more information.
 
 ## Contribution
 
@@ -73,6 +73,9 @@ It would be appreciated if you post a comment on an issue before submitting or w
 Make sure to run `npm run format` and `npm run lint` before submitting commits to avoid failing CI pipelines.
 
 ### Development Workflow
+
+**Note** these instructions are for development of Satellite itself.
+For development of sites using the theme, [check out the documentation](https://lkummer.github.io/Satellite).
 
 After cloning the project, install the required dependencies:
 
