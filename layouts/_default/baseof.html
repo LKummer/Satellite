@@ -109,6 +109,31 @@
           <nav id="navbar-search-popup" class="navbar-search-popup search-results" aria-label="search results" aria-live="polite" aria-hidden="true">
           </nav>
         </li>
+        <li>
+          <button aria-label="select version" aria-expanded="false" id="version-select" class="version-select" >
+            {{- $currentVersion := (index .Site.Data.versions.versions (int .Site.Data.versions.current)) }}
+            {{- with $currentVersion.label }}
+            <span class="version-select-label">
+              {{ . }}
+            </span>
+            {{- end }}
+            {{ $currentVersion.title }}
+          </button>
+          <nav id="version-menu" class="version-menu" aria-label="versions" aria-live="polite" aria-hidden="true">
+            <ol class="version-menu-list">
+              {{- range .Site.Data.versions.versions }}
+              <li>
+                <a href="" class="version-menu-list-item{{ if eq $currentVersion.path .path }} version-menu-list-item-active{{ end }}">
+                  {{- with .label }}
+                  {{ . }}
+                  {{- end }}
+                  {{ .title }}
+                </a>
+              </li>
+              {{- end }}
+            </ol>
+          </nav>
+        </li>
         {{ range .Site.Menus.main }}
         <li>
           <a href="{{ .URL }}" class="navbar-item {{ if $current.IsMenuCurrent "main" . }} navbar-item-active{{ end }}">

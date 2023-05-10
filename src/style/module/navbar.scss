@@ -145,11 +145,21 @@
     height: var(--space-10);
     outline: 0 solid var(--color-secondary-a1);
     padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
-    transition: outline var(--motion-fast);
-    width: 30ch;
+    transition: outline var(--motion-fast), background var(--motion-fast);
+    width: 26ch;
+
+    &:hover {
+      background: var(--color-secondary-b1);
+    }
 
     &:focus {
+      background: var(--color-secondary-b1);
       outline: 3px solid var(--color-secondary-a1);
+    }
+
+    &::placeholder {
+      color: var(--color-secondary-f8);
+      opacity: 1;
     }
 
     &-wrapper {

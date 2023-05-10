@@ -15,7 +15,7 @@ export default function init(baseURL) {
   const navbarPopup = document.getElementById('navbar-search-popup');
   const navbarPopper = createPopper(navbarInput, navbarPopup, {
     placement: 'bottom-end',
-    modifiers: [{ name: 'offset', options: { offset: [0, 32] } }]
+    modifiers: [{ name: 'offset', options: { offset: [0, 16] } }]
   });
   const navbarPopupAnimator = new PopupAnimator(navbarPopup, navbarPopper, {
     showClass: 'search-results-active',
