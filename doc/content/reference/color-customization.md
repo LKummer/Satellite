@@ -39,12 +39,14 @@ Used for top navigation bar.
 
 | Option         | Description               |
 | -------------- | ------------------------- |
-| `secondary-b2` | Navbar search background. |
+| `secondary-b1` | Navbar input hover.       |
+| `secondary-b2` | Navbar input background.  |
 | `secondary-b3` | Navbar background.        |
 | `secondary-b4` | Navbar hover background.  |
 | `secondary-b5` | Navbar active background. |
-| `secondary-a1` | Navbar search border.     |
+| `secondary-a1` | Navbar input border.      |
 | `secondary-f1` | Navbar text.              |
+| `secondary-f8` | Navbar input placeholder. |
 | `secondary-f9` | Navbar search text.       |
 
 ## Tertiary Colors
