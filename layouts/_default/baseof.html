@@ -121,9 +121,21 @@
           </button>
           <nav id="version-menu" class="version-menu" aria-label="versions" aria-live="polite" aria-hidden="true">
             <ol class="version-menu-list">
+              {{- $page := . }}
+              {{- $withoutBase := (strings.TrimPrefix $page.Site.BaseURL $page.Permalink) }}
+              {{- $withoutBase = strings.TrimPrefix "/" $withoutBase }}
+              {{- $baseWithoutTrailingSlash := (strings.TrimSuffix "/" $page.Site.BaseURL) }}
+              {{- $baseWithoutVersion := (strings.TrimSuffix $currentVersion.path $baseWithoutTrailingSlash) }}
+              {{- $baseWithoutVersionAndTrailingSlash := (strings.TrimSuffix "/" $baseWithoutVersion) }}
               {{- range .Site.Data.versions.versions }}
               <li>
-                <a href="" class="version-menu-list-item{{ if eq $currentVersion.path .path }} version-menu-list-item-active{{ end }}">
+                {{- $path := "" }}
+                {{- with .path }}
+                {{- $path = printf "%s/%s/%s" $baseWithoutVersionAndTrailingSlash . $withoutBase }}
+                {{- else }}
+                {{- $path = printf "%s/%s" $baseWithoutVersionAndTrailingSlash $withoutBase }}
+                {{- end }}
+                <a href="{{ $path }}" class="version-menu-list-item{{ if eq $currentVersion.path .path }} version-menu-list-item-active{{ end }}">
                   {{- with .label }}
                   {{ . }}
                   {{- end }}
