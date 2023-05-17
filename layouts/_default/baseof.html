@@ -89,6 +89,7 @@
           <nav id="navbar-search-popup" class="navbar-search-popup search-results" aria-label="search results" aria-live="polite" aria-hidden="true">
           </nav>
         </li>
+        {{- if .Site.Data.versions }}
         <li>
           <button aria-label="select version" aria-expanded="false" id="version-select" class="version-select" >
             {{- $currentVersion := (index .Site.Data.versions.versions (int .Site.Data.versions.current)) }}
@@ -126,6 +127,7 @@
             </ol>
           </nav>
         </li>
+        {{- end }}
         <li>
           <button id="light-dark-toggle" class="navbar-mode-icon navbar-button navbar-item">
             <svg viewBox="0 0 24 24" style="display: block">
@@ -231,6 +233,48 @@
         </ul>
       </details>
       {{ end }}
+      {{- if .Site.Data.versions }}
+      <details class="navmenu-section">
+        <summary class="navmenu-section-summary">
+          <h2 class="navmenu-section-summary-title navmenu-section-summary-title-light">
+            {{- $currentVersion := (index .Site.Data.versions.versions (int .Site.Data.versions.current)) }}
+            {{- with $currentVersion.label }}
+            {{ . }}
+            {{- end }}
+            {{ $currentVersion.title }}
+          </h2>
+          <svg class="navmenu-section-summary-indicator" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <g>
+              <path class="navmenu-section-summary-indicator-path" d="M12.9,6.7l-4.6,4.6c-0.2,0.2-0.5,0.2-0.7,0L3.1,6.7C2.3,5.9,2.8,4.6,3.9,4.6h8.1C13.2,4.6,13.7,5.9,12.9,6.7z" />
+            </g>
+          </svg>              
+        </summary>
+        <ul class="navmenu-section-pages">
+          {{- $page := . }}
+          {{- $withoutBase := (strings.TrimPrefix $page.Site.BaseURL $page.Permalink) }}
+          {{- $withoutBase = strings.TrimPrefix "/" $withoutBase }}
+          {{- $baseWithoutTrailingSlash := (strings.TrimSuffix "/" $page.Site.BaseURL) }}
+          {{- $baseWithoutVersion := (strings.TrimSuffix $currentVersion.path $baseWithoutTrailingSlash) }}
+          {{- $baseWithoutVersionAndTrailingSlash := (strings.TrimSuffix "/" $baseWithoutVersion) }}
+          {{- range .Site.Data.versions.versions }}
+          <li>
+            {{- $path := "" }}
+            {{- with .path }}
+            {{- $path = printf "%s/%s/%s" $baseWithoutVersionAndTrailingSlash . $withoutBase }}
+            {{- else }}
+            {{- $path = printf "%s/%s" $baseWithoutVersionAndTrailingSlash $withoutBase }}
+            {{- end }}
+            <a href="{{ $path }}" class="navmenu-section-pages-item {{ if eq $currentVersion.path .path }} navmenu-section-pages-item-current{{ end }}">
+              {{- with .label }}
+              {{ . }}
+              {{- end }}
+              {{ .title }}
+            </a>
+          </li>
+          {{- end }}
+        </ul>
+      </details>
+      {{- end }}
     </nav>
     <script>
       const baseURL = {{ printf "%s/" (strings.TrimSuffix "/" .Site.BaseURL) }};

@@ -65,6 +65,10 @@
         font-weight: var(--type-weight-4);
         margin: 0;
         padding: 0;
+
+        &-light {
+          font-weight: var(--type-weight-2);
+        }
       }
 
       &-indicator {
