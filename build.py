@@ -80,12 +80,19 @@ def main():
     parser.add_argument(
         "--base-url", required=True, help="Base URL to build the site for"
     )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("build_output"),
+        help="Output directory",
+    )
     args = parser.parse_args()
 
     repo_url = args.repository
     site_subdir = args.subdir
     includes = args.start
     base_url = args.base_url.removesuffix("/")
+    output = args.output
     with TemporaryDirectory() as temp_dir:
         temp_path = Path(temp_dir)
         clone(repo_url, temp_path / "repo")
@@ -104,7 +111,7 @@ def main():
             copy_content(temp_path / "repo", site_subdir, temp_path / "site")
             build(temp_path / "site", base_url, tag)
 
-        copytree(temp_path / "site/public", Path("build_output"))
+        copytree(temp_path / "site/public", output)
 
 
 if __name__ == "__main__":
