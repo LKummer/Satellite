@@ -10,9 +10,6 @@ This guide goes through deploying a Satellite site automatically with GitHub Act
 
 ## Creating a CI Pipeline
 
-This guide assumes your site will be hosted at `lkummer.github.io/example`.
-Modify the pipeline to the URL of your Pages site.
-
 Create a `.github/workflows/deploy.yml` file, and paste the following content in it:
 
 ```yaml
@@ -27,14 +24,17 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://lkummer.github.io/example
+      url: ${{ steps.pages-url.outputs.url }}
     steps:
+      - name: Set GitHub Pages URL variable
+        id: pages-url
+        run: echo "url=https://${GITHUB_REPOSITORY_OWNER,,}.github.io${GITHUB_REPOSITORY/${GITHUB_REPOSITORY_OWNER/}}" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v3
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.111.3'
-      - run: hugo --baseURL https://lkummer.github.io/example
+      - run: hugo --baseURL '${{ steps.pages-url.outputs.url }}'
       - uses: actions/upload-pages-artifact@v1
         with:
           path: public
