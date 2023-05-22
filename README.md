@@ -44,6 +44,7 @@
 - **Color customization** to make it yours.
 - **Automatic dark mode** and manual toggle.
 - **Fuzzy full-text search** with no dependency on external services.
+- **Multi-version builds** to document your project over time.
 - **Responsive design** for great user experience everywhere.
 - **Search and sharing optimization** for Google, Facebook and Twitter.
 
@@ -55,7 +56,7 @@
 
 ## Getting Started
 
-Make sure to have Hugo `v0.81.0` or later installed for best compatibility.
+Make sure to have Hugo `v0.109.0` or later installed for best compatibility.
 
 Download the latest `quickstart-site` archive [from the releases](https://github.com/LKummer/Satellite/releases).
 Once extracted, you should have a ready to build website.
