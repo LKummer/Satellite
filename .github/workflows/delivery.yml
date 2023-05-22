@@ -100,7 +100,10 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Build Websites
-        run: npm run build
+        run: |
+          npm run build:theme
+          npm run build:demo
+          python3 build.py --subdir doc --base-url https://lkummer.github.io/Satellite https://github.com/LKummer/Satellite.git --start v1.0.0 --output dist/doc
       - name: Prepare for Deployment
         run: |
           echo > dist/doc/.nojekyll
