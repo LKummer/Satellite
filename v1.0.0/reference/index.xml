@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on Satellite</title>
+    <link>https://lkummer.github.io/Satellite/v1.0.0/reference/</link>
+    <description>Recent content in Reference on Satellite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://lkummer.github.io/Satellite/v1.0.0/reference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Color Customization</title>
+      <link>https://lkummer.github.io/Satellite/v1.0.0/reference/customization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satellite/v1.0.0/reference/customization/</guid>
+      <description>Looking to make your Satellite website yours? You arrived at the right place. This page lists all color customization options Satellite offers.
+Each section of a Satellite site can be colored independently, allowing you to theme your website however you want.
+Colors can be customized using params.colors configuration options. This page lists all color options. Check out the config example at the bottom for a concrete example.
+Primary Colors Used for the main section of the website, where content is displayed.</description>
+    </item>
+    
+    <item>
+      <title>Icons and Logos</title>
+      <link>https://lkummer.github.io/Satellite/v1.0.0/reference/icons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satellite/v1.0.0/reference/icons/</guid>
+      <description>Want to make your Satellite website pop with beautiful SVG logos? This page contains everything you need to know to configure the customizable icons and logos of your Satellite website.
+Favicon The favicon can be customized using the params.icons.favicon configuration option. However, you also need to host your favicon.
+Place the favicon in the static/ folder of the website. It is recommended to use a subfolder, such as static/images/. With your icon in the static folder, set params.</description>
+    </item>
+    
+    <item>
+      <title>Menus and Navigation</title>
+      <link>https://lkummer.github.io/Satellite/v1.0.0/reference/menus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satellite/v1.0.0/reference/menus/</guid>
+      <description>This document assumes basic knowledge of Hugo menus.
+Top Navigation The params.logoPermalink option can be used to set where the top navigation logo links to. By default the logo links to the site&amp;rsquo;s index.
+The main menu entries are listed in the top navigation bar and in the mobile hamburger menu. Note that weight can be set to order menu items.
+Pages on the website can be added to the main menu through front matter options, for example:</description>
+    </item>
+    
+    <item>
+      <title>Search Engine Optimizations</title>
+      <link>https://lkummer.github.io/Satellite/v1.0.0/reference/seo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satellite/v1.0.0/reference/seo/</guid>
+      <description>Do you need Google enhanced search results and enhanced social media sharing? This page documents Satellite&amp;rsquo;s SEO related configuration options.
+General The title and params.seo.description configuration options can be used to set a title and description for your website.
+title = &amp;#34;Satellite&amp;#34; [params] [params.seo] description = &amp;#34;Satellite Hugo theme demo.&amp;#34; In content pages, the title and description of the current page are used.
+Twitter and Facebook Twitter and facebook allow specifying an image for your website.</description>
+    </item>
+    
+  </channel>
+</rss>

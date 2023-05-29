@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How-Tos on Satellite</title>
+    <link>https://lkummer.github.io/Satellite/v4.0.0/how-to/</link>
+    <description>Recent content in How-Tos on Satellite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://lkummer.github.io/Satellite/v4.0.0/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to build a multi-version site</title>
+      <link>https://lkummer.github.io/Satellite/v4.0.0/how-to/build-multi-version-sites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satellite/v4.0.0/how-to/build-multi-version-sites/</guid>
+      <description>This guide goes through building a multi-version Satellite site from a Git repository versioned with Git tags.
+Requirements Satellite site inside a Git repository, versioned with Git tags. Git installed. Hugo v0.109.0 or later installed. Python installed. The build script was developed against Python 3.10 but slightly older versions should work. This guide assumes you are working on Linux. On Windows you may need to run python instead of python3.</description>
+    </item>
+    
+    <item>
+      <title>How to deploy to GitHub Pages</title>
+      <link>https://lkummer.github.io/Satellite/v4.0.0/how-to/deploy-github-pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satellite/v4.0.0/how-to/deploy-github-pages/</guid>
+      <description>This guide goes through deploying a Satellite site automatically with GitHub Actions on GitHub Pages.
+Requirements Git repo with Satellite site in it&amp;rsquo;s root directory. Hosted on GitHub. Creating a CI Pipeline Create a .github/workflows/deploy.yml file, and paste the following content in it:
+on: push jobs: deploy: name: Deploy to GitHub Pages runs-on: ubuntu-latest permissions: pages: write id-token: write environment: name: github-pages url: ${{ steps.pages-url.outputs.url }} steps: - name: Set GitHub Pages URL variable id: pages-url run: echo &amp;#34;url=https://${GITHUB_REPOSITORY_OWNER,,}.</description>
+    </item>
+    
+    <item>
+      <title>How to deploy to GitLab Pages</title>
+      <link>https://lkummer.github.io/Satellite/v4.0.0/how-to/deploy-gitlab-pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lkummer.github.io/Satellite/v4.0.0/how-to/deploy-gitlab-pages/</guid>
+      <description>This guide goes through deploying a Satellite site automatically with GitLab CI on GitLab Pages.
+Requirements Git repo with Satellite site in it&amp;rsquo;s root directory. Hosted on GitLab (either SaaS or self-managed). Note that when using self-managed GitLab, you must have GitLab Pages and a GitLab CI runner set up.
+Creating a CI Pipeline Create a .gitlab-ci.yml file, and paste the following content in it:
+stages: - deploy pages: stage: deploy image: debian:bullseye script: - apt-get update - apt-get install --yes wget - wget -O /tmp/hugo.</description>
+    </item>
+    
+  </channel>
+</rss>
